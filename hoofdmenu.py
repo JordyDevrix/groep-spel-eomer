@@ -27,6 +27,6 @@ def scherm_speel(root):
     labl = Label(root, text="Hallo")
     labl.grid(column=1, row=1)
 #
-#
+
 #
     root.mainloop()
