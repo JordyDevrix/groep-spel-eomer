@@ -1,5 +1,8 @@
+from tkinter import *
+from hoofdmenu import hoofdmenu
 def main():
-    print("Dit is de Main")
-    print("hey")
+    hoofdmenu()
+
+
 if __name__ == '__main__':
     main()
