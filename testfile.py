@@ -1,5 +1,5 @@
 
-def karakter_creëeren
+def karakter_creëerenghy
 def main():
 
 
