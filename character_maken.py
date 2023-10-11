@@ -112,5 +112,19 @@ def ras_kiezen(venster):
 
 
 def ras_binnen_krijgen(venster, type_ras):
+    for widget in venster.winfo_children():
+        widget.destroy()
+
     if type_ras == 1:
         eigenschap = "sterk"
+    elif type_ras == 2:
+        eigenschap = "slim"
+
+    label = Label(venster, text="Je hebt een character!", font=("Roboto, 24"))
+    label.place(anchor= 'center', relx=0.5, rely=0.4)
+
+    top_bar = Frame(venster, bg="grey", height=40)
+    top_bar.pack(fill="both")
+    from app_gui import menu
+    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(venster))
+    cancel_button.place()
