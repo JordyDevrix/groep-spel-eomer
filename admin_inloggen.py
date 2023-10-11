@@ -1,4 +1,15 @@
 from tkinter import *
+import json
+
+def check_inlog(input_gebruikersnaam, input_wachtwoord):
+    with open("admin_inlog.json") as bestand:
+        inhoud = json.load(bestand)
+    if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
+        print("Ingelogd")
+    else:
+        print("Inloggen mislukt")
+
+
 
 def admin_scherm(root,menu):
     for widget in root.winfo_children():
@@ -22,7 +33,8 @@ def admin_scherm(root,menu):
     wachtwoord_label = Label(admin_login_frame, text="Wachtwoord")
     input_wachtwoord = Entry(admin_login_frame, bd=5, show="*")
 
-    inlog_button = Button(admin_login_frame, width=25, height=2, text="Log in", command=lambda: print_tekst(input_gebruikersnaam, input_wachtwoord))
+    inlog_button = Button(admin_login_frame, width=25, height=2, text="Log in",
+                          command=lambda: check_inlog(input_gebruikersnaam.get(), input_wachtwoord.get()))
 
 
     gebruikersnaam_label.pack(padx=5, pady=5)
