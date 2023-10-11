@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c882300a-c472-4320-9931-0ca255bfa4d6" name="Changes" comment="Ras kiezen PhotoImage basis">
-      <change afterPath="$PROJECT_DIR$/images/elf2.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/elf30.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c882300a-c472-4320-9931-0ca255bfa4d6" name="Changes" comment="Ras kiezen PhotoImage basis 2.0">
+      <change afterPath="$PROJECT_DIR$/images/dwerg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/mens.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/character_maken.py" beforeDir="false" afterPath="$PROJECT_DIR$/character_maken.py" afterDir="false" />
     </list>
@@ -105,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697024117282</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ras kiezen PhotoImage basis 2.0">
+      <option name="closed" value="true" />
+      <created>1697025770115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697025770115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,15 +121,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="character creation mooier gemaakt" />
     <MESSAGE value="Ras kiezen PhotoImage basis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ras kiezen PhotoImage basis" />
+    <MESSAGE value="Ras kiezen PhotoImage basis 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ras kiezen PhotoImage basis 2.0" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/groep_12_eomer$hoofdmenu.coverage" NAME="hoofdmenu Coverage Results" MODIFIED="1696950762159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/groep_12_eomer$character_maken.coverage" NAME="character_maken Coverage Results" MODIFIED="1697025093160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/groep_12_eomer$hoofdmenu.coverage" NAME="hoofdmenu Coverage Results" MODIFIED="1697027705106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/groep_12_eomer$character_maken.coverage" NAME="character_maken Coverage Results" MODIFIED="1697030940220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/groep_12_eomer$qwert.coverage" NAME="qwert Coverage Results" MODIFIED="1696942876288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/groep_12_eomer$Doctests_in_builtins.coverage" NAME="Doctests in builtins Coverage Results" MODIFIED="1697005668513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/python_stubs/-1168734427" />
     <SUITE FILE_PATH="coverage/groep_12_eomer$meerdere_keuzes.coverage" NAME="meerdere_keuzes Coverage Results" MODIFIED="1697024196536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/groep_12_eomer$app_gui.coverage" NAME="app_gui Coverage Results" MODIFIED="1697025640768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/groep_12_eomer$app_gui.coverage" NAME="app_gui Coverage Results" MODIFIED="1697031402986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/groep_12_eomer$main.coverage" NAME="main Coverage Results" MODIFIED="1697005659252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

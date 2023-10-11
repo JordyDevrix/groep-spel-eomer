@@ -105,6 +105,8 @@ def applicatie_gui():
 
     menu(app_frame)
 
+
+
     root.mainloop()
 
 
