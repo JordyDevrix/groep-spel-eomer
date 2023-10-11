@@ -9,16 +9,16 @@ from PIL import Image, ImageTk
 
 
 
-def character_wegschrijven():
-    name = input()
-    with open(f"charater_{name}.json", 'w') as bestand:
+def character_wegschrijven(eigenschap, name_input):
+
+    with open(f"charater_gegevens.json", 'w') as bestand:
         gegevens = {
-            "ras": 'Dwerg',
-            "naam": name
+            "eigenschap": eigenschap,
+            "naam":str(name_input)
         }
         data = json.dumps(gegevens, indent=1)
         bestand.write(data)
-    return  name
+
 
 
 def character_ophalen(name):
@@ -50,7 +50,7 @@ def character_maken(venster, menu):
     name_input = Entry(naam_input_frame, width=10, font="Roboto, 24")
     name_input.grid(row=0, column=1)
 
-    haal_naam_op_knop = Button(naam_input_frame, text="Haal tekst op", command=lambda: naam_ophalen(venster, name_input))
+    haal_naam_op_knop = Button(naam_input_frame, text="Haal tekst op", command=lambda: naam_ophalen(venster, name_input, menu))
     haal_naam_op_knop.grid(row=0, column=2)
 
     return venster
@@ -58,16 +58,16 @@ def character_maken(venster, menu):
 
 
 
-def naam_ophalen(venster, name_input):
+def naam_ophalen(venster, name_input, menu):
     name_inhoud = name_input.get()
     name_input.delete(0, tkinter.END)
-    name = name_inhoud
-    label_huidge_naam = Label(venster, text= f"Uw huidige naam: {name}")
+
+    label_huidge_naam = Label(venster, text= f"Uw huidige naam: {name_inhoud}")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
-    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font=("Arial, 10"), command=lambda : ras_kiezen(venster))
+    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font=("Arial, 10"), command=lambda : ras_kiezen(venster, menu, name_inhoud))
     doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.6)
 
-def ras_kiezen(venster):
+def ras_kiezen(venster, menu, name_inhoud):
     for widget in venster.winfo_children():
         widget.destroy()
 
@@ -86,10 +86,10 @@ def ras_kiezen(venster):
     venster.mens_photo = ImageTk.PhotoImage(mens_image)
 
     # Knoppen maken met afbeeldingen
-    dwerg_button = Button(venster, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1))
+    dwerg_button = Button(venster, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1, menu, name_inhoud))
     dwerg_button.place(anchor='center', relx=0.25, rely=0.4)
 
-    mens_button = Button(venster, image=venster.mens_photo, command=lambda: ras_binnen_krijgen(venster, 2))
+    mens_button = Button(venster, image=venster.mens_photo, command=lambda: ras_binnen_krijgen(venster, 2, menu, name_inhoud))
     mens_button.place(anchor='center', relx=0.75, rely=0.4)
 
     frame.pack()
@@ -111,6 +111,23 @@ def ras_kiezen(venster):
 
 
 
-def ras_binnen_krijgen(venster, type_ras):
+def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
+    for widget in venster.winfo_children():
+        widget.destroy()
+
     if type_ras == 1:
         eigenschap = "sterk"
+    else:
+        eigenschap = "slim"
+
+
+    label = Label(venster, text="Je hebt een character!", font=("Roboto, 24"))
+    label.place(anchor= 'center', relx=0.5, rely=0.4)
+
+    top_bar = Frame(venster, bg="grey", height=40)
+    top_bar.pack(fill="both")
+
+    cancel_button = Button(top_bar, width=5, height=3, text="X", command=lambda: menu(venster))
+    cancel_button.place(anchor= 'center', relx=0.5, rely=0.5)
+
+    character_wegschrijven(eigenschap, name_inhoud)
