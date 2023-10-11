@@ -73,9 +73,9 @@ def ras_kiezen(venster):
     label.place(anchor= 'center', relx= 0.5, rely= 0.45)
 
 
-    elf_foto = PhotoImage(file='images/ELF_character.png')
+    elf_foto = PhotoImage(file='images/elf2.0.png')
     ras_kiezen_button_elf = Label(image=elf_foto)
-    ras_kiezen_button_elf.pack()
+    ras_kiezen_button_elf.place(anchor= 'center', relx= 0, rely= 0 )
 
     # ras_kiezen_button_dwerg  =
     #
