@@ -66,14 +66,5 @@ def ras_kiezen(venster):
     label = Label(venster, text="HEY")
     label.pack()
 
-def main_charac(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    button_charac_maken = Button(root, text="Character maken", font=("Arial",24), command=lambda : character_maken(root))
-    button_charac_maken.pack()
-
-    name = character_wegschrijven()
-    character_ophalen(name)
 
 
