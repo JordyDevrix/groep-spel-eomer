@@ -68,7 +68,6 @@ def spel_spelen(root):
     cancel_button.pack(padx=5, pady=5, side="right")
 
 
-
 def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
