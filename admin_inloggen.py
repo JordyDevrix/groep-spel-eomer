@@ -1,6 +1,6 @@
 from tkinter import *
 import json
-
+#test
 def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     with open("admin_inlog.json") as bestand:
         inhoud = json.load(bestand)
