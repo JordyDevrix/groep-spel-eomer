@@ -7,15 +7,14 @@ def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
         print("Ingelogd")
         admin_scherm(root, menu)
-    else:
-        print("Inloggen mislukt")
+    elif input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord != inhoud['wachtwoord']:
+        melding = Label()
 
 
 
 def admin_inlogscherm(root, menu):
     for widget in root.winfo_children():
         widget.destroy()
-    print(root)
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
@@ -24,6 +23,7 @@ def admin_inlogscherm(root, menu):
 
     titel = Label(root, text="Admin login", font=("Roboto", 24))
     titel.pack(padx= 25, pady= 25)
+
 
     admin_login_frame = Frame(root, bg="grey")
     admin_login_frame.place(anchor="center", relx=0.5, rely=0.5)
@@ -64,9 +64,19 @@ def admin_scherm(root, menu):
     verhaal_button_frame = Frame(root, height=650, width=500, bg="red")
     verhaal_button_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    admin_opties = Button(verhaal_button_frame,
+    admin_verhaal1 = Button(verhaal_button_frame,
                           text="Verhaal1",
                           font="Roboto, 20",
                           width=40)
-    admin_opties.pack()
+    admin_verhaal2 = Button(verhaal_button_frame,
+                          text="Verhaal2",
+                          font="Roboto, 20",
+                          width=40)
+    admin_verhaal3 = Button(verhaal_button_frame,
+                          text="Verhaal3",
+                          font="Roboto, 20",
+                          width=40)
+    admin_verhaal1.pack()
+    admin_verhaal2.pack()
+    admin_verhaal3.pack()
     return root, menu

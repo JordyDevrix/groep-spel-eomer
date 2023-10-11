@@ -1,7 +1,19 @@
 from tkinter import *
 from admin_inloggen import *
 from character_maken import character_maken
+from pygame import mixer
+import pygame.constants
+import threading
 
+
+def music():
+    mixer.init()
+    mixer.music.load("music/lordapp vol1 preview2.mp3")
+    mixer.music.play(-1)
+    mixer.music.set_endevent(pygame.constants.USEREVENT)
+
+
+threading.Thread(target=music).start()
 # def character(root):
 #     for widget in root.winfo_children():
 #         widget.destroy()
