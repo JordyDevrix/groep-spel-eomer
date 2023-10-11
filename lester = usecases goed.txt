@@ -1,2 +1,0 @@
-lester = usecases goed
-lester = usecase diagram goed
