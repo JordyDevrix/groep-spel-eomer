@@ -1,5 +1,5 @@
 from tkinter import *
-from admin_inloggen import admin_scherm
+from admin_inloggen import *
 from character_maken import character_maken
 
 # def character(root):
@@ -91,7 +91,7 @@ def menu(root):
                             text="ADMIN MODE",
                             font="Roboto, 20",
                             width=40,
-                            command=lambda: admin_scherm(root, menu))
+                            command=lambda: admin_inlogscherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
 
