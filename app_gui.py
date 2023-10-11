@@ -4,6 +4,7 @@ from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
 import threading
+git from character_maken import naar_spel_spelen
 
 
 def music():
@@ -46,6 +47,7 @@ def settings(root):
 
 
 def spel_spelen(root):
+
     for widget in root.winfo_children():
         widget.destroy()
 
