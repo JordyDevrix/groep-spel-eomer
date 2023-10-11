@@ -73,23 +73,23 @@ def ras_kiezen(venster):
 
     frame = Frame(venster)
 
-    # Laden van afbeeldingen
+
     dwerg_image = Image.open("images/dwerg.png")
     mens_image = Image.open('images/mens.png')
 
-    # Schalen van de afbeeldingen
+
     dwerg_image = dwerg_image.resize((250, 500))
     mens_image = mens_image.resize((250, 500))
 
-    # Omzetten naar een formaat dat tkinter kan gebruiken
+
     venster.dwerg_photo = ImageTk.PhotoImage(dwerg_image)
     venster.mens_photo = ImageTk.PhotoImage(mens_image)
 
-    # Knoppen maken met afbeeldingen
-    dwerg_button = Button(venster, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1))
+
+    dwerg_button = Button(frame, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1))
     dwerg_button.place(anchor='center', relx=0.25, rely=0.4)
 
-    mens_button = Button(venster, image=venster.mens_photo, command=lambda: ras_binnen_krijgen(venster, 2))
+    mens_button = Button(frame, image=venster.mens_photo, command=lambda: ras_binnen_krijgen(venster, 2))
     mens_button.place(anchor='center', relx=0.75, rely=0.4)
 
     frame.pack()
@@ -111,6 +111,12 @@ def ras_kiezen(venster):
 
 
 
+
 def ras_binnen_krijgen(venster, type_ras):
-    if type_ras == 1:
-        eigenschap = "sterk"
+    for widget in venster.winfo_children():
+        widget.destroy()
+        if type_ras == 1:
+            eigenschap = "sterk"
+        elif type_ras == 2:
+            eigenschap = "slim"
+    label = Label(venster, text="Uw gemaakt keuzes zijn:", font=("Roboto, 24"))
