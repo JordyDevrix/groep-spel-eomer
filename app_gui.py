@@ -13,6 +13,9 @@ def music():
     mixer.music.set_endevent(pygame.constants.USEREVENT)
 
 
+print("hoi")
+
+
 threading.Thread(target=music).start()
 # def character(root):
 #     for widget in root.winfo_children():
