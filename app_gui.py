@@ -1,5 +1,5 @@
 from tkinter import *
-
+from admin_inloggen import admin_scherm
 
 def character(root):
     for widget in root.winfo_children():
@@ -15,19 +15,6 @@ def character(root):
 
 
 def settings(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
-
-    char = Frame(root)
-    char.pack()
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
-
-
-def admin_mode(root):
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -61,6 +48,7 @@ def spel_spelen(root):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
+
 
 
 def menu(root):
@@ -101,7 +89,7 @@ def menu(root):
                             text="ADMIN MODE",
                             font="Roboto, 20",
                             width=40,
-                            command=lambda: admin_mode(root))
+                            command=lambda: admin_scherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
 
