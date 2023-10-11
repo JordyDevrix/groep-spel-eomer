@@ -3,6 +3,7 @@ from admin_inloggen import *
 from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
+from PIL import Image, ImageTk
 import threading
 
 
@@ -43,6 +44,7 @@ def settings(root):
     char.pack()
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
+
 
 def tijd_locatie_weergeven(root):
     for widget in root.winfo_children():
@@ -138,9 +140,14 @@ def applicatie_gui():
     app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
 
-    menu(app_frame)
+    # bouw splashscreen code
+    splash_screen = Frame(root)
+    splash_screen.pack()
 
+    splash_text = Label(root, text="ZHONG XINA GAME STUDIOS", font="Roboto, 24")
+    splash_text.place(anchor="center", relx=0.5, rely=0.5)
 
+    root.after(4000, menu, root)
 
     root.mainloop()
 
