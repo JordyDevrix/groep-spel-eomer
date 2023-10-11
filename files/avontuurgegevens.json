@@ -1,39 +1,80 @@
 {
     "locaties": {
         "start": {
-            "beschrijving": "Je karakter betreedt de ruïnes van Isengard en moet op zoek naar aanwijzingen over Saruman's plannen. De ruïnes zijn gehuld in een spookachtige stilte, en de bomen lijken je in de gaten te houden.",
+            "beschrijving": "De lucht is donker en de lucht is vanavond mistig in Isengard .Het enige lichtbron is de schittering van de altijd aanwezig maan.  Er is een belofte van een onbekende duisternis als je blik richt op de gevreesde Orthanc in de verte.\nWelke richting loop je op?:",
             "keuzes": [
-                { "Onderzoek de ruïnes": "ruines" },
-                { "Zoek naar de boomherders": "boomherders" }
+                { "Noord": "sharku" },
+                { "Zuid": "gazmog" },
+                { "Oost": "snaga" }
             ]
         },
-        "ruines": {
-            "beschrijving": "Je doorzoekt de ruïnes, maar vindt alleen gebroken torens en verwoesting. Het lijkt erop dat Saruman's machten hier flink hebben huisgehouden.",
+        "sharku": {
+            "beschrijving": "Sharku, een goblin warrior, verschijnt plotseling en is gehuld in versleten, groezelige bepantsering en bewapend met een roestige bijl. Zijn gele ogen fonkelen met kwaadaardige intentie en zijn puntige tanden steken uit onder zijn harige snuit. Sharku staat bekend om zijn sluwe aanvallen en brute kracht.\nWat doe jij?",
             "keuzes": [
-                { "Ga verder met je zoektocht": "zoektocht" },
-                { "Keer terug naar de startlocatie": "start" }
+                { "Vecht tegen Sharku": "vechten" },
+                { "Ren weg van Sharku": "rennen" }
             ]
         },
-        "zoektocht": {
-            "beschrijving": "Terwijl je verder zoekt, hoor je geritsel in de bomen. Het zijn de boomherders, de Wachters van het Woud. Ze zijn terughoudend en wantrouwend.",
+        "gazmog": {
+            "beschrijving": "\nWat doe jij?",
             "keuzes": [
-                { "Praat met de boomherders en overtuig hen om je te helpen": "goed_einde" },
-                { "Probeer Gríma Wormtongue te vermijden en ga verder met je zoektocht": "slecht_einde" }
+                { "Vecht tegen Gazmog": "vechten" },
+                { "Ren weg van Gazmog": "rennen" }
             ]
         },
-        "goed_einde": {
-            "beschrijving": "Je hebt de boomherders overtuigd om je te helpen. Samen zoeken jullie verder en vinden belangrijke documenten die de plannen van Saruman onthullen. Je ontsnapt aan Isengard voordat de vloedgolf komt.",
-            "keuzes": [ { "Einde van het avontuur - Je hebt gewonnen!": null } ]
-        },
-        "slecht_einde": {
-            "beschrijving": "Je hebt Gríma Wormtongue niet weten te vermijden, en hij heeft je verraden aan Saruman's Uruk-hai. Je wordt gevangengenomen en vastgehouden in Orthanc.",
-            "keuzes": [ { "Einde van het avontuur - Je hebt verloren.": null } ]
-        },
-        "boomherders": {
-            "beschrijving": "Je nadert de boomherders en probeert hen te overtuigen om je te helpen. Na enige aarzeling stemmen ze toe en vertellen ze je over Saruman's kwaadaardige plannen.",
+        "snaga": {
+            "beschrijving": "\nWat doe jij?",
             "keuzes": [
-                { "Ga verder met je zoektocht": "goed_einde" },
-                { "Probeer Gríma Wormtongue te vermijden en ga verder met je zoektocht": "slecht_einde" }
+                { "Vecht tegen Snaga": "vechten" },
+                { "Ren weg van Snaga": "rennen" }
+            ]
+        },
+        "vechten": {
+            "beschrijving": "Je bent overweldigd door de vijand en kon nog net weg komen voordat het echt erg word.",
+            "keuzes": [
+                { "Ren weg van het gevecht": "rennen" }
+            ]
+        },
+        "rennen": {
+            "beschrijving": "Je rent voor wat voelt als een eeuwigheid en komt terecht bij Fangorn Forrest.\nWat doe jij?",
+            "keuzes": [
+                { "Even rust pakken.": "rusten" },
+                { "Ga eten zoeken": "eten_zoeken" },
+                { "Loop door zonder te stoppen": "loop_door" }
+            ]
+        },
+        "rusten": {
+            "beschrijving": "Je doet je ogen dicht voor 5 minuten... Opeens wordt je verrast door Saruman's Uruk-hai!!! Je wordt gevangen genomen en meegenomen naar Orthanc.",
+            "keuzes": [
+                { "Slecht Einde - Ga mee naar Orthanc": null }
+            ]
+        },
+        "eten_zoeken": {
+            "beschrijving": "In Fangorn Forest, ontmoet je een vriendelijk personage verscholen tussen de bomen. Hij geeft je een stok en vertelt je dat je de boomherders moet overtuigen om je te helpen. De stok is je sleutel tot hun vertrouwen.",
+            "keuzes": [
+                { "Ga naar de Boomherders": null }
+            ]
+        },
+        "loop_door": {
+            "beschrijving": "Je besluit verder te lopen door Fangorn Forrest. Opeens Hoor je iets in de bosjes achter je. Het zijn Boom Herders en zij staan klaar om je te vermoorden.\nWat doe jij?",
+            "keuzes": [
+                { "Vechten": "raadsel" },
+                { "Smeken": "smeken" },
+                { "Zingen": "zingen" }
+            ]
+        },
+        "raadsel": {
+            "beschrijving": "Natuurlijk verlies je tegen zo veel Boom Herders. Opeens hoor je 'Wij zullen jou sparen als je het volgende raadsel oplost. Stemloos krijt hij, Vliegt vleugelloos rond,Tandloos bijt hij,Mompelt zonder mond.'",
+            "keuzes": [
+                { "Wind ": "wind" },
+                { "Briesje ": "briesje" }
+            ]
+        },
+        "wind": {
+            "beschrijving": " ian klaar om je te vermoorden.\nWat doe jij?",
+            "keuzes": [
+                { "Wind ": "wind" },
+                { "Briesje ": "briesje" }
             ]
         }
     }
