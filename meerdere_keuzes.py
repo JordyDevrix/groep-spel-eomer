@@ -59,7 +59,7 @@ def lees_gegevens(gegevensbestand):
 
 def start_tekst_avontuur():
     root = tk.Tk()
-    TekstAvontuur(root, "avontuurgegevens.json")
+    TekstAvontuur(root, "files/avontuurgegevens.json")
     root.mainloop()
 
 
