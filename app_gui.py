@@ -96,6 +96,7 @@ def menu(root):
 
 
 def applicatie_gui():
+
     root = Tk()
     root.geometry("1400x800")
 
