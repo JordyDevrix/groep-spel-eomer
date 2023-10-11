@@ -1,0 +1,40 @@
+{
+    "locaties": {
+        "start": {
+            "beschrijving": "Je karakter betreedt de ruïnes van Isengard en moet op zoek naar aanwijzingen over Saruman's plannen. De ruïnes zijn gehuld in een spookachtige stilte, en de bomen lijken je in de gaten te houden.",
+            "keuzes": [
+                { "Onderzoek de ruïnes": "ruines" },
+                { "Zoek naar de boomherders": "boomherders" }
+            ]
+        },
+        "ruines": {
+            "beschrijving": "Je doorzoekt de ruïnes, maar vindt alleen gebroken torens en verwoesting. Het lijkt erop dat Saruman's machten hier flink hebben huisgehouden.",
+            "keuzes": [
+                { "Ga verder met je zoektocht": "zoektocht" },
+                { "Keer terug naar de startlocatie": "start" }
+            ]
+        },
+        "zoektocht": {
+            "beschrijving": "Terwijl je verder zoekt, hoor je geritsel in de bomen. Het zijn de boomherders, de Wachters van het Woud. Ze zijn terughoudend en wantrouwend.",
+            "keuzes": [
+                { "Praat met de boomherders en overtuig hen om je te helpen": "goed_einde" },
+                { "Probeer Gríma Wormtongue te vermijden en ga verder met je zoektocht": "slecht_einde" }
+            ]
+        },
+        "goed_einde": {
+            "beschrijving": "Je hebt de boomherders overtuigd om je te helpen. Samen zoeken jullie verder en vinden belangrijke documenten die de plannen van Saruman onthullen. Je ontsnapt aan Isengard voordat de vloedgolf komt.",
+            "keuzes": [ { "Einde van het avontuur - Je hebt gewonnen!": null } ]
+        },
+        "slecht_einde": {
+            "beschrijving": "Je hebt Gríma Wormtongue niet weten te vermijden, en hij heeft je verraden aan Saruman's Uruk-hai. Je wordt gevangengenomen en vastgehouden in Orthanc.",
+            "keuzes": [ { "Einde van het avontuur - Je hebt verloren.": null } ]
+        },
+        "boomherders": {
+            "beschrijving": "Je nadert de boomherders en probeert hen te overtuigen om je te helpen. Na enige aarzeling stemmen ze toe en vertellen ze je over Saruman's kwaadaardige plannen.",
+            "keuzes": [
+                { "Ga verder met je zoektocht": "goed_einde" },
+                { "Probeer Gríma Wormtongue te vermijden en ga verder met je zoektocht": "slecht_einde" }
+            ]
+        }
+    }
+}

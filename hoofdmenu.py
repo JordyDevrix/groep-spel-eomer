@@ -9,7 +9,7 @@ def hoofdmenu():
     bg = PhotoImage(file="images/LOTRBG.png")
     canvasBG = Canvas(root, width=1000,
                       height=562)
-    canvasBG.pack(fill = "both", expand = True)
+    canvasBG.pack(fill = "both")
     canvasBG.create_image(0, 0, image = bg,
                           anchor = "nw")
     canvasBG.create_text(500, 50, text= "Welkom bij Lord of The Rings Legends", font=("Arial", 28))

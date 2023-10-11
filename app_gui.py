@@ -1,33 +1,39 @@
 from tkinter import *
 
+import pygame.constants
 
-def character(root):
-    for widget in root.winfo_children():
-        widget.destroy()
+from admin_inloggen import admin_scherm
+from character_maken import character_maken
+from pygame import mixer
+import threading
 
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
 
-    char = Frame(root)
-    char.pack()
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
+def music():
+    mixer.init()
+    mixer.music.load("music/lordapp vol1 preview2.mp3")
+    mixer.music.play()
+    mixer.music.set_endevent(pygame.constants.USEREVENT)
+
+
+threading.Thread(target=music).start()
+
+
+# def character(root):
+#     for widget in root.winfo_children():
+#         widget.destroy()
+#
+#     top_bar = Frame(root, bg="grey", height=40)
+#     top_bar.pack(fill="both")
+#
+#
+#
+#     char = Frame(root)
+#     char.pack()
+#     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
+#     cancel_button.pack(padx=5, pady=5, side="right")
 
 
 def settings(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
-
-    char = Frame(root)
-    char.pack()
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
-
-
-def admin_mode(root):
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -63,6 +69,7 @@ def spel_spelen(root):
     cancel_button.pack(padx=5, pady=5, side="right")
 
 
+
 def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
@@ -75,6 +82,12 @@ def menu(root):
 
     menu_button_frame = Frame(menu_frame, height=200, width=400, bg="red")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
+    maak_character = Button(menu_button_frame,
+                            text="CREATE A CHARACTER",
+                            font="Roboto, 20",
+                            width=40,
+                            command=lambda: character_maken(root, menu))
+    maak_character.pack(padx=10, pady=10, fill="both")
 
     speel_spel = Button(menu_button_frame,
                         text="PLAY GAME",
@@ -82,13 +95,6 @@ def menu(root):
                         width=40,
                         command=lambda: spel_spelen(root))
     speel_spel.pack(padx=10, pady=10, fill="both")
-
-    maak_character = Button(menu_button_frame,
-                            text="CREATE A CHARACTER",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: character(root))
-    maak_character.pack(padx=10, pady=10, fill="both")
 
     settings_optie = Button(menu_button_frame,
                             text="SETTINGS",
@@ -101,25 +107,19 @@ def menu(root):
                             text="ADMIN MODE",
                             font="Roboto, 20",
                             width=40,
-                            command=lambda: admin_mode(root))
+                            command=lambda: admin_scherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
 
 def applicatie_gui():
+
     root = Tk()
     root.geometry("1400x800")
 
-    app_frame = Frame(root, bg="blue")
+    app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
 
-    #bouw splashscreen code
-    splash_screen = Frame(app_frame, bg="pink")
-    splash_screen.pack(fill="both", expand=True)
-
-    splash_text = Label(splash_screen, text="Tantoe veel kurk ouwe", font="Roboto, 24")
-    splash_text.place(anchor="center", relx=0.5, rely=0.5)
-
-    root.after(3000, menu, root)
+    menu(app_frame)
 
     root.mainloop()
 
