@@ -1,7 +1,6 @@
+from tkinter import *
 
-from app_gui import *
-
-def admin_mode(root):
+def admin_scherm(root,menu):
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -31,3 +30,4 @@ def admin_mode(root):
     wachtwoord_label.pack(padx=5, pady=5)
     input_wachtwoord.pack(padx=5, pady=5)
     inlog_button.pack(padx=5, pady=5)
+    return root
