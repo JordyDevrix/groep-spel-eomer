@@ -1,17 +1,20 @@
 from tkinter import *
 from admin_inloggen import admin_scherm
+from character_maken import character_maken
 
-def character(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
-
-    char = Frame(root)
-    char.pack()
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
+# def character(root):
+#     for widget in root.winfo_children():
+#         widget.destroy()
+#
+#     top_bar = Frame(root, bg="grey", height=40)
+#     top_bar.pack(fill="both")
+#
+#
+#
+#     char = Frame(root)
+#     char.pack()
+#     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
+#     cancel_button.pack(padx=5, pady=5, side="right")
 
 
 def settings(root):
@@ -63,12 +66,11 @@ def menu(root):
 
     menu_button_frame = Frame(menu_frame, height=200, width=400, bg="red")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
-
     maak_character = Button(menu_button_frame,
                             text="CREATE A CHARACTER",
                             font="Roboto, 20",
                             width=40,
-                            command=lambda: character(root))
+                            command=lambda: character_maken(root, menu))
     maak_character.pack(padx=10, pady=10, fill="both")
 
     speel_spel = Button(menu_button_frame,
