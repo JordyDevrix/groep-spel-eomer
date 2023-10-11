@@ -1,7 +1,19 @@
 from tkinter import *
-from admin_inloggen import admin_scherm
+from admin_inloggen import *
 from character_maken import character_maken
+from pygame import mixer
+import pygame.constants
+import threading
 
+
+def music():
+    mixer.init()
+    mixer.music.load("music/lordapp vol1 preview2.mp3")
+    mixer.music.play(-1)
+    mixer.music.set_endevent(pygame.constants.USEREVENT)
+
+
+threading.Thread(target=music).start()
 # def character(root):
 #     for widget in root.winfo_children():
 #         widget.destroy()
@@ -91,7 +103,7 @@ def menu(root):
                             text="ADMIN MODE",
                             font="Roboto, 20",
                             width=40,
-                            command=lambda: admin_scherm(root, menu))
+                            command=lambda: admin_inlogscherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
 
@@ -104,6 +116,8 @@ def applicatie_gui():
     app_frame.pack(fill="both", expand=True)
 
     menu(app_frame)
+
+
 
     root.mainloop()
 

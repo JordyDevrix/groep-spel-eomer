@@ -2,6 +2,8 @@ import json
 import tkinter
 from tkinter import *
 
+from PIL import Image, ImageTk
+
 
 
 
@@ -69,20 +71,52 @@ def ras_kiezen(venster):
     for widget in venster.winfo_children():
         widget.destroy()
 
-    label = Label(venster, text="Kies uw ras")
-    label.place(anchor= 'center', relx= 0.5, rely= 0.45)
+    frame = Frame(venster)
 
 
-    elf_foto = PhotoImage(file='images/elf2.0.png')
-    ras_kiezen_button_elf = Label(image=elf_foto)
-    ras_kiezen_button_elf.place(anchor= 'center', relx= 0, rely= 0 )
-
-    # ras_kiezen_button_dwerg  =
-    #
-    # ras_kiezen_button_hobbit =
-    #
-    # ras_kiezen_button_mens =
+    dwerg_image = Image.open("images/dwerg.png")
+    mens_image = Image.open('images/mens.png')
 
 
+    dwerg_image = dwerg_image.resize((250, 500))
+    mens_image = mens_image.resize((250, 500))
 
 
+    venster.dwerg_photo = ImageTk.PhotoImage(dwerg_image)
+    venster.mens_photo = ImageTk.PhotoImage(mens_image)
+
+
+    dwerg_button = Button(frame, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1))
+    dwerg_button.place(anchor='center', relx=0.25, rely=0.4)
+
+    mens_button = Button(frame, image=venster.mens_photo, command=lambda: ras_binnen_krijgen(venster, 2))
+    mens_button.place(anchor='center', relx=0.75, rely=0.4)
+
+    frame.pack()
+
+    tekst_dwerg = Label(venster, text="Dwerg", font=("Roboto, 24"))
+    tekst_dwerg.place(anchor='center', relx=0.25, rely=0.75)
+
+    tekst_mens = Label(venster, text="Mens", font=("Roboto, 24"))
+    tekst_mens.place(anchor='center', relx=0.75, rely=0.75)
+
+    tekst_mens_beschrijving = Label(venster, text="Eigenschap: Slim", font=("Roboto, 24"))
+    tekst_mens_beschrijving.place(anchor='center', relx=0.75, rely=0.8)
+
+    tekst_dwerg_beschrijving = Label(venster, text="Eigenschap: Sterk", font=("Roboto, 24"))
+    tekst_dwerg_beschrijving.place(anchor='center', relx=0.25, rely=0.8)
+
+    tekst = Label(venster, text="Kies uw Ras", font=('Roboto, 24'))
+    tekst.pack()
+
+
+
+
+def ras_binnen_krijgen(venster, type_ras):
+    for widget in venster.winfo_children():
+        widget.destroy()
+        if type_ras == 1:
+            eigenschap = "sterk"
+        elif type_ras == 2:
+            eigenschap = "slim"
+    label = Label(venster, text="Uw gemaakt keuzes zijn:", font=("Roboto, 24"))
