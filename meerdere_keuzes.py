@@ -1,46 +1,67 @@
 import json
+import tkinter as tk
+
+
+class TekstAvontuur:
+    def __init__(self, root, gegevensbestand):
+        self.gegevens = lees_gegevens(gegevensbestand)
+        self.huidige_locatie = "start"
+
+        root.title("Tekstavontuur")
+        root.geometry("1400x800")
+
+        top_bar = tk.Frame(root, bg="grey", height=40)
+        top_bar.pack(fill="both")
+
+        self.beschrijving_label = tk.Label(root, text="", wraplength=800, padx=10, pady=10)
+        self.beschrijving_label.place(anchor="center", relx=0.5, rely=0.9)
+
+        self.button_frame = tk.Frame(root)
+        self.button_frame.place(anchor="center", relx=0.5, rely=0.5)
+
+        self.keuze_buttons = []
+
+        self.update_interface()
+
+        root.mainloop()
+
+    def update_interface(self):
+        locatie_data = self.gegevens["locaties"][self.huidige_locatie]
+        self.beschrijving_label.config(text=locatie_data["beschrijving"])
+
+        for button in self.keuze_buttons:
+            button.destroy()
+
+        keuzes = locatie_data["keuzes"]
+
+        for i, keuze in enumerate(keuzes):
+            keuze_text = list(keuze.keys())[0]
+            nieuwe_locatie = list(keuze.values())[0]
+            button = tk.Button(self.button_frame, width=47, height=30, bg="grey", text=keuze_text,
+                               command=lambda loc=nieuwe_locatie: self.kies_optie(loc))
+            button.grid(padx=20, pady=5, column=i, row=0)
+            self.keuze_buttons.append(button)
+
+    def kies_optie(self, nieuwe_locatie):
+        self.huidige_locatie = nieuwe_locatie
+        if nieuwe_locatie is not None:
+            self.update_interface()
+        else:
+            self.beschrijving_label.config(text="Tot ziens!")
+            for button in self.keuze_buttons:
+                button.destroy()
 
 
 def lees_gegevens(gegevensbestand):
-    with open(gegevensbestand, 'r') as f:
-        gegevens = json.load(f)
-    return gegevens
+    with open(gegevensbestand, 'r') as bestand:
+        return json.load(bestand)
 
 
-def speel(gegevens):
-    huidige_locatie = "start"
-
-    print("Welkom bij het tekstavontuur!")
-
-    while True:
-        locatie_data = gegevens["locaties"][huidige_locatie]
-        print("\n" + locatie_data["beschrijving"])
-        keuzes = locatie_data["keuzes"]
-
-        if not keuzes:
-            print("Dit is het einde van het avontuur.")
-            break
-
-        print("Beschikbare keuzes:")
-        for i, keuze in enumerate(keuzes):
-            print(f"{i + 1}. {list(keuze.keys())[0]}")
-
-        keuze_nummer = input("Voer het nummer van je keuze in: ")
-        try:
-            keuze_nummer = int(keuze_nummer)
-            if 1 <= keuze_nummer <= len(keuzes):
-                nieuwe_locatie = list(keuzes[keuze_nummer - 1].values())[0]
-                if nieuwe_locatie is not None:
-                    huidige_locatie = nieuwe_locatie
-                else:
-                    print("Tot ziens!")
-                    break
-            else:
-                print("Ongeldige keuze. Probeer opnieuw.")
-        except ValueError:
-            print("Ongeldige invoer. Voer het nummer van je keuze in.")
+def start_tekst_avontuur():
+    root = tk.Tk()
+    TekstAvontuur(root, "avontuurgegevens.json")
+    root.mainloop()
 
 
-# if __name__ == "__main__":
-#     gegevens = lees_gegevens("files/avontuurgegevens.json")
-#     speel(gegevens)
+if __name__ == "__main__":
+    start_tekst_avontuur()
