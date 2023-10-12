@@ -24,6 +24,7 @@ def admin_inlogscherm(root, menu):
     frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
 
+
     titel = Label(frame, text="Admin login", font=("Roboto", 24), bg="#ded9ee")
     titel.pack(padx= 25, pady= 25)
 
@@ -103,6 +104,7 @@ def verhaal_1(root, menu):
     frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
 
+
     titel = Label(frame, text="Verhaal 1", font="Roboto, 24", bg="#ded9ee")
     ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20", bg="#ded9ee")
     titel.pack(padx=25, pady=25)
@@ -112,10 +114,11 @@ def verhaal_1(root, menu):
     with open("files/avontuurgegevens.json") as bestand:
         inhoud = json.load(bestand)
         for onderdelen in inhoud['locaties']:
-            if inhoud['locaties'][onderdelen]['einde'] == "goed":
+            if inhoud['locaties'][onderdelen]['einde'] == 'goed':
                 for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
                         keuzes = Label(verhaal_keuzes_frame,
-                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee")
+                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee",
+                                       font="Roboto, 5")
                         keuzes.pack()
             else:
                 pass

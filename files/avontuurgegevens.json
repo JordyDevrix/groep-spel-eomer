@@ -90,7 +90,8 @@
             "beschrijving": "Je stem zo slecht dat de boom herders klaar zijn om je te doden. Eentje steekt zijn hand op om je neer te steken. Maar wacht! Gandalf verschijnt om je te redden. \"You shall not kill!\" Gilt  hij. Alles komt tot een stil stand. \"Jullie hebben elkaar nodig anders wint Saruman en zijn duistere wezens en dan is alles als wij het weten over\", zegt Gandalf. De boom herders besluiten om je te helpenl.",
             "keuzes": [
                 { "Ga naar gandalf" : "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "smeken_mens": {
             "beschrijving": "Je gaat op je knien zitten en smeekt, \"Alstublieft ik heb niemand anders die me kan helpen. De veradelijke worm tongue zit vast al achter me aan. Als Saruman wint komt hij ook voor het bos en alle wezens die hier wonen\". De boomherders zijn een vreedzaam volk ze beseffen dat zij misschien overdreven reageerden. Ze realiseren hoe belangerijk het is dat Saruman niet wint. Ze kiezen om je te helpen.",
@@ -201,7 +202,7 @@
                 { "Goed einde - Documenten Bemachtigd" : null },
                 { "Probeer Opnieuw" : "start" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         }
     }
 }
