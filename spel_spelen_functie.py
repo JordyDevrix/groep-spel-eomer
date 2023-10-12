@@ -6,15 +6,13 @@ def verhaal_kiezen(root, menu):
         widget.destroy()
 
 
-    # button_tl = Button(root, text="Tijd/Locatie", command=lambda: tijd_locatie_weergeven(root))
-    # button_tl.place(x=20, y=750)
-    #
-    # root.mainloop()
-    # for widget in root.winfo_children():
-    #     widget.destroy()
 
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
+
+
+    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
+    cancel_button.pack(padx=5, pady=5, side="right")
 
     avonturen_frame = Frame(root)
     avonturen_frame.place(anchor="center", relx=0.5, rely=0.5)
@@ -37,12 +35,10 @@ def verhaal_kiezen(root, menu):
 
 
 
-    # cancel_button = Button(top_bar, width=3, height=
-    # 1, text="X", command=lambda: menu(root))
-    # cancel_button.pack(padx=5, pady=5, side="right")
+
     def verhaal_een(venster):
+        from meerdere_keuzes import start_tekst_avontuur
         for widget in venster.winfo_children():
             widget.destroy()
 
-        test_label = Label(venster, text="Hallo")
-        test_label.pack()
+        verhaal_een_button = Button(venster, text="Verhaal 1", font="Roboto, 24", command=start_tekst_avontuur(venster))
