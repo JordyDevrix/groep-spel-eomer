@@ -1,6 +1,6 @@
 from tkinter import *
 import json
-#test
+
 def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     with open("admin_inlog.json") as bestand:
         inhoud = json.load(bestand)
@@ -100,6 +100,14 @@ def verhaal_1(root, menu):
 
     verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
+    with open("files/avontuurgegevens.json") as bestand:
+        inhoud = json.load(bestand)
+        for onderdelen in inhoud['locaties']:
+            for i in inhoud['locaties'][onderdelen]['keuzes']:
+                print(i)
+
+
+
 
 def verhaal_2(root, menu):
     for widget in root.winfo_children():

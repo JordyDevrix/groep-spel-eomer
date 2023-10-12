@@ -1,5 +1,6 @@
 import json
 import tkinter as tk
+from tkinter import *
 
 
 class TekstAvontuur:
@@ -57,10 +58,11 @@ def lees_gegevens(gegevensbestand):
         return json.load(bestand)
 
 
-def start_tekst_avontuur():
-    root = tk.Tk()
+def start_tekst_avontuur(root):
+    for widget in root.winfo_children():
+        widget.destroy()
     TekstAvontuur(root, "files/avontuurgegevens.json")
-    root.mainloop()
+
 
 
 if __name__ == "__main__":
