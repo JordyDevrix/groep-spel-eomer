@@ -5,6 +5,7 @@ from pygame import mixer
 import pygame.constants
 from PIL import Image, ImageTk
 import threading
+git from character_maken import naar_spel_spelen
 
 
 def music():
@@ -62,6 +63,7 @@ def tijd_locatie_weergeven(root):
     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
     close_button.grid(row=1, column=0)
 def spel_spelen(root):
+
     for widget in root.winfo_children():
         widget.destroy()
 
