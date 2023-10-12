@@ -4,7 +4,7 @@ from character_maken import character_maken
 def main():
     hoofdmenu()
     print("hey")
-
+    print("hoi")
 
 
 if __name__ == '__main__':

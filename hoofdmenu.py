@@ -7,8 +7,8 @@ def hoofdmenu():
 
 #---------------------ACHTERGROND/TEKST--------------------------
     bg = PhotoImage(file="images/LOTRBG.png")
-    canvasBG = Canvas(root, width=1000,
-                      height=562)
+    canvasBG = Canvas(root, width=1080,
+                      height=1920)
     canvasBG.pack(fill = "both")
     canvasBG.create_image(0, 0, image = bg,
                           anchor = "nw")
