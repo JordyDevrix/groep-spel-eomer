@@ -62,6 +62,8 @@ def tijd_locatie_weergeven(root):
 
     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
     close_button.grid(row=1, column=0)
+
+
 def spel_spelen(root):
 
     for widget in root.winfo_children():
