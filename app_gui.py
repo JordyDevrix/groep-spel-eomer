@@ -111,6 +111,7 @@ def menu(root):
 def applicatie_gui():
     root = Tk()
     root.geometry("1400x800")
+    root.resizable(False, False)
 
 
     app_frame = Frame(root)
