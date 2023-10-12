@@ -26,16 +26,16 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
 
         if "Dwerg" in keuze_text:
             if het_ras_van_de_speler_is_dwerg:
-                button = tk.Button(button_frame, width=40, height=20, bg="grey", text=keuze_text,font="Roboto,18",
+                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
                                    command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
                 button.grid(padx=20, pady=5, column=i, row=0)
         elif "Mens" in keuze_text:
             if het_ras_van_de_speler_is_mens:
-                button = tk.Button(button_frame, width=40, height=20, bg="grey", text=keuze_text,font="Roboto,18",
+                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
                                    command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
                 button.grid(padx=20, pady=5, column=i, row=0)
         else:
-            button = tk.Button(button_frame, width=40, height=20, bg="grey", text=keuze_text,font="Roboto,18",
+            button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
                                command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
             button.grid(padx=20, pady=5, column=i, row=0)
 
