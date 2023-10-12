@@ -1,7 +1,7 @@
 {
     "locaties": {
         "start": {
-            "beschrijving": "De lucht is donker en de lucht is vanavond mistig in Isengard. Het enige lichtbron is de schittering van de altijd aanwezig maan. Er is een belofte van een onbekende duisternis als je blik richt op de gevreesde Orthanc in de verte. Welke richting loop je op?",
+            "beschrijving": "De hemel is donker en de lucht is vanavond mistig in Isengard. Het enige lichtbron is de schittering van de altijd aanwezig maan. Er is een belofte van een onbekende duisternis als je blik richt op de gevreesde Orthanc in de verte. Welke richting loop je op?",
             "keuzes": [
                 { "Noord": "sharku" },
                 { "Zuid": "gazmog" },
