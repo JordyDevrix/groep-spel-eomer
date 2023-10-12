@@ -8,7 +8,6 @@ class TestGUIApp(unittest.TestCase):
         self.root.geometry("800x600")
 
     def test_admin_login_success(self):
-        # Test succesvolle admin-inlog
         admin_inlogscherm(self.root, lambda root: None)
         username_entry = self.root.children['!frame'].children['!frame'].children['!entry']
         password_entry = self.root.children['!frame'].children['!entry2']
@@ -19,7 +18,6 @@ class TestGUIApp(unittest.TestCase):
         self.assertNotIn('login_frame', self.root.children)
 
     def test_admin_login_fail(self):
-        # Test mislukte admin-inlog met onjuist wachtwoord
         admin_inlogscherm(self.root, lambda root: None)
         username_entry = self.root.children['!frame'].children['!frame'].children['!entry']
         password_entry = self.root.children['!frame'].children['!entry2']
@@ -30,7 +28,6 @@ class TestGUIApp(unittest.TestCase):
         self.assertIn('login_frame', self.root.children)
 
     def test_navigation_between_screens(self):
-        # Test navigatie tussen schermen
         admin_scherm(self.root, lambda root: None)
         admin_verhaal1_button = self.root.children['!frame'].children['!button']
         admin_verhaal1_button.invoke()
