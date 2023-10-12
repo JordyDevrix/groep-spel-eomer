@@ -49,7 +49,7 @@ def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, bu
             button.destroy()
 
 
-def start_tekst_avontuur(root, bestand):
+def start_tekst_avontuur(root, bestand, menu):
 
     gegevens = lees_gegevens(bestand)
 
@@ -71,7 +71,7 @@ def start_tekst_avontuur(root, bestand):
     top_bar = tk.Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
-    cancel_button = tk.Button(top_bar, width=3, height=1, text="X")
+    cancel_button = tk.Button(top_bar, width=3, height=1, text="X", command=lambda : menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
 
     beschrijving_label = tk.Label(root, justify="left", text="", wraplength=800, padx=10, pady=10)

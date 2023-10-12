@@ -7,6 +7,9 @@ def character_maken(venster, menu):
     for widget in venster.winfo_children():
         widget.destroy()
 
+
+
+
     top_bar = Frame(venster, bg="grey", height=40)
     top_bar.pack(fill="both")
 
@@ -37,6 +40,11 @@ def character_ophalen(name):
 
 def naam_ophalen(venster, name_input, menu):
     naam_character = name_input.get()
+    if naam_character == "":
+
+        character_maken(venster, menu)
+        label = Label(venster, text="Dit is niet geldig")
+        label.pack()
     name_input.delete(0, tkinter.END)
 
     label_huidge_naam = Label(venster, text= f"Uw huidige naam: {naam_character}")
