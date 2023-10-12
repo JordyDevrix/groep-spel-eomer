@@ -4,6 +4,7 @@ from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
 from PIL import Image, ImageTk
+from _thread import start_new_thread
 import threading
 
 
@@ -11,6 +12,13 @@ def music():
     mixer.init()
     mixer.music.load("music/lordapp vol1 preview2.mp3")
     mixer.music.play(-1)
+    mixer.music.set_endevent(pygame.constants.USEREVENT)
+
+
+def introsound():
+    mixer.init()
+    mixer.music.load("music/introsound.mp3")
+    mixer.music.play()
     mixer.music.set_endevent(pygame.constants.USEREVENT)
 
 
@@ -87,7 +95,6 @@ def menu(root):
 
 
 def applicatie_gui():
-    threading.Thread(target=music).start()
 
     root = Tk()
     root.geometry("1400x800")
@@ -104,5 +111,6 @@ def applicatie_gui():
     splash_text.place(anchor="center", relx=0.5, rely=0.5)
 
     root.after(4000, menu, root)
+    threading.Thread(target=introsound).start()
 
     root.mainloop()
