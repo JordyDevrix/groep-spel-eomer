@@ -57,6 +57,10 @@ def naam_ophalen(venster, name_input, menu):
         character_maken(venster, menu)
         label = Label(venster, text="Dit is niet geldig")
         label.pack()
+    elif naam_character == "Frodo Baggings":
+        label = Label(venster, text="It must often be so, Sam, when things are in danger: some one has to "
+                                    "give them up, lose them, so that others may keep them", font="Roboto, 16")
+        label.pack()
     name_input.delete(0, tkinter.END)
 
     label_huidge_naam = Label(venster, text= f"Uw huidige naam: {naam_character}")
