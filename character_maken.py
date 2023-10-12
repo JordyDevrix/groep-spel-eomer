@@ -51,6 +51,13 @@ def ras_kiezen(venster, menu, name_inhoud):
 
     frame = Frame(venster)
 
+    top_bar = Frame(venster, bg="grey", height=40)
+    top_bar.pack(fill="both")
+
+
+
+    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(venster))
+    cancel_button.pack(padx=5, pady=5, side="right")
 
     dwerg_image = Image.open("images/dwerg.png")
     mens_image = Image.open('images/mens.png')
@@ -84,6 +91,7 @@ def ras_kiezen(venster, menu, name_inhoud):
 
     tekst_dwerg_eigenschap = Label(venster, text="Eigenschap: Sterk", font="Roboto, 24")
     tekst_dwerg_eigenschap.place(anchor='center', relx=0.25, rely=0.8)
+
 
     tekst = Label(venster, text="Kies uw Ras", font='Roboto, 24')
     tekst.pack()
