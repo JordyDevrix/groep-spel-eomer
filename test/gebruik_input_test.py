@@ -1,7 +1,8 @@
 import unittest
 from unittest.mock import MagicMock
 from tkinter import Tk, Frame, Button, Entry, Label
-from character_maken import character_maken, naam_ophalen, ras_kiezen, ras_binnen_krijgen, character_gegevens_wegschrijven
+from character_maken import naam_ophalen, ras_kiezen, ras_binnen_krijgen, character_gegevens_wegschrijven
+
 
 class TestCharacterFunctions(unittest.TestCase):
 
