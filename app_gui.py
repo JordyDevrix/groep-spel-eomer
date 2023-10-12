@@ -80,7 +80,6 @@ def menu(root):
 
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
-
     bg_label = Label(root, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
 
@@ -88,8 +87,6 @@ def menu(root):
 
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
-
-
 
     menu_button_frame = Frame(height=200, width=400, bg="Green")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
@@ -108,11 +105,11 @@ def menu(root):
 
     root.mainloop()
 
+
 def applicatie_gui():
     root = Tk()
     root.geometry("1400x800")
     root.resizable(False, False)
-
 
     app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
