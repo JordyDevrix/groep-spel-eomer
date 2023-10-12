@@ -17,7 +17,7 @@ def verhaal_kiezen(root, menu):
     avonturen_frame = Frame(root)
     avonturen_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    avontuur_een = Button(root,width=50, height=30, bg='grey', text="Verhaal 1",command=lambda : verhaal_een(root))
+    avontuur_een = Button(root,width=50, height=30, bg='grey', text="Avontuur naar",command=lambda : verhaal_een(root))
     avontuur_een.place(anchor='center', relx=0.25, rely=0.5)
 
 

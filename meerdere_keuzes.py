@@ -11,6 +11,7 @@ class TekstAvontuur:
         root.title("Tekstavontuur")
         root.geometry("1400x800")
 
+
         top_bar = tk.Frame(root, bg="grey", height=40)
         top_bar.pack(fill="both")
 
