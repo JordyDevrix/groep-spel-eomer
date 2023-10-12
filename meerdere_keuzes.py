@@ -1,6 +1,8 @@
 import json
 import tkinter as tk
 
+gemaakte_keuzes = []
+
 
 def lees_gegevens(gegevensbestand):
     with open(gegevensbestand, 'r') as bestand:
@@ -40,12 +42,17 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
 
 
 def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, button_frame):
+    locatie_data = gegevens["locaties"][huidige_locatie]
+    keuzes = locatie_data["keuzes"]
+    keuze_text = [list(keuze.keys())[0] for keuze in keuzes if list(keuze.values())[0] == nieuwe_locatie][0]
+    gemaakte_keuzes.append(keuze_text)
+
     huidige_locatie = nieuwe_locatie
     if nieuwe_locatie is not None:
         update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
     else:
-        beschrijving_label.config(text="Tot ziens!")
         for button in button_frame.winfo_children():
+            beschrijving_label.config(text=gemaakte_keuzes)
             button.destroy()
 
 
