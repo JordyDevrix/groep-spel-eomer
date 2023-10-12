@@ -115,8 +115,6 @@ def verhaal_1(root, menu):
                 pass
 
 
-
-
 def verhaal_2(root, menu):
     for widget in root.winfo_children():
         widget.destroy()

@@ -2,7 +2,7 @@ import json
 
 
 def main():
-    file = open("charact.json")
+    file = open("files/charact.json")
 
     data = json.load(file)
     enter_key = "loc1"
