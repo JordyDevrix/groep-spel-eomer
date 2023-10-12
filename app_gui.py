@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import *
 from admin_inloggen import *
 from character_maken import character_maken
@@ -51,14 +52,13 @@ def menu(root):
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
-    image = Image.open("images/LOTRBG.png")
-    achtergrond = ImageTk.PhotoImage(image)
+    achtergrond = PhotoImage(file="images/LOTRBG.png")
 
     menu_frame = Frame(root, bg="grey")
     menu_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
     menu_achtergrond = Label(menu_frame, image=achtergrond)
-    menu_achtergrond.pack(fill="both", expand=True)
+    menu_achtergrond.place(x=0, y=0, relheight=1, relwidth=1)
 
     menu_button_frame = Frame(menu_achtergrond, height=200, width=400, bg="red")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
