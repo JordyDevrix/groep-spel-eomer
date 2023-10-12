@@ -63,9 +63,9 @@ def naam_ophalen(venster, name_input, menu):
         label.pack()
     name_input.delete(0, tkinter.END)
 
-    label_huidge_naam = Label(venster, text= f"Uw huidige naam: {naam_character}")
+    label_huidge_naam = Label(venster, text= f"Uw gekozen naam: {naam_character}", font="Roboto, 17")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
-    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 10", command=lambda : ras_kiezen(venster, menu, naam_character))
+    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 17", command=lambda : ras_kiezen(venster, menu, naam_character))
     doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.6)
     venster.mainloop()
 
@@ -148,7 +148,7 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
     bg_label.place(relwidth=1, relheight=1)
     label_je_hebt_een_character = Label(venster, text="Je hebt een character!", font="Roboto, 24")
     label_je_hebt_een_character.place(anchor= 'center', relx=0.5, rely=0.4)
-    doorgaan_naar_kiezen_verhaal = Button(venster, text="Verhaal kiezen", font="Roboto, 24", command=lambda : verhaal_kiezen(venster, menu))
+    doorgaan_naar_kiezen_verhaal = Button(venster,width=12, height=1 ,text="Verhaal kiezen", font="Roboto, 24", command=lambda : verhaal_kiezen(venster, menu))
     doorgaan_naar_kiezen_verhaal.place(anchor='center', relx=0.5, rely=0.5)
 
     top_bar = Frame(venster, bg="grey", height=40)
