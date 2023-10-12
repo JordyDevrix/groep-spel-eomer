@@ -21,20 +21,20 @@ def admin_inlogscherm(root, menu):
     cancel_button = Button(top_bar, width=3, height=1, text="X", command= lambda : menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
 
-    frame = Frame(root, bg="#7c8184")
+    frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
 
-    titel = Label(frame, text="Admin login", font=("Roboto", 24), bg="#7c8184")
+    titel = Label(frame, text="Admin login", font=("Roboto", 24), bg="#ded9ee")
     titel.pack(padx= 25, pady= 25)
 
 
-    admin_login_frame = Frame(frame, bg="#7c8184")
+    admin_login_frame = Frame(frame, bg="#ded9ee")
     admin_login_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    gebruikersnaam_label = Label(admin_login_frame, text="Gebruikersnaam", bg="#7c8184")
+    gebruikersnaam_label = Label(admin_login_frame, text="Gebruikersnaam", bg="#ded9ee")
     input_gebruikersnaam = Entry(admin_login_frame, bd=5)
 
-    wachtwoord_label = Label(admin_login_frame, text="Wachtwoord", bg="#7c8184")
+    wachtwoord_label = Label(admin_login_frame, text="Wachtwoord", bg="#ded9ee")
     input_wachtwoord = Entry(admin_login_frame, bd=5, show="*")
 
     inlog_button = Button(admin_login_frame, width=25, height=2, text="Log in",
@@ -61,13 +61,13 @@ def admin_scherm(root, menu):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
-    frame = Frame(root, bg="#7c8184")
+    frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
-    titel = Label(frame, text="Admin portaal", font=("Roboto", 24), bg="#7c8184")
+    titel = Label(frame, text="Admin portaal", font=("Roboto", 24), bg="#ded9ee")
     titel.pack(padx=25, pady=25)
 
 
-    verhaal_button_frame = Frame(frame, height=650, width=500, bg="#8e75e4")
+    verhaal_button_frame = Frame(frame, height=650, width=500, bg="#ded9ee")
     verhaal_button_frame.place(anchor="center", relx=0.5, rely=0.5)
 
     admin_verhaal1 = Button(verhaal_button_frame,
@@ -100,14 +100,14 @@ def verhaal_1(root, menu):
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: admin_scherm(root, menu))
     cancel_button.pack(padx=5, pady=5, side="right")
 
-    frame = Frame(root, bg="#7c8184")
+    frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
 
-    titel = Label(frame, text="Verhaal 1", font="Roboto, 24", bg="#7c8184")
-    ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20", bg="#7c8184")
+    titel = Label(frame, text="Verhaal 1", font="Roboto, 24", bg="#ded9ee")
+    ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20", bg="#ded9ee")
     titel.pack(padx=25, pady=25)
     ondertitel.pack()
-    verhaal_keuzes_frame = Frame(frame, height=400, width=500, bg="#7c8184")
+    verhaal_keuzes_frame = Frame(frame, height=400, width=500, bg="#ded9ee")
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
     with open("files/avontuurgegevens.json") as bestand:
         inhoud = json.load(bestand)
@@ -115,7 +115,7 @@ def verhaal_1(root, menu):
             if inhoud['locaties'][onderdelen]['einde'] == "goed":
                 for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
                         keuzes = Label(verhaal_keuzes_frame,
-                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#7c8184")
+                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee")
                         keuzes.pack()
             else:
                 pass
