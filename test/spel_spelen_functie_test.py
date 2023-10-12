@@ -2,8 +2,7 @@ import unittest
 import tkinter as tk
 from unittest.mock import patch
 
-# Importeer de functies die we willen testen
-from groep_12_eomer/spel_spelen_functie.py import main, tijd_locatie_weergeven
+from spel_spelen_functie import main, tijd_locatie_weergeven
 
 
 class TestMijnCode(unittest.TestCase):
