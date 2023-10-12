@@ -17,7 +17,7 @@ def character_maken(venster, menu):
     cancel_button.pack(padx=5, pady=5, side="right")
 
     naam_input_frame = Frame(venster)
-    naam_input_frame.place(anchor='center', relx=0.5, rely=0.5)
+    naam_input_frame.place(anchor='center', relx=0.5, rely=0.50)
 
     label = Label(naam_input_frame, text="Vul uw naam in ", font="Roboto, 24")
     label.grid(row=0, column=0)
