@@ -14,7 +14,8 @@
             "keuzes": [
                 { "Vecht tegen Sharku (Dwerg)": "vechten_dwerg_vijand_1" },
                 { "Vecht tegen Sharku (Mens)": "vechten_mens_vijand_1" },
-                { "Ren weg van Sharku": "rennen" }
+                { "Ren weg van Sharku": "rennen"}
+
             ],
             "einde": "goed"
         },
