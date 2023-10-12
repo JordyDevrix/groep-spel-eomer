@@ -2,7 +2,7 @@ from tkinter import *
 import json
 
 def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
-    with open("admin_inlog.json") as bestand:
+    with open("files/admin_inlog.json") as bestand:
         inhoud = json.load(bestand)
     if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
         print("Ingelogd")
@@ -93,12 +93,15 @@ def verhaal_1(root, menu):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: admin_scherm(root, menu))
     cancel_button.pack(padx=5, pady=5, side="right")
-    titel = Label(root, text="Verhaal 1", font="Roboto, 24")
-    ondertitel = Label(root, text="Goede keuzes:", font="Roboto, 20")
+
+    frame = Frame(root, bg="grey")
+    frame.pack(fill="both", expand=True)
+
+    titel = Label(frame, text="Verhaal 1", font="Roboto, 24")
+    ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20")
     titel.pack(padx=25, pady=25)
     ondertitel.pack()
-
-    verhaal_keuzes_frame = Frame(root, height=400, width=500)
+    verhaal_keuzes_frame = Frame(frame, height=400, width=500)
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
     with open("files/avontuurgegevens.json") as bestand:
         inhoud = json.load(bestand)
