@@ -4,6 +4,9 @@ import tkinter as tk
 
 class TekstAvontuur:
     def __init__(self, root, gegevensbestand):
+        bg_image = tk.PhotoImage(file="images/Lord of the rings background (1).png" )
+        bg_label= tk.Label(root, image= bg_image)
+        bg_label.place(x=0, y=0)
         self.gegevens = lees_gegevens(gegevensbestand)
         self.huidige_locatie = "start"
 
