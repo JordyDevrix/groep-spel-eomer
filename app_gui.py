@@ -44,46 +44,15 @@ def tijd_locatie_weergeven(root):
     close_button.grid(row=1, column=0)
 
 
-def spel_spelen(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    button_tl = Button(root, text="Tijd/Locatie", command=lambda: tijd_locatie_weergeven(root))
-    button_tl.place(x=20, y=750)
-
-    root.mainloop()
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
-
-    avonturen_frame = Frame(root)
-    avonturen_frame.place(anchor="center", relx=0.5, rely=0.5)
-
-    avontuur_een = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    avontuur_een.grid(padx=20, pady=5, column=0, row=0)
-
-    avontuur_twee = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    avontuur_twee.grid(padx=20, pady=5, column=1, row=0)
-
-    avontuur_drie = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    avontuur_drie.grid(padx=20, pady=5, column=2, row=0)
-
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
-
-
 def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
 
-    threading.Thread(target=music).start()
-
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
-    achtergrond = ImageTk.PhotoImage(Image.open("images/LOTRBG.png"))
+    image = Image.open("images/LOTRBG.png")
+    achtergrond = ImageTk.PhotoImage(image)
 
     menu_frame = Frame(root, bg="grey")
     menu_frame.pack(fill="both", expand=True, padx=5, pady=5)
@@ -99,13 +68,6 @@ def menu(root):
                             width=40,
                             command=lambda: character_maken(root, menu))
     maak_character.pack(padx=10, pady=10, fill="both")
-
-    speel_spel = Button(menu_button_frame,
-                        text="PLAY GAME",
-                        font="Roboto, 20",
-                        width=40,
-                        command=lambda: spel_spelen(root))
-    speel_spel.pack(padx=10, pady=10, fill="both")
 
     settings_optie = Button(menu_button_frame,
                             text="SETTINGS",
@@ -135,6 +97,8 @@ def applicatie_gui():
 
     splash_text = Label(root, text="ZHONG XINA GAME STUDIOS", font="Roboto, 24")
     splash_text.place(anchor="center", relx=0.5, rely=0.5)
+    # start game muziek
+    threading.Thread(target=music).start()
 
     root.after(4000, menu, root)
 
