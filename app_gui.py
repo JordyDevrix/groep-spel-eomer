@@ -27,21 +27,21 @@ def settings(root):
     cancel_button.pack(padx=5, pady=5, side="right")
 
 
-def tijd_locatie_weergeven(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    tijd = "10:12"
-    locatie = "Rivendel"
-
-    frame1 = Frame(root, width=300, height=120, highlightbackground="blue", highlightthickness=6)
-    frame1.place(x=600, y=340)
-
-    lt_label = Label(frame1, text=f"{tijd} en {locatie}", font=("Roboto", 24))
-    lt_label.grid(row=0, column=0, pady=20)
-
-    close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
-    close_button.grid(row=1, column=0)
+# def tijd_locatie_weergeven(root):
+#     for widget in root.winfo_children():
+#         widget.destroy()
+#
+#     tijd = "10:12"
+#     locatie = "Rivendel"
+#
+#     frame1 = Frame(root, width=300, height=120, highlightbackground="blue", highlightthickness=6)
+#     frame1.place(x=600, y=340)
+#
+#     lt_label = Label(frame1, text=f"{tijd} en {locatie}", font=("Roboto", 24))
+#     lt_label.grid(row=0, column=0, pady=20)
+#
+#     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
+#     close_button.grid(row=1, column=0)
 
 
 def spel_spelen(root):
@@ -111,6 +111,7 @@ def menu(root):
 def applicatie_gui():
     root = Tk()
     root.geometry("1400x800")
+
 
     app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
