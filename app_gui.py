@@ -5,7 +5,6 @@ from pygame import mixer
 import pygame.constants
 from PIL import Image, ImageTk
 import threading
-git from character_maken import naar_spel_spelen
 
 
 def music():
@@ -13,9 +12,6 @@ def music():
     mixer.music.load("music/lordapp vol1 preview2.mp3")
     mixer.music.play(-1)
     mixer.music.set_endevent(pygame.constants.USEREVENT)
-
-
-print("hoi")
 
 
 threading.Thread(target=music).start()
@@ -62,8 +58,9 @@ def tijd_locatie_weergeven(root):
 
     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
     close_button.grid(row=1, column=0)
-def spel_spelen(root):
 
+
+def spel_spelen(root):
     for widget in root.winfo_children():
         widget.destroy()
 
