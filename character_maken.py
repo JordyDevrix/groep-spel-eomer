@@ -3,11 +3,15 @@ import tkinter
 from tkinter import *
 from PIL import Image, ImageTk
 
-def character_maken(venster, menu):
+def character_maken(venster: Tk, menu):
+
     for widget in venster.winfo_children():
         widget.destroy()
 
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
+    bg_label = Label(venster, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
 
 
     top_bar = Frame(venster, bg="grey", height=40)
@@ -17,7 +21,7 @@ def character_maken(venster, menu):
     cancel_button.pack(padx=5, pady=5, side="right")
 
     naam_input_frame = Frame(venster)
-    naam_input_frame.place(anchor='center', relx=0.5, rely=0.50)
+    naam_input_frame.place(anchor='center', relx=0.5, rely=0.5)
 
     label = Label(naam_input_frame, text="Vul uw naam in ", font="Roboto, 24")
     label.grid(row=0, column=0)
@@ -28,14 +32,26 @@ def character_maken(venster, menu):
     haal_naam_op_knop = Button(naam_input_frame, text="Haal tekst op", command=lambda: naam_ophalen(venster, name_input, menu))
     haal_naam_op_knop.grid(row=0, column=2)
 
+    venster.mainloop()
+
     return venster
 
 
+def character_ophalen(name):
 
+
+    with open(f"charater_{name}.json", 'r') as bestand:
+        data = json.load(bestand)
+        print(data)
 
 
 def naam_ophalen(venster, name_input, menu):
     naam_character = name_input.get()
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    bg_label = Label(venster, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
+
     if naam_character == "":
 
         character_maken(venster, menu)
@@ -47,11 +63,16 @@ def naam_ophalen(venster, name_input, menu):
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
     doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 10", command=lambda : ras_kiezen(venster, menu, naam_character))
     doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.6)
+    venster.mainloop()
 
 
 def ras_kiezen(venster, menu, name_inhoud):
     for widget in venster.winfo_children():
         widget.destroy()
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    bg_label = Label(venster, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
 
     frame = Frame(venster)
 
@@ -99,9 +120,10 @@ def ras_kiezen(venster, menu, name_inhoud):
 
     tekst = Label(venster, text="Kies uw Ras", font='Roboto, 24')
     tekst.pack()
-
+    venster.mainloop()
 
 def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
+
     from spel_spelen_functie import verhaal_kiezen
 
     for widget in venster.winfo_children():
@@ -111,11 +133,11 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
         eigenschap = "sterk"
     else:
         eigenschap = "slim"
-
-
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+    bg_label = Label(venster, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
     label_je_hebt_een_character = Label(venster, text="Je hebt een character!", font="Roboto, 24")
     label_je_hebt_een_character.place(anchor= 'center', relx=0.5, rely=0.4)
-
     doorgaan_naar_kiezen_verhaal = Button(venster, text="Verhaal kiezen", font="Roboto, 24", command=lambda : verhaal_kiezen(venster, menu))
     doorgaan_naar_kiezen_verhaal.place(anchor='center', relx=0.5, rely=0.5)
 
@@ -126,9 +148,11 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
     cancel_button.place(anchor= 'center', relx=0.5, rely=0.5)
 
     character_gegevens_wegschrijven(eigenschap, name_inhoud)
+    venster.mainloop()
 
 
 def character_gegevens_wegschrijven(eigenschap, name_input):
+
     with open(f"charater_gegevens.json", 'w') as bestand:
         gegevens = {
             "eigenschap": eigenschap,

@@ -1,0 +1,55 @@
+## Testscenario 1: Succesvolle Admin-inlog
+
+- **Invoer**:
+  - Geldige admin-gebruikersnaam en wachtwoord.
+
+- **Verwachte uitkomst**:
+  - De gebruiker moet succesvol kunnen inloggen en wordt doorverwezen naar het admin-portaal.
+
+## Testscenario 2: Mislukte Admin-inlog - Onjuist wachtwoord
+
+- **Invoer**:
+  - Geldige admin-gebruikersnaam en een onjuist wachtwoord.
+
+- **Verwachte uitkomst**:
+  - De inlogpoging moet mislukken en er moet een passende foutmelding worden weergegeven.
+
+## Testscenario 3: Mislukte Admin-inlog - Onjuiste gebruikersnaam
+
+- **Invoer**:
+  - Een onjuiste admin-gebruikersnaam en een geldig wachtwoord.
+
+- **Verwachte uitkomst**:
+  - De inlogpoging moet mislukken en er moet een passende foutmelding worden weergegeven.
+
+## Testscenario 4: Toegang tot Admin-Portaal
+
+- **Invoer**:
+  - Succesvolle admin-inlog.
+
+- **Verwachte uitkomst**:
+  - De gebruiker moet worden doorverwezen naar het admin-portaal en moet het admin-paneel met knoppen voor verschillende verhalen kunnen zien.
+
+## Testscenario 5: Toegang tot Verhaal 1
+
+- **Invoer**:
+  - Klik op de knop "Verhaal 1" in het admin-portaal.
+
+- **Verwachte uitkomst**:
+  - De gebruiker moet worden doorverwezen naar het eerste verhaal en de "goede" keuzes moeten worden weergegeven.
+
+## Testscenario 6: Toegang tot Verhaal 2
+
+- **Invoer**:
+  - Klik op de knop "Verhaal 2" in het admin-portaal.
+
+- **Verwachte uitkomst**:
+  - De gebruiker moet worden doorverwezen naar het tweede verhaal en de "goede" keuzes moeten worden weergegeven.
+
+## Testscenario 7: Toegang tot Verhaal 3
+
+- **Invoer**:
+  - Klik op de knop "Verhaal 3" in het admin-portaal.
+
+- **Verwachte uitkomst**:
+  - De gebruiker moet worden doorverwezen naar het derde verhaal en de "goede" keuzes moeten worden weergegeven.
