@@ -8,6 +8,36 @@ import threading
 from settings_menu import settings
 
 
+def kill_process(root, menu_return):
+    settings_menu_frame = Frame(root, width=500, height=300, bg="grey")
+    settings_menu_frame.place(anchor="center", relx=0.5, rely=0.5)
+    quit_text = Label(settings_menu_frame, text="Are you sure you want to quit?", font="Roboto, 16", bg="grey")
+    quit_text.pack(pady=10, padx=10)
+
+    def quit_game():
+        print("ending game")
+        root.destroy()
+
+    quitter_frame = Frame(settings_menu_frame, bg="grey")
+    quitter_frame.pack()
+
+    quit_button = Button(quitter_frame,
+                         text="yes",
+                         width=10,
+                         height=3,
+                         bg="red",
+                         command=quit_game)
+    quit_button.pack(side="left", padx=10, pady=10)
+
+    cancel_button = Button(quitter_frame,
+                           text="no",
+                           width=10,
+                           height=3,
+                           bg="green",
+                           command=lambda: menu_return(root))
+    cancel_button.pack(side="right", padx=10, pady=10)
+
+
 def music():
     mixer.init()
     mixer.music.load("music/lordapp vol1 preview2.mp3")
@@ -62,10 +92,10 @@ def menu(root):
     maak_character.pack(padx=10, pady=10, fill="both")
 
     settings_menu = Button(menu_button_frame,
-                            text="SETTINGS",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: settings(root, menu))
+                           text="SETTINGS",
+                           font="Roboto, 20",
+                           width=40,
+                           command=lambda: settings(root, menu))
     settings_menu.pack(padx=10, pady=10, fill="both")
 
     # speel_spel = Button(menu_button_frame, text="PLAY GAME", font="Roboto, 20", width=40, command=lambda: spel_spelen(root))
@@ -78,11 +108,17 @@ def menu(root):
                           command=lambda: admin_inlogscherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
+    quit_button = Button(menu_button_frame,
+                         text="QUIT GAME",
+                         font="Roboto, 20",
+                         width=40,
+                         command=lambda: kill_process(root, menu))
+    quit_button.pack(padx=10, pady=10, fill="both")
+
     root.mainloop()
 
 
 def applicatie_gui():
-
     root = Tk()
     root.geometry("1400x800")
     root.iconbitmap("images/lord_of_the_rings_icon.ico")
