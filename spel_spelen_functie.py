@@ -11,26 +11,23 @@ def verhaal_kiezen(root, menu):
     top_bar.pack(fill="both")
 
 
+    frame = Frame(root)
+
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
 
     avonturen_frame = Frame(root)
     avonturen_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    avontuur_een = Button(root,width=50, height=30, bg='grey', text="Verhaal 1",command=lambda : verhaal_een(root))
+    avontuur_een = Button(root,width=50, height=30, bg='grey', text="Avontuur naar",command=lambda : verhaal_een(root))
     avontuur_een.place(anchor='center', relx=0.25, rely=0.5)
 
+    avontuur_twee = Button(root, width=50, height=30, command=lambda: verhaal_een(root))
+    avontuur_twee.place(anchor='center', relx=0.50, rely=0.5)
 
+    avontuur_drie = Button(root, width=50, height=30, command=lambda: verhaal_een(root))
+    avontuur_drie.place(anchor='center', relx=0.75, rely=0.5)
 
-    # avontuur_een = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    # avontuur_een.grid(padx=20, pady=5, column=0, row=0)
-
-    # avontuur_twee = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    # avontuur_twee.grid(padx=20, pady=5, column=1, row=0)
-    #
-    # avontuur_drie = Frame(avonturen_frame, width=400, height=700, bg="grey")
-    # avontuur_drie.grid(padx=20, pady=5, column=2, row=0)
-    #
 
 
 
