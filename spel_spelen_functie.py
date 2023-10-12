@@ -1,15 +1,13 @@
 from tkinter import *
 
+
 def verhaal_kiezen(root, menu):
 
     for widget in root.winfo_children():
         widget.destroy()
 
-
-
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
-
 
     frame = Frame(root)
 
@@ -28,14 +26,10 @@ def verhaal_kiezen(root, menu):
     avontuur_drie = Button(root, width=50, height=30, command=lambda: verhaal_een(root))
     avontuur_drie.place(anchor='center', relx=0.75, rely=0.5)
 
-
-
-
-
-
     def verhaal_een(venster):
         from meerdere_keuzes import start_tekst_avontuur
         for widget in venster.winfo_children():
             widget.destroy()
 
-        verhaal_een_button = Button(venster, text="Verhaal 1", font="Roboto, 24", command=start_tekst_avontuur(venster))
+        verhaal_een_button = Button(venster, text="Verhaal 1", font="Roboto, 24",
+                                    command=start_tekst_avontuur(venster, "files/avontuurgegevens.json"))
