@@ -78,15 +78,18 @@ def applicatie_gui():
 
     root = Tk()
     root.geometry("1400x800")
+    root.iconbitmap("images/lord_of_the_rings_icon.ico")
+    root.title("Lord of The Rings")
+
     root.resizable(False, False)
-    app_frame = Frame(root)
+    app_frame = Frame(root, bg="black")
     app_frame.pack(fill="both", expand=True)
 
     # bouw splashscreen code
-    splash_screen = Frame(root)
+    splash_screen = Frame(root, bg="black")
     splash_screen.pack()
     logo_image = PhotoImage(file= "images/lord_of_the_rings_logo.png")
-    logo_label = Label(root, image= logo_image)
+    logo_label = Label(root, image= logo_image, bg="black")
     logo_label.place(anchor="center", relx=0.5, rely=0.5)
     root.after(5000, menu, root)
 
