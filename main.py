@@ -2,9 +2,8 @@ from tkinter import *
 from hoofdmenu import hoofdmenu
 from character_maken import character_maken
 def main():
-    hoofdmenu()
-    print("hey")
-
+    from app_gui import applicatie_gui
+    applicatie_gui()
 
 
 if __name__ == '__main__':
