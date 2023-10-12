@@ -2,7 +2,8 @@ import json
 import tkinter as tk
 
 gemaakte_keuzes = []
-
+het_ras_van_de_speler_is_mens = False
+het_ras_van_de_speler_is_dwerg = False
 
 def lees_gegevens(gegevensbestand):
     with open(gegevensbestand, 'r') as bestand:
@@ -10,9 +11,6 @@ def lees_gegevens(gegevensbestand):
 
 
 def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame):
-    het_ras_van_de_speler_is_mens = False
-    het_ras_van_de_speler_is_dwerg = True
-
     locatie_data = gegevens["locaties"][huidige_locatie]
     beschrijving_label.config(text=locatie_data["beschrijving"])
 

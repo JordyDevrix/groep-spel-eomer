@@ -1,7 +1,9 @@
 import json
 import tkinter
+import meerdere_keuzes as mk
 from tkinter import *
 from PIL import Image, ImageTk
+
 
 def character_maken(venster: Tk, menu):
 
@@ -38,8 +40,6 @@ def character_maken(venster: Tk, menu):
 
 
 def character_ophalen(name):
-
-
     with open(f"charater_{name}.json", 'r') as bestand:
         data = json.load(bestand)
         print(data)
@@ -122,6 +122,7 @@ def ras_kiezen(venster, menu, name_inhoud):
     tekst.pack()
     venster.mainloop()
 
+
 def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
 
     from spel_spelen_functie import verhaal_kiezen
@@ -130,9 +131,14 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
         widget.destroy()
 
     if type_ras == 1:
-        eigenschap = "sterk"
+        ras = "dwerg (sterk)"
+        mk.het_ras_van_de_speler_is_dwerg = True
+        mk.het_ras_van_de_speler_is_mens = False
     else:
-        eigenschap = "slim"
+        ras = "mens (slim)"
+        mk.het_ras_van_de_speler_is_mens = True
+        mk.het_ras_van_de_speler_is_dwerg = False
+
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
@@ -147,15 +153,15 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
     cancel_button = Button(top_bar, width=5, height=3, text="X", command=lambda: menu(venster))
     cancel_button.place(anchor= 'center', relx=0.5, rely=0.5)
 
-    character_gegevens_wegschrijven(eigenschap, name_inhoud)
+    character_gegevens_wegschrijven(ras, name_inhoud)
     venster.mainloop()
 
 
-def character_gegevens_wegschrijven(eigenschap, name_input):
+def character_gegevens_wegschrijven(ras, name_input):
 
     with open(f"charater_gegevens.json", 'w') as bestand:
         gegevens = {
-            "eigenschap": eigenschap,
+            "Ras": ras,
             "naam":str(name_input)
         }
         data = json.dumps(gegevens, indent=1)
