@@ -102,7 +102,11 @@ def verhaal_1(root, menu):
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
     with open("files/avontuurgegevens.json") as bestand:
         inhoud = json.load(bestand)
-        print(inhoud)
+        for onderdelen in inhoud['locaties']:
+            for i in inhoud['locaties'][onderdelen]['keuzes']:
+                print(i)
+
+
 
 
 def verhaal_2(root, menu):
