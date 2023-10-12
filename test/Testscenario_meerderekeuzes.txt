@@ -14,4 +14,20 @@
 - **Verwachte uitkomst**:
   - De gemaakte keuze wordt opgeslagen, en de beschrijving en keuzes bij de nieuwe locatie worden weergegeven. De interface wordt bijgewerkt zonder fouten.
 
+## Testscenario 3: Keuze van een Ongeldige Optie
 
+- **Invoer**:
+  - De gebruiker probeert een optie te kiezen die niet beschikbaar is vanwege het ras van de speler.
+
+- **Verwachte uitkomst**:
+  - De optie wordt niet geaccepteerd, er wordt een foutmelding weergegeven en de interface wordt niet gewijzigd.
+
+## Testscenario 4: Terugkeer naar het Hoofdmenu
+
+- **Invoer**:
+  - De gebruiker kiest ervoor om terug te keren naar het hoofdmenu tijdens het spelen van het tekstavontuur.
+
+- **Verwachte uitkomst**:
+  - Het tekstavontuur wordt afgesloten, en de gebruiker wordt zonder fouten teruggeleid naar het hoofdmenu.
+
+Je kunt deze testscenario's nu kopiëren vanuit dit venster.
