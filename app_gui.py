@@ -38,7 +38,7 @@ def tijd_locatie_weergeven(root):
     frame1.place(x=600, y=340)
 
     lt_label = Label(frame1, text=f"{tijd} en {locatie}", font=("Roboto", 24))
-    lt_label.grid(row=0, column=0, pady=20)  # Center label vertically
+    lt_label.grid(row=0, column=0, pady=20)
 
     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
     close_button.grid(row=1, column=0)

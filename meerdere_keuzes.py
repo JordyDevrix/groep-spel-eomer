@@ -56,7 +56,6 @@ def start_tekst_avontuur(root, bestand):
     for widget in root.winfo_children():
         widget.destroy()
 
-
     bg_image = tk.PhotoImage(file="images/Lord of the rings background (1).png")
     bg_label = tk.Label(root, image=bg_image)
     bg_label.place(x=0, y=0)
