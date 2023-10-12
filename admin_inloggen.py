@@ -131,7 +131,16 @@ def verhaal_2(root, menu):
 
     verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
-
+    with open("files/avontuurgegevens_2.json") as bestand:
+        inhoud = json.load(bestand)
+        for onderdelen in inhoud['locaties']:
+            if inhoud['locaties'][onderdelen]['einde'] == "goed":
+                for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
+                        keuzes = Label(verhaal_keuzes_frame,
+                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}')
+                        keuzes.pack()
+            else:
+                pass
 def verhaal_3(root, menu):
     for widget in root.winfo_children():
         widget.destroy()
@@ -148,3 +157,14 @@ def verhaal_3(root, menu):
 
     verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
+
+    with open("files/avontuurgegevens_3.json") as bestand:
+        inhoud = json.load(bestand)
+        for onderdelen in inhoud['locaties']:
+            if inhoud['locaties'][onderdelen]['einde'] == "goed":
+                for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
+                        keuzes = Label(verhaal_keuzes_frame,
+                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}')
+                        keuzes.pack()
+            else:
+                pass
