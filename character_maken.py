@@ -1,7 +1,9 @@
 import json
 import tkinter
+import meerdere_keuzes as mk
 from tkinter import *
 from PIL import Image, ImageTk
+
 
 def character_maken(venster: Tk, menu):
 
@@ -38,8 +40,6 @@ def character_maken(venster: Tk, menu):
 
 
 def character_ophalen(name):
-
-
     with open(f"charater_{name}.json", 'r') as bestand:
         data = json.load(bestand)
         print(data)
@@ -57,11 +57,15 @@ def naam_ophalen(venster, name_input, menu):
         character_maken(venster, menu)
         label = Label(venster, text="Dit is niet geldig")
         label.pack()
+    elif naam_character == "Frodo Baggings":
+        label = Label(venster, text="It must often be so, Sam, when things are in danger: some one has to "
+                                    "give them up, lose them, so that others may keep them", font="Roboto, 16")
+        label.pack()
     name_input.delete(0, tkinter.END)
 
-    label_huidge_naam = Label(venster, text= f"Uw huidige naam: {naam_character}")
+    label_huidge_naam = Label(venster, text= f"Uw gekozen naam: {naam_character}", font="Roboto, 17")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
-    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 10", command=lambda : ras_kiezen(venster, menu, naam_character))
+    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 17", command=lambda : ras_kiezen(venster, menu, naam_character))
     doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.6)
     venster.mainloop()
 
@@ -122,6 +126,7 @@ def ras_kiezen(venster, menu, name_inhoud):
     tekst.pack()
     venster.mainloop()
 
+
 def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
 
     from spel_spelen_functie import verhaal_kiezen
@@ -130,15 +135,20 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
         widget.destroy()
 
     if type_ras == 1:
-        eigenschap = "sterk"
+        ras = "dwerg (sterk)"
+        mk.het_ras_van_de_speler_is_dwerg = True
+        mk.het_ras_van_de_speler_is_mens = False
     else:
-        eigenschap = "slim"
+        ras = "mens (slim)"
+        mk.het_ras_van_de_speler_is_mens = True
+        mk.het_ras_van_de_speler_is_dwerg = False
+
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
     label_je_hebt_een_character = Label(venster, text="Je hebt een character!", font="Roboto, 24")
     label_je_hebt_een_character.place(anchor= 'center', relx=0.5, rely=0.4)
-    doorgaan_naar_kiezen_verhaal = Button(venster, text="Verhaal kiezen", font="Roboto, 24", command=lambda : verhaal_kiezen(venster, menu))
+    doorgaan_naar_kiezen_verhaal = Button(venster,width=12, height=1 ,text="Verhaal kiezen", font="Roboto, 24", command=lambda : verhaal_kiezen(venster, menu))
     doorgaan_naar_kiezen_verhaal.place(anchor='center', relx=0.5, rely=0.5)
 
     top_bar = Frame(venster, bg="grey", height=40)
@@ -147,15 +157,15 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
     cancel_button = Button(top_bar, width=5, height=3, text="X", command=lambda: menu(venster))
     cancel_button.place(anchor= 'center', relx=0.5, rely=0.5)
 
-    character_gegevens_wegschrijven(eigenschap, name_inhoud)
+    character_gegevens_wegschrijven(ras, name_inhoud)
     venster.mainloop()
 
 
-def character_gegevens_wegschrijven(eigenschap, name_input):
+def character_gegevens_wegschrijven(ras, name_input):
 
     with open(f"charater_gegevens.json", 'w') as bestand:
         gegevens = {
-            "eigenschap": eigenschap,
+            "Ras": ras,
             "naam":str(name_input)
         }
         data = json.dumps(gegevens, indent=1)

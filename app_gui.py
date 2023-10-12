@@ -79,16 +79,15 @@ def applicatie_gui():
     root = Tk()
     root.geometry("1400x800")
     root.resizable(False, False)
-
     app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
 
     # bouw splashscreen code
     splash_screen = Frame(root)
     splash_screen.pack()
-
-    splash_text = Label(root, text="ZHONG XINA GAME STUDIOS", font="Roboto, 24")
-    splash_text.place(anchor="center", relx=0.5, rely=0.5)
+    logo_image = PhotoImage(file= "images/lord_of_the_rings_logo.png")
+    logo_label = Label(root, image= logo_image)
+    logo_label.place(anchor="center", relx=0.5, rely=0.5)
     root.after(5000, menu, root)
 
     threading.Thread(target=music).start()

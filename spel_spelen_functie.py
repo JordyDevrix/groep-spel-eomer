@@ -20,6 +20,15 @@ def verhaal_kiezen(root, menu):
     root.avontuur_2_foto = ImageTk.PhotoImage(avontuur_2_foto)
     root.avontuur_3_foto = ImageTk.PhotoImage(avontuur_3_foto)
 
+    tekst_verhaal_een = Label(root, text="Saruman's plan", font="Roboto, 24")
+    tekst_verhaal_een.place(anchor= 'center', relx= 0.24, rely= 0.85)
+
+    tekst_verhaal_een = Label(root, text="De Entwives Zoektocht ", font="Roboto, 24")
+    tekst_verhaal_een.place(anchor='center', relx=0.50, rely=0.85)
+
+    tekst_verhaal_een = Label(root, text="Het avontuur van Ithlien ", font="Roboto, 24")
+    tekst_verhaal_een.place(anchor='center', relx=0.75, rely=0.85)
+
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
