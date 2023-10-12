@@ -1,0 +1,17 @@
+## Testscenario 1: Start van het Tekstavontuur
+
+- **Invoer**:
+  - De gebruiker start een tekstavontuur.
+
+- **Verwachte uitkomst**:
+  - Het tekstavontuur wordt zonder fouten geladen. De beschrijving van de huidige locatie wordt weergegeven, samen met de beschikbare keuzes voor de speler.
+
+## Testscenario 2: Keuze van een Geldige Optie
+
+- **Invoer**:
+  - De gebruiker kiest een geldige optie door op een van de keuzeopties te klikken.
+
+- **Verwachte uitkomst**:
+  - De gemaakte keuze wordt opgeslagen, en de beschrijving en keuzes bij de nieuwe locatie worden weergegeven. De interface wordt bijgewerkt zonder fouten.
+
+
