@@ -35,8 +35,11 @@ class TestTextAdventure(unittest.TestCase):
         huidige_locatie = "start"
         update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
 
-        # Test of de beschrijving correct is bijgewerkt
-        self.assertEqual(mock_label_config.call_args[0][0], {"text": gegevens["locaties"]["start"]["beschrijving"]})
+        # Haal de opgeroepen argumenten op
+        call_args = mock_label_config.call_args[0][0]
+
+        # Test of de tekst op het label correct is bijgewerkt
+        self.assertEqual(call_args["text"], gegevens["locaties"]["start"]["beschrijving"])
 
         # Test of de knoppen correct zijn gegenereerd
         self.assertEqual(len(button_frame.winfo_children()), len(gegevens["locaties"]["start"]["keuzes"]))
