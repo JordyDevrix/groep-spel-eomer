@@ -31,11 +31,7 @@ def character_maken(venster, menu):
     return venster
 
 
-def character_ophalen(name):
 
-    with open(f"charater_{name}.json", 'r') as bestand:
-        data = json.load(bestand)
-        print(data)
 
 
 def naam_ophalen(venster, name_input, menu):
