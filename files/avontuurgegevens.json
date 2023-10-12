@@ -6,7 +6,8 @@
                 { "Noord": "sharku" },
                 { "Zuid": "gazmog" },
                 { "Oost": "snaga" }
-            ]
+            ],
+            "einde": "goed"
         },
         "sharku": {
             "beschrijving": "Je vertrekt naar het noorden, je bent opgewekt als je denkt aan het avontuur dat voor je ligt. Het is alsof je... Wacht!? Er is iets fout. Je voelt een tinteling in je ruggengraat. Je wordt in de gaten gehouden! Een krokodilachtig wezen stapt uit de schaduw. Hij zegt niets terwijl hij zijn ogen op je richt, maar zijn mond gaat wijd open en onthult een stel scherpe, vuile tanden. Het is Sharku de goblin-krijger! en hij is hier voor je hoofd. Wat doe je?",
@@ -14,7 +15,8 @@
                 { "Vecht tegen Sharku (Dwerg)": "vechten_dwerg_vijand_1" },
                 { "Vecht tegen Sharku (Mens)": "vechten_mens_vijand_1" },
                 { "Ren weg van Sharku": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "gazmog": {
             "beschrijving": "Je vertrekt naar het zuid, je bent opgewekt als je denkt aan het avontuur dat voor je ligt. het is alsof je... Wacht!? Er is iets fout. Je voelt een tinteling in je ruggengraat - je wordt in de gaten gehouden. Een wezen dat zo lelijk is dat je onbewust een stap achteruit doet, stapt uit. Zijn huid zit zo vol slijm dat het lijkt alsof hij elk moment van zijn gezicht kan glijden. Zijn neus lijkt bijna tegen zijn gezicht gedrukt en zijn mond lijkt op het punt te rotten. Wacht even...Je herkent dit ding. Het is Gazmog de persoonlijke bode van Saruman. Hij spreekt met een sluwe, ijle stem: \"Ik kom op bevel van mijn meester Saruman. Je moet vrijwillig komen, anders neem ik je met geweld mee.\" Wat doe je?",
@@ -22,7 +24,8 @@
                 { "Vecht tegen Gazmog (Dwergen)": "vechten_dwerg_vijand_1" },
                 { "Vecht tegen Gazmog (Mens)": "vechten_mens_vijand_1" },
                 { "Ren weg van Gazmog": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "snaga": {
             "beschrijving": "Je vertrekt naar het Oost, je bent opgewekt als je denkt aan het avontuur dat voor je ligt. Het is alsof je... Wacht?! Wat is dat ding? Er staat iets recht voor het pad. Een wezen dat je niet herkent. Je probeert achteruit te gaan om niet opgemerkt te worden, maar daarbij stap je op een tak. Het luide geknars van de brekende takken weerklinkt in de nacht. De puntige oren van het wezen fleuren op. Zijn ogen ontmoeten de jouwe. Wat doe je?",
@@ -30,20 +33,23 @@
                 { "Vecht tegen Snaga (Dwergen)": "vechten_dwerg_vijand_1" },
                 { "Vecht tegen Snaga (Mens)": "vechten_mens_vijand_1" },
                 { "Ren weg van Snaga": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "vechten_dwerg_vijand_1": {
             "beschrijving": "Je kiest om het intimiderend monster te vechten! Je staart recht in zijn bloeddoorlopen ogen en schreeuwt: \"Wij van de dwergen ras buigen niet voor nietige monsters zoals jij! Geef je over aan mijn macht!\" Het monster rent op je af, maar met een krachtige klap van je zware vuist sla je hem neer!",
             "keuzes": [
                 { "Ga verder naar het bos.": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "vechten_mens_vijand_1": {
             "beschrijving": "Je probeert de zwakke punten van het monster te analyseren. Je ogen schieten over het lichaam van het monster, wachtend tot de zwakte zich openbaart. Ondertussen cirkelt het schepsel van de duisternis om je heen als een roofdier voor zijn prooi. Eureka! je realiseert je dat hij mank loopt aan zijn rechterbeen. Voordat je je kunt voorbereiden om toe te slaan, stormt het monster op je af. het breekt je rib met een snelle slag. Je valt op de grond en kronkelt van de pijn. Het monster laat je achter met je verwondingen. Uiteindelijk word je gevonden door Saruman's Uruk Hai. Zij nemen je gevangen en mee naar Orthanc.",
             "keuzes": [
                 { "Slecht Einde - Ga mee naar Orthanc": null },
                 { "Probeer Opnieuw" : "start"}
-            ]
+            ],
+            "einde": "slecht"
         },
         "rennen": {
             "beschrijving": "Je komt net op tijd aan in het Fangorn-bos voordat de zon begint op te komen. De mist begint langzaam op te trekken. De ooit angstaanjagend uitziende boomstammen beginnen te veranderen in prachtige natuurlijke architectuur. Je voelt je eindelijk veilig. Wat doe je?",
@@ -51,20 +57,23 @@
                 { "Even rust pakken.": "rusten" },
                 { "Ga eten zoeken": "eten_zoeken" },
                 { "Loop door zonder te stoppen": "loop_door" }
-            ]
+            ],
+            "einde": "goed"
         },
         "rusten": {
             "beschrijving": "Je kiest ervoor om je hoofd even neer te leggen tegen een nabijgelegen boom. Je ogen sluiten terwijl je wegdrijft in een droomloze slaap. Je wordt plotseling wakker door zwaar ademhalen. Je opent je ogen en wordt opgewacht door de Uruk Hai die je ontvoert en je naar Orthanc brengt.",
             "keuzes": [
                 { "Slecht Einde - Ga mee naar Orthanc": null },
                 { "Probeer Opnieuw" : "start"}
-            ]
+            ],
+            "einde": "slecht"
         },
         "eten_zoeken": {
             "beschrijving": "Je gaat op zoek naar voedsel. Gelukkig voor jou zitten er wat rijpe bessen aan een struik vlakbij. De sappige bessen roepen je bijna toe terwijl je erop af rent. Voordat je er een kunt plukken, hoor je een geritsel uit de struiken. Je zet je dapperste gezicht op en zegt: \"Kom naar buiten, wie je ook bent, ik ben niet bang voor je\". \"Dat zou je moeten zijn\", antwoordt de stem. Het is een diep stem die autoriteit uitstraalt. Tot jouw verbazing komt Gandalf uit de struiken tevoorschijn.\n\n\"Er is geen tijd\", zegt hij. Hij geeft je een enkele narcis. \"Je moet reizen om de boomherders te zien. Geef dit aan hen en zij zullen weten dat ze je kunnen helpen.\" Je neemt de bloem van hem af.\nJe gaat naar de boom herders en laat de narcis zien. Ze willen je helpen.",
             "keuzes": [
                 { "Ga naar gandalf": "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "loop_door": {
             "beschrijving": "Je kiest ervoor om verder te gaan met je reis naar het bos. Je komt oog in oog te staan met de boomherders en ze zien er niet uit alsof ze blij zijn je te zien.\nWat doe je?",
@@ -74,7 +83,8 @@
                 { "Smeken (Mens)": "smeken_mens"},
                 { "Smeken (Dwerg)": "smeken_dwerg"},
                 { "Zingen": "zingen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "zingen": {
             "beschrijving": "Je stem zo slecht dat de boom herders klaar zijn om je te doden. Eentje steekt zijn hand op om je neer te steken. Maar wacht! Gandalf verschijnt om je te redden. \"You shall not kill!\" Gilt  hij. Alles komt tot een stil stand. \"Jullie hebben elkaar nodig anders wint Saruman en zijn duistere wezens en dan is alles als wij het weten over\", zegt Gandalf. De boom herders besluiten om je te helpenl.",
@@ -86,20 +96,23 @@
             "beschrijving": "Je gaat op je knien zitten en smeekt, \"Alstublieft ik heb niemand anders die me kan helpen. De veradelijke worm tongue zit vast al achter me aan. Als Saruman wint komt hij ook voor het bos en alle wezens die hier wonen\". De boomherders zijn een vreedzaam volk ze beseffen dat zij misschien overdreven reageerden. Ze realiseren hoe belangerijk het is dat Saruman niet wint. Ze kiezen om je te helpen.",
             "keuzes": [
                 { "Ga naar gandalf" : "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "smeken_dwerg": {
             "beschrijving": "Je blijft staan en bereid je voor om te smeken. \"Dit is zo gênant.\", zeg je zachtjes je knijpt je vuisten samen en vermijdt oogcontact met de boomherders. \"Alstublieft helpen wij zijn allemaal dood als Worm tongue en Saruman winnen\". Tot je verassing is dat goed genoeg. De boom herders vonden het leuk om een dwerg te zien smeken. Ze gaan je helpen.",
             "keuzes": [
                 { "Ga naar gandalf" : "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "vechten_dwerg_bh": {
             "beschrijving": "Je wint de gevecht tegen de boom herders maar nu weigeren ze om je te helpen. Jij moet nu alleen een manier vinden om Saruman te stoppen. Jij probeert zelf Orthanc aan te vallen, maar je wordt gepakt en zit nu vast in de toren ",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "slecht"
         },
         "vechten_mensen_bh": {
             "beschrijving": "Je pakt een van hun brede armen klaar om ze te verslaan, maar ze tillen je makkelijk op met hun grote kracht. Je sluit je ogen terwijl je wacht op een onvermijdelijke dood. Maar tot je verbazing zeggen ze: \"Jij bent iemand die vechten snel als een oplossing ziet, maar we zien het goede in je hart. We geven je locatie niet aan Saruman als je het juiste antwoord op dit raadsel kunt geven\": \"Stemloos krijt hij, Vliegt vleugelloos rond,Tandloos bijt hij,Mompelt zonder mond.\"Wat is het antwoord? Hint(je kan het niet aanraken).",
@@ -107,26 +120,30 @@
                 { "Wind ": "wind" },
                 { "Zon ": "zon" },
                 { "Briesje ": "briesje" }
-            ]
+            ],
+            "einde": "goed"
         },
         "wind": {
             "beschrijving": "Juiste antwoord is wind je woord gespaart. Jij vraagt ze om hulp. Ze vonden het indrukwekkend dat je het raadsel zo snel kon oplossen. Zij willen helpen",
             "keuzes": [
                 { "Ga naar gandalf" : "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "zon": {
             "beschrijving": "Jij hebt zon gekozen de boom herders zijn teleurgesteld met je antwoord. Ze zeggen, \"We dachten dat jij de ware was maar het blijkt niet zo te zijn.\" Ze geven je locatie aan Saruman en je wordt gevangen in Orthanc.",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "slecht"
         },
         "briesje": {
             "beschrijving": "Briesje was dicht bij het antwoord ze sparen je maar het wordt nu moelijker om ze te overtuigen. Jij belooft dat als zij je helpen je ervoor zorgt dat de bos voor altijd beschermt zal zijn. Ze zijn daar mee eens en willen helpen",
             "keuzes": [
                 { "Ga naar gandalf" : "artefacten" }
-            ]
+            ],
+            "einde": "goed"
         },
         "artefacten": {
             "beschrijving": "Gandalf zegt dat hij jou een keuze van drie magische artefacten gaat geven.\nWelke kies jij?",
@@ -134,21 +151,24 @@
                 { "Elven rope" : "elven_rope" },
                 { "Mithril schild" : "mithril_schild" },
                 { "Dragon helm of Dor-Lomin" : "dragon_helm"}
-            ]
+            ],
+            "einde": "goed"
         },
         "elven_rope": {
             "beschrijving": "Jij vertrekt met je Elven rope en de boom herders naar Orthac. Het is een ruige reis door moeraslanden en barre weersomstandigheden en sommigen hebben de reis helaas niet overleefd, maar je arriveert in Orthanc, klaar voor de strijd. De torenhoge zwarte landmarkering brengt een beetje angst in je hart, maar jij en de boomhoorders vallen aan, in de hoop je wereld van Saruman te verlossen.\n\nJe gebruikt de elven rope op de Uruk hai die de toren bewaken maar je hebt niet genoeg voor ze allemaal. De boom herders vechten met veel moed maar jullie woorden toch gevangengenomen door Saruman's Uruk-hai en worden vastgehouden in Orthanc.",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start"}
-            ]
+            ],
+            "einde": "slecht"
         },
         "mithril_schild": {
             "beschrijving": "Jij vertrekt met je Mithril schild en de boom herders naar Orthac. Het is een ruige reis door moeraslanden en barre weersomstandigheden en sommigen hebben de reis helaas niet overleefd, maar je arriveert in Orthanc, klaar voor de strijd. De torenhoge zwarte landmarkering brengt een beetje angst in je hart, maar jij en de boomhoorders vallen aan, in de hoop je wereld van Saruman te verlossen.\n\nDe Mithril schild is geweldig in de verdediging tegen de orks maar het beschermt allen de voorkant van je lichaam een Urk haai pakt je vanachter. Jullie verliezen",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "slecht"
         },
         "dragon_helm": {
             "beschrijving": "Jij vertrekt met je Dragon helm of Dor-Lomin en de boom herders naar Orthac. Het is een ruige reis door moeraslanden en barre weersomstandigheden en sommigen hebben de reis helaas niet overleefd, maar je arriveert in Orthanc, klaar voor de strijd. De torenhoge zwarte landmarkering brengt een beetje angst in je hart, maar jij en de boomhoorders vallen aan, in de hoop je wereld van Saruman te verlossen.\n\n Met de Dragon helm of Dor-Lomin zaai je aangst in de harten van alle uruk haai die jullie zien. Jij  en de boom herders verslaan alle orks en kommen uiteindelijk binnen bij de hoofd kamer. Saruman staat op je te wachten, hij probeerd je te betoveren maar de helm is te sterk. Hij valt bevroren op de grond vol met angst. Jij moet nu de documenten zoeken. Waar ga jij zoeken?",
@@ -156,28 +176,32 @@
                 { "In de muren." : "muren" },
                 { "Onder de kristallen bol." : "kristallen_bol" },
                 { "In de zakken van Saruman's Mantel." : "mantel"}
-            ]
+            ],
+            "einde": "goed"
         },
         "muren": {
             "beschrijving": "Je loopt naar de muur toe en probeert tussen de scheuren van de stenen te zoeken. \"Pas op!\"  Schreeuwt een van de Boom herders maar he is te laat. Jij wordt aangevallen door de Urks die daar verstopt zijn, de helm valt weg. Jullie woorden gepakt en gegooid in de gevangenis van de toren",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "slecht"
         },
         "kristallen_bol": {
             "beschrijving": "Je raakt de bol aan en er ontstaat een ontploffing die zo groot is dat je op de grond wordt gegooit. Je helm valt. Jullie verliezen en worden gevangengenomen in Orthanc.",
             "keuzes": [
                 { "Slecht Einde - Vast in Orthanc" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "slecht"
         },
         "mantel": {
             "beschrijving": "Je zoek rondt in de zakken van Saruman's Mantel. Je vindt de documenten die je zocht!!! Je pakt de documenten terwijl Saruman bevroren is met angst. Jullie winnen het avontuur!",
             "keuzes": [
                 { "Goed einde - Documenten Bemachtigd" : null },
                 { "Probeer Opnieuw" : "start" }
-            ]
+            ],
+            "einde": "goed"
         }
     }
 }
