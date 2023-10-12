@@ -6,34 +6,39 @@
                 { "Noord": "sharku" },
                 { "Zuid": "gazmog" },
                 { "Oost": "snaga" }
-            ]
+            ],
+            "einde": "goed"
         },
         "sharku": {
             "beschrijving": "Sharku, een goblin warrior, verschijnt plotseling en is gehuld in versleten, groezelige bepantsering en bewapend met een roestige bijl. Zijn gele ogen fonkelen met kwaadaardige intentie en zijn puntige tanden steken uit onder zijn harige snuit. Sharku staat bekend om zijn sluwe aanvallen en brute kracht.\nWat doe jij?",
             "keuzes": [
                 { "Vecht tegen Sharku": "vechten" },
                 { "Ren weg van Sharku": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "gazmog": {
             "beschrijving": "\nWat doe jij?",
             "keuzes": [
                 { "Vecht tegen Gazmog": "vechten" },
                 { "Ren weg van Gazmog": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "snaga": {
             "beschrijving": "\nWat doe jij?",
             "keuzes": [
                 { "Vecht tegen Snaga": "vechten" },
                 { "Ren weg van Snaga": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "vechten": {
             "beschrijving": "Je bent overweldigd door de vijand en kon nog net weg komen voordat het echt erg word.",
             "keuzes": [
                 { "Ren weg van het gevecht": "rennen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "rennen": {
             "beschrijving": "Je rent voor wat voelt als een eeuwigheid en komt terecht bij Fangorn Forrest.\nWat doe jij?",
@@ -41,19 +46,22 @@
                 { "Even rust pakken.": "rusten" },
                 { "Ga eten zoeken": "eten_zoeken" },
                 { "Loop door zonder te stoppen": "loop_door" }
-            ]
+            ],
+            "einde": "goed"
         },
         "rusten": {
             "beschrijving": "Je doet je ogen dicht voor 5 minuten... Opeens wordt je verrast door Saruman's Uruk-hai!!! Je wordt gevangen genomen en meegenomen naar Orthanc.",
             "keuzes": [
                 { "Slecht Einde - Ga mee naar Orthanc": null }
-            ]
+            ],
+            "einde": "slecht"
         },
         "eten_zoeken": {
             "beschrijving": "In Fangorn Forest, ontmoet je een vriendelijk personage verscholen tussen de bomen. Hij geeft je een stok en vertelt je dat je de boomherders moet overtuigen om je te helpen. De stok is je sleutel tot hun vertrouwen.",
             "keuzes": [
                 { "Ga naar de Boomherders": null }
-            ]
+            ],
+            "einde": "goed"
         },
         "loop_door": {
             "beschrijving": "Je besluit verder te lopen door Fangorn Forrest. Opeens Hoor je iets in de bosjes achter je. Het zijn Boom Herders en zij staan klaar om je te vermoorden.\nWat doe jij?",
@@ -61,21 +69,24 @@
                 { "Vechten": "raadsel" },
                 { "Smeken": "smeken" },
                 { "Zingen": "zingen" }
-            ]
+            ],
+            "einde": "goed"
         },
         "raadsel": {
             "beschrijving": "Natuurlijk verlies je tegen zo veel Boom Herders. Opeens hoor je 'Wij zullen jou sparen als je het volgende raadsel oplost. Stemloos krijt hij, Vliegt vleugelloos rond,Tandloos bijt hij,Mompelt zonder mond.'",
             "keuzes": [
                 { "Wind ": "wind" },
                 { "Briesje ": "briesje" }
-            ]
+            ],
+            "einde": "goed"
         },
         "wind": {
             "beschrijving": " ian klaar om je te vermoorden.\nWat doe jij?",
             "keuzes": [
                 { "Wind ": "wind" },
                 { "Briesje ": "briesje" }
-            ]
+            ],
+            "einde": "goed"
         }
     }
 }

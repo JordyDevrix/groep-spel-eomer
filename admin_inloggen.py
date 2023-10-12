@@ -98,13 +98,18 @@ def verhaal_1(root, menu):
     titel.pack(padx=25, pady=25)
     ondertitel.pack()
 
-    verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
+    verhaal_keuzes_frame = Frame(root, height=400, width=500, bg='grey')
     verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
     with open("files/avontuurgegevens.json") as bestand:
         inhoud = json.load(bestand)
         for onderdelen in inhoud['locaties']:
-            for i in inhoud['locaties'][onderdelen]['keuzes']:
-                print(i)
+            if inhoud['locaties'][onderdelen]['einde'] == "goed":
+                for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
+                        keuzes = Label(verhaal_keuzes_frame,
+                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}')
+                        keuzes.pack()
+            else:
+                pass
 
 
 
