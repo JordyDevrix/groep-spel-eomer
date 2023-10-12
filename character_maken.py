@@ -3,11 +3,15 @@ import tkinter
 from tkinter import *
 from PIL import Image, ImageTk
 
-def character_maken(venster, menu):
+def character_maken(venster: Tk, menu):
+
     for widget in venster.winfo_children():
         widget.destroy()
 
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
+    bg_label = Label(venster, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
 
 
     top_bar = Frame(venster, bg="grey", height=40)
@@ -28,10 +32,13 @@ def character_maken(venster, menu):
     haal_naam_op_knop = Button(naam_input_frame, text="Haal tekst op", command=lambda: naam_ophalen(venster, name_input, menu))
     haal_naam_op_knop.grid(row=0, column=2)
 
+    venster.mainloop()
+
     return venster
 
 
 def character_ophalen(name):
+
 
     with open(f"charater_{name}.json", 'r') as bestand:
         data = json.load(bestand)
