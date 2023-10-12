@@ -3,6 +3,7 @@ from hoofdmenu import hoofdmenu
 from character_maken import character_maken
 def main():
     hoofdmenu()
+    print("hey")
 
 
 
