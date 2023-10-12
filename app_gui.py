@@ -18,7 +18,7 @@ def music():
 def introsound():
     mixer.init()
     mixer.music.load("music/introsound.mp3")
-    mixer.music.play()
+    mixer.Channel(1).play(pygame.mixer.Sound('music/introsound.mp3'))
     mixer.music.set_endevent(pygame.constants.USEREVENT)
 
 
@@ -109,8 +109,8 @@ def applicatie_gui():
 
     splash_text = Label(root, text="ZHONG XINA GAME STUDIOS", font="Roboto, 24")
     splash_text.place(anchor="center", relx=0.5, rely=0.5)
+    root.after(5000, menu, root)
 
-    root.after(4000, menu, root)
-    threading.Thread(target=introsound).start()
+    threading.Thread(target=music).start()
 
     root.mainloop()

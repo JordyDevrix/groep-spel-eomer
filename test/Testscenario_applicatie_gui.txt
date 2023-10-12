@@ -1,0 +1,38 @@
+## Testscenario 1: Opstarten van de Applicatie
+
+- **Invoer**:
+  - De gebruiker start de applicatie.
+
+- **Verwachte uitkomst**:
+  - De applicatie wordt zonder fouten geladen en het splashscreen wordt weergegeven. Na 4 seconden wordt het menuscherm getoond.
+
+## Testscenario 2: Menuopties Selecteren
+
+- **Invoer**:
+  - De gebruiker selecteert verschillende menuopties.
+    1. De gebruiker kiest "CREATE A CHARACTER".
+    2. De gebruiker kiest "SETTINGS".
+    3. De gebruiker kiest "ADMIN MODE".
+
+- **Verwachte uitkomst**:
+  - De overeenkomstige schermen of functionaliteiten worden weergegeven zonder fouten.
+
+## Testscenario 3: Terugkeren naar het Menuscherm
+
+- **Invoer**:
+  - De gebruiker keert terug naar het menuscherm vanuit andere schermen.
+    1. De gebruiker klikt op de "X"-knop in het instellingenscherm.
+    2. De gebruiker keert terug vanuit het scherm voor het maken van een personage (character_maken).
+
+- **Verwachte uitkomst**:
+  - De gebruiker wordt teruggeleid naar het menuscherm zonder fouten.
+
+## Testscenario 4: Muziek Afspelen en Beëindigen
+
+- **Invoer**:
+  - De achtergrondmuziek wordt afgespeeld en beëindigd.
+    1. De muziek begint te spelen bij het opstarten van de applicatie.
+    2. De gebruiker sluit de applicatie.
+
+- **Verwachte uitkomst**:
+  - De muziek wordt correct afgespeeld en stopt wanneer de applicatie wordt afgesloten.
