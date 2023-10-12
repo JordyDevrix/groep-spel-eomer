@@ -7,31 +7,11 @@ from PIL import Image, ImageTk
 import threading
 
 
-
 def music():
     mixer.init()
     mixer.music.load("music/lordapp vol1 preview2.mp3")
     mixer.music.play(-1)
     mixer.music.set_endevent(pygame.constants.USEREVENT)
-
-
-print("hoi")
-
-
-threading.Thread(target=music).start()
-# def character(root):
-#     for widget in root.winfo_children():
-#         widget.destroy()
-#
-#     top_bar = Frame(root, bg="grey", height=40)
-#     top_bar.pack(fill="both")
-#
-#
-#
-#     char = Frame(root)
-#     char.pack()
-#     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-#     cancel_button.pack(padx=5, pady=5, side="right")
 
 
 def settings(root):
@@ -62,8 +42,9 @@ def tijd_locatie_weergeven(root):
 
     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
     close_button.grid(row=1, column=0)
-def spel_spelen(root):
 
+
+def spel_spelen(root):
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -97,13 +78,20 @@ def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
 
+    threading.Thread(target=music).start()
+
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
+
+    achtergrond = ImageTk.PhotoImage(Image.open("images/LOTRBG.png"))
 
     menu_frame = Frame(root, bg="grey")
     menu_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
-    menu_button_frame = Frame(menu_frame, height=200, width=400, bg="red")
+    menu_achtergrond = Label(menu_frame, image=achtergrond, bg="grey")
+    menu_achtergrond.pack(fill="both", expand=True)
+
+    menu_button_frame = Frame(menu_achtergrond, height=200, width=400, bg="red")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
     maak_character = Button(menu_button_frame,
                             text="CREATE A CHARACTER",
@@ -127,15 +115,14 @@ def menu(root):
     settings_optie.pack(padx=10, pady=10, fill="both")
 
     admin_opties = Button(menu_button_frame,
-                            text="ADMIN MODE",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: admin_inlogscherm(root, menu))
+                          text="ADMIN MODE",
+                          font="Roboto, 20",
+                          width=40,
+                          command=lambda: admin_inlogscherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
 
 def applicatie_gui():
-
     root = Tk()
     root.geometry("1400x800")
 
@@ -152,6 +139,3 @@ def applicatie_gui():
     root.after(4000, menu, root)
 
     root.mainloop()
-
-
-applicatie_gui()

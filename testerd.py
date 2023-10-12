@@ -23,6 +23,7 @@ def main():
                     keuze = int(input())
                     if keuze == 1:
                         entered_key = data[i].get(entered_key).get('opties').get('optie1')[1]
+                        print(entered_key)
                         return verhalen(entered_key), data[i].get(entered_key).get('eind')
                     elif keuze == 2:
                         entered_key = data[i].get(entered_key).get('opties').get('optie2')[1]
