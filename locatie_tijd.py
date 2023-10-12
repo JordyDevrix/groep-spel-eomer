@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def main(root):
     for widget in root.winfo_children():
         widget.destroy()
@@ -9,9 +10,8 @@ def main(root):
 
     root.mainloop()
 
+
 def tijd_locatie_weergeven(root):
-    for widget in root.winfo_children():
-        widget.destroy()
 
     tijd = "10:12"
     locatie = "Rivendel"
@@ -25,7 +25,3 @@ def tijd_locatie_weergeven(root):
     close_button = Button(frame1, text="x", command=lambda: main(root))
     close_button.grid(row=1, column=0)
 
-if __name__ == '__main__':
-    root = Tk()
-    root.geometry("1400x800")
-    main(root)

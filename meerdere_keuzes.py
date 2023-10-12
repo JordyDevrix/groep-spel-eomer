@@ -65,8 +65,14 @@ def start_tekst_avontuur(root, bestand):
     root.title("Tekstavontuur")
     root.geometry("1400x800")
 
+    for widget in root.winfo_children():
+        widget.destroy()
+
     top_bar = tk.Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
+
+    cancel_button = tk.Button(top_bar, width=3, height=1, text="X")
+    cancel_button.pack(padx=5, pady=5, side="right")
 
     beschrijving_label = tk.Label(root, justify="left", text="", wraplength=800, padx=10, pady=10)
     beschrijving_label.place(anchor="center", relx=0.5, rely=0.9)
