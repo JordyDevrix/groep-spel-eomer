@@ -4,8 +4,8 @@ from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
 from PIL import Image, ImageTk
-from _thread import start_new_thread
 import threading
+from settings_menu import settings
 
 
 def music():
@@ -20,19 +20,6 @@ def introsound():
     mixer.music.load("music/introsound.mp3")
     mixer.Channel(1).play(pygame.mixer.Sound('music/introsound.mp3'))
     mixer.music.set_endevent(pygame.constants.USEREVENT)
-
-
-def settings(root):
-    for widget in root.winfo_children():
-        widget.destroy()
-
-    top_bar = Frame(root, bg="grey", height=40)
-    top_bar.pack(fill="both")
-
-    char = Frame(root)
-    char.pack()
-    cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
-    cancel_button.pack(padx=5, pady=5, side="right")
 
 
 # def tijd_locatie_weergeven(root):
@@ -76,13 +63,6 @@ def menu(root):
 
     # speel_spel = Button(menu_button_frame, text="PLAY GAME", font="Roboto, 20", width=40, command=lambda: spel_spelen(root))
     # speel_spel.pack(padx=10, pady=10, fill="both")
-
-    settings_optie = Button(menu_button_frame,
-                            text="SETTINGS",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: settings(root))
-    settings_optie.pack(padx=10, pady=10, fill="both")
 
     admin_opties = Button(menu_button_frame,
                           text="ADMIN MODE",
