@@ -3,6 +3,7 @@ from admin_inloggen import *
 from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
+from PIL import Image, ImageTk
 import threading
 git from character_maken import naar_spel_spelen
 
@@ -46,8 +47,30 @@ def settings(root):
     cancel_button.pack(padx=5, pady=5, side="right")
 
 
+def tijd_locatie_weergeven(root):
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    tijd = "10:12"
+    locatie = "Rivendel"
+
+    frame1 = Frame(root, width=300, height=120, highlightbackground="blue", highlightthickness=6)
+    frame1.place(x=600, y=340)
+
+    lt_label = Label(frame1, text=f"{tijd} en {locatie}", font=("Roboto", 24))
+    lt_label.grid(row=0, column=0, pady=20)  # Center label vertically
+
+    close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
+    close_button.grid(row=1, column=0)
 def spel_spelen(root):
 
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    button_tl = Button(root, text="Tijd/Locatie", command=lambda: tijd_locatie_weergeven(root))
+    button_tl.place(x=20, y=750)
+
+    root.mainloop()
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -68,7 +91,6 @@ def spel_spelen(root):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
-
 
 
 def menu(root):
@@ -120,9 +142,14 @@ def applicatie_gui():
     app_frame = Frame(root)
     app_frame.pack(fill="both", expand=True)
 
-    menu(app_frame)
+    # bouw splashscreen code
+    splash_screen = Frame(root)
+    splash_screen.pack()
 
+    splash_text = Label(root, text="ZHONG XINA GAME STUDIOS", font="Roboto, 24")
+    splash_text.place(anchor="center", relx=0.5, rely=0.5)
 
+    root.after(4000, menu, root)
 
     root.mainloop()
 
