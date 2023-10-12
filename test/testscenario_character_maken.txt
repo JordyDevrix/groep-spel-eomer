@@ -1,0 +1,63 @@
+## Testscenario 1: Start van het Character Maken Scherm
+
+- **Invoer**:
+  - De gebruiker start het "Character Maken" scherm vanuit het hoofdmenu.
+
+- **Verwachte uitkomst**:
+  - Het scherm wordt zonder fouten geladen, met een achtergrondafbeelding en invoervelden voor het invullen van de naam. Er is een knop om de ingevoerde naam op te halen.
+
+## Testscenario 2: Karakter Naam Invoeren
+
+- **Invoer**:
+  - De gebruiker voert een geldige naam in en klikt op de knop "Haal tekst op".
+
+- **Verwachte uitkomst**:
+  - De ingevoerde naam wordt opgeslagen en weergegeven op het scherm. Er verschijnt een knop om door te gaan naar de volgende keuze.
+
+## Testscenario 3: Terugkeer naar het Menuscherm
+
+- **Invoer**:
+  - De gebruiker keert terug naar het hoofdmenu vanuit het "Character Maken" scherm.
+
+- **Verwachte uitkomst**:
+  - De gebruiker wordt zonder fouten teruggeleid naar het hoofdmenu.
+
+## Testscenario 4: Keuze van Ras
+
+- **Invoer**:
+  - De gebruiker kiest een ras (Dwerg of Mens) en klikt op de knop voor dat ras.
+
+- **Verwachte uitkomst**:
+  - Het gekozen ras wordt weergegeven op het scherm samen met de bijbehorende eigenschap (sterk of slim). Er verschijnt een knop om door te gaan naar het selecteren van het verhaal.
+
+## Testscenario 5: Terugkeer naar het Menuscherm vanuit Raskeuze
+
+- **Invoer**:
+  - De gebruiker keert terug naar het hoofdmenu vanuit het raskeuzescherm.
+
+- **Verwachte uitkomst**:
+  - De gebruiker wordt zonder fouten teruggeleid naar het hoofdmenu.
+
+## Testscenario 6: Bevestiging van Karakter Gegevens
+
+- **Invoer**:
+  - De gebruiker bevestigt de karaktergegevens en klikt op de knop "Verhaal kiezen".
+
+- **Verwachte uitkomst**:
+  - De karaktergegevens (eigenschap en naam) worden opgeslagen. Er wordt een bevestiging getoond, en de gebruiker kan doorgaan naar het verhaalkeuzescherm.
+
+## Testscenario 7: Terugkeer naar het Menuscherm vanuit Verhaalkeuze
+
+- **Invoer**:
+  - De gebruiker keert terug naar het hoofdmenu vanuit het verhaalkeuzescherm.
+
+- **Verwachte uitkomst**:
+  - De gebruiker wordt zonder fouten teruggeleid naar het hoofdmenu.
+
+## Testscenario 8: Opslaan van Karaktergegevens
+
+- **Invoer**:
+  - De karaktergegevens (eigenschap en naam) worden opgeslagen en kunnen later worden gebruikt.
+
+- **Verwachte uitkomst**:
+  - De karaktergegevens worden opgeslagen in een JSON-bestand zonder fouten.
