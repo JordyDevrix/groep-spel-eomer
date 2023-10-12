@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.ttk import Progressbar
 
 
-def settings(root, menu, mixer):
+def settings(root, menu):
     volume = 10
     for widget in root.winfo_children():
         widget.destroy()

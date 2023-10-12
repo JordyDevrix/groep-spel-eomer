@@ -61,6 +61,13 @@ def menu(root):
                             command=lambda: character_maken(root, menu))
     maak_character.pack(padx=10, pady=10, fill="both")
 
+    settings_menu = Button(menu_button_frame,
+                            text="SETTINGS",
+                            font="Roboto, 20",
+                            width=40,
+                            command=lambda: settings(root, menu))
+    settings_menu.pack(padx=10, pady=10, fill="both")
+
     # speel_spel = Button(menu_button_frame, text="PLAY GAME", font="Roboto, 20", width=40, command=lambda: spel_spelen(root))
     # speel_spel.pack(padx=10, pady=10, fill="both")
 
