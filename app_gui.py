@@ -88,7 +88,7 @@ def menu(root):
     menu_frame = Frame(root, bg="grey")
     menu_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
-    menu_achtergrond = Label(menu_frame, image=achtergrond, bg="grey")
+    menu_achtergrond = Label(menu_frame, image=achtergrond)
     menu_achtergrond.pack(fill="both", expand=True)
 
     menu_button_frame = Frame(menu_achtergrond, height=200, width=400, bg="red")
