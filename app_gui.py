@@ -78,49 +78,35 @@ def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
 
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+
+    bg_label = Label(root, image=bg_image)
+    bg_label.place(relwidth=1, relheight=1)
+
     threading.Thread(target=music).start()
 
     top_bar = Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
 
-    achtergrond = ImageTk.PhotoImage(Image.open("images/LOTRBG.png"))
 
-    menu_frame = Frame(root, bg="grey")
-    menu_frame.pack(fill="both", expand=True, padx=5, pady=5)
 
-    menu_achtergrond = Label(menu_frame, image=achtergrond)
-    menu_achtergrond.pack(fill="both", expand=True)
-
-    menu_button_frame = Frame(menu_achtergrond, height=200, width=400, bg="red")
+    menu_button_frame = Frame(height=200, width=400, bg="Green")
     menu_button_frame.place(anchor="center", relx=0.5, rely=0.5)
-    maak_character = Button(menu_button_frame,
-                            text="CREATE A CHARACTER",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: character_maken(root, menu))
+
+    maak_character = Button(menu_button_frame, text="CREATE A CHARACTER", font="Roboto, 20", width=40, command=lambda: character_maken(root, menu))
     maak_character.pack(padx=10, pady=10, fill="both")
 
-    speel_spel = Button(menu_button_frame,
-                        text="PLAY GAME",
-                        font="Roboto, 20",
-                        width=40,
-                        command=lambda: spel_spelen(root))
+    speel_spel = Button(menu_button_frame, text="PLAY GAME", font="Roboto, 20", width=40, command=lambda: spel_spelen(root))
     speel_spel.pack(padx=10, pady=10, fill="both")
 
-    settings_optie = Button(menu_button_frame,
-                            text="SETTINGS",
-                            font="Roboto, 20",
-                            width=40,
-                            command=lambda: settings(root))
+    settings_optie = Button(menu_button_frame, text="SETTINGS", font="Roboto, 20", width=40, command=lambda: settings(root))
     settings_optie.pack(padx=10, pady=10, fill="both")
 
-    admin_opties = Button(menu_button_frame,
-                          text="ADMIN MODE",
-                          font="Roboto, 20",
-                          width=40,
-                          command=lambda: admin_inlogscherm(root, menu))
+    admin_opties = Button(menu_button_frame, text="ADMIN MODE", font="Roboto, 20", width=40, command=lambda: admin_inlogscherm(root, menu))
     admin_opties.pack(padx=10, pady=10, fill="both")
 
+    root.mainloop()
 
 def applicatie_gui():
     root = Tk()

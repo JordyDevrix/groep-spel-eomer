@@ -22,5 +22,5 @@ def verhaal_kiezen(root, menu):
     avontuur_twee = Button(root, text="Hey", width=50, height=30, command=lambda: mk.start_tekst_avontuur(root, "files/avontuurgegevens_2.json"))
     avontuur_twee.place(anchor='center', relx=0.50, rely=0.5)
 
-    avontuur_drie = Button(root, text="hallo ",width=50, height=30, command=lambda: mk.start_tekst_avontuur(root, "files/avontuurgegevens.json"))
+    avontuur_drie = Button(root, text="hallo ",width=50, height=30, command=lambda: mk.start_tekst_avontuur(root, "files/avontuurgegevens_3.json"))
     avontuur_drie.place(anchor='center', relx=0.75, rely=0.5)
