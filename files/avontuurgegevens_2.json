@@ -1,0 +1,30 @@
+{
+    "locaties": {
+        "start": {
+            "beschrijving": "Je begint je avontuur in het Fangorn forrest. Het knisperen van de bladeren onder je voeten is een mooie herinnering aan het mystieke wezen waar je naar op zoek bent: De Entwives.\nZe zijn opeens verdwenen en niemand weet waarom dat gebeurde of waar ze zijn. De wind fluit door de bomen en de geur van vochtig hout nadat de regen de vult de lucht. Jij hebt het gevoel dat dit een spannend avontuur wordt. Waar ga je heen?",
+            "keuzes": [
+                { "Noord": "noord" },
+                { "West": "west" },
+                { "Zuid": "zuid" }
+            ]
+        },
+        "noord": {
+            "beschrijving": "Je ontmoet Treebeard en Quickbeam op een pad in de bos",
+            "keuzes": [
+
+            ]
+        },
+        "west": {
+            "beschrijving": "Het lijkt erop dat je goed hebt gekozen. Dit pad is goed verlicht en - een gebrul onderbreekt je gedachten. Een gruwelijke Ork met een dorst naar bloed komt naar je toe. Voordat je kunt reageren, komen er twee entiteiten tussenbeide en overmeesteren de orc, deze vlucht beschaamd. Ze draaien zich naar jou toe. Je bedankt ze. Het ouder uitziende boomachtige wezen stelt zichzelf voor als Treebeard, de jongere lanke boom stelt zichzelf voor als Quickbeam",
+            "keuzes": [
+
+            ]
+        },
+        "zuid": {
+            "beschrijving": "Je loopt rechtstreeks in de pad van de vijand",
+            "keuzes": [
+
+            ]
+        }
+    }
+}
