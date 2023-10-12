@@ -1,0 +1,41 @@
+## Testscenario 1: Start van het Verhaalkeuzescherm
+
+- **Invoer**:
+  - De gebruiker start het "Verhaal Kiezen" scherm vanuit het hoofdmenu.
+
+- **Verwachte uitkomst**:
+  - Het scherm wordt zonder fouten geladen. Er worden drie avonturen (verhaalopties) weergegeven, elk met een bijbehorende afbeelding. Er is een knop om terug te keren naar het hoofdmenu.
+
+## Testscenario 2: Keuze van Avontuur 1
+
+- **Invoer**:
+  - De gebruiker klikt op de knop voor "Avontuur 1".
+
+- **Verwachte uitkomst**:
+  - Het eerste avontuur wordt geladen zonder fouten, en de gebruiker kan beginnen met het lezen van het verhaal.
+
+## Testscenario 3: Keuze van Avontuur 2
+
+- **Invoer**:
+  - De gebruiker klikt op de knop voor "Avontuur 2".
+
+- **Verwachte uitkomst**:
+  - Het tweede avontuur wordt geladen zonder fouten, en de gebruiker kan beginnen met het lezen van het verhaal.
+
+## Testscenario 4: Keuze van Avontuur 3
+
+- **Invoer**:
+  - De gebruiker klikt op de knop voor "Avontuur 3".
+
+- **Verwachte uitkomst**:
+  - Het derde avontuur wordt geladen zonder fouten, en de gebruiker kan beginnen met het lezen van het verhaal.
+
+## Testscenario 5: Terugkeer naar het Menuscherm vanuit Verhaalkeuzescherm
+
+- **Invoer**:
+  - De gebruiker keert terug naar het hoofdmenu vanuit het verhaalkeuzescherm.
+
+- **Verwachte uitkomst**:
+  - De gebruiker wordt zonder fouten teruggeleid naar het hoofdmenu.
+
+Je kunt deze testscenario's nu kopiëren vanuit dit venster.

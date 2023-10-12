@@ -3,7 +3,7 @@ from admin_inloggen import *
 from character_maken import character_maken
 from pygame import mixer
 import pygame.constants
-from PIL import Image, ImageTk
+
 import threading
 
 
