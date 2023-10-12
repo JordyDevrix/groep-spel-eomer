@@ -5,7 +5,7 @@ from pygame import mixer
 import pygame.constants
 from PIL import Image, ImageTk
 import threading
-git from character_maken import naar_spel_spelen
+
 
 
 def music():
