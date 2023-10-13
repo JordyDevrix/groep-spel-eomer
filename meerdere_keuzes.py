@@ -95,7 +95,6 @@ def start_tekst_avontuur(root, bestand, menu):
 
     huidige_locatie = "start"
 
-    root.title("Tekstavontuur")
     root.geometry("1400x800")
 
     for widget in root.winfo_children():
