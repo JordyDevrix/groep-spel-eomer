@@ -74,7 +74,7 @@ def start_tekst_avontuur(root, bestand, menu):
 
     for widget in root.winfo_children():
         widget.destroy()
-    bg_image = tk.PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+    bg_image = tk.PhotoImage(file="images/Mordor background.png")
     bg_label = tk.Label(root, image=bg_image)
     bg_label.place(x=0, y=0)
     button_frame = tk.Frame(root)
