@@ -7,8 +7,6 @@ def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
         print("Ingelogd")
         admin_scherm(root, menu)
-    elif input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord != inhoud['wachtwoord']:
-        melding = Label()
 
 def admin_inlogscherm(root, menu):
     for widget in root.winfo_children():
