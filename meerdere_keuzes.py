@@ -40,10 +40,25 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
             button.grid(padx=20, pady=5, column=i, row=0)
 
 
+def tijd_locatie_weergeven(huidige_locatie):
+
+    locatie = huidige_locatie
+
+    frame1 = tk.Frame(width=300, height=120, highlightbackground="blue", highlightthickness=6)
+    frame1.place(x=600, y=340)
+
+    lt_label = tk.Label(frame1, text=f"{locatie}", font=("Roboto", 24))
+    lt_label.grid(row=0, column=0, pady=20)  # Center label vertically
+    close_button = tk.Button(frame1, text="x", command=lambda: (close_button.destroy(), lt_label.destroy(), frame1.destroy()))
+    close_button.grid(row=1, column=0)
+
+
 def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, button_frame):
     locatie_data = gegevens["locaties"][huidige_locatie]
     keuzes = locatie_data["keuzes"]
     geselecteerde_keuze = next((keuze for keuze in keuzes if list(keuze.values())[0] == nieuwe_locatie), None)
+    button_tl = tk.Button(text="Actie/Locatie", command=lambda: tijd_locatie_weergeven(huidige_locatie))
+    button_tl.place(x=20, y=750)
     if geselecteerde_keuze:
         geselecteerde_keuze_tekst = list(geselecteerde_keuze.keys())[0]
         gemaakte_keuzes.append(geselecteerde_keuze_tekst)
@@ -54,11 +69,16 @@ def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, bu
         update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
     else:
         gemaakte_keuzes_tekst = "\n- ".join(gemaakte_keuzes)
-        beschrijving_label.config(text=gemaakte_keuzes_tekst)
+        beschrijving_label.place_forget()
+        button_frame.place_forget()
+        gemaakte_keuzes_label = tk.Label(justify="center", font="Roboto, 12", text=gemaakte_keuzes_tekst,
+                                         wraplength=800, padx=10, pady=10)
+        gemaakte_keuzes_label.place(anchor="center", relx=0.5, rely=0.5)
         gemaakte_keuzes.clear()
 
         for knop in button_frame.winfo_children():
             knop.destroy()
+    tk.mainloop()
 
 
 def start_tekst_avontuur(root, bestand, menu):

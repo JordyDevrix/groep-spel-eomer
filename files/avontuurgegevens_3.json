@@ -50,13 +50,6 @@
             ],
             "einde": "slecht"
         },
-        "zelf_redden": {
-            "beschrijving": "Je hoort een vreemd geluid uit de bomen komen. Het klinkt als een gierend geluid, als van een wild dier. Jij blijft stilstaan en probeert erachter te komen wat het is. Plotseling verschijnt er uit de bomen een ghul! Het is een grotesk wezen met een lange, spitse neus en scherpe klauwen. Zijn ogen waren roodgloeiend en hij laat een laag, dreigend gegrom horen. De ghul komt dichter naar je toe en je voelt zijn koude adem op jouw gezicht. Faramir springt uit de bomen en redt je met de kracht van zijn zwaard.",
-            "keuzes": [
-                { "Ga verder": "goed" }
-            ],
-            "einde": "goed"
-        },
         "zuid": {
             "beschrijving": "Je komt plotseling oog in oog te staan met een volger van de vijand, een angstaanjagend monster dat bekend staat als de gevreesde Hell Hawk! De lucht trilt van onheilspellende vleugelslagen terwijl deze verschrikking van een wezen zijn duistere silhouet boven je aftekent. De helhavik is berucht om zijn genadeloze aanvallen en meedogenloze jachtinstinct, en je voelt de adrenaline door je aderen razen terwijl je je klaarmaakt voor een onvermijdelijke confrontatie. Wat doe je?",
             "keuzes": [
@@ -64,7 +57,7 @@
                 { "Aanvallen": "aanvallen_handen" },
                 { "Gooi tak": "tak_gooien" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "verdedigen_steen": {
             "beschrijving": "Je kiest om te verdedigen. Je slaat het monster met je blote hand of steen. Het heeft effect, want het monster is gedesoriënteerd, en de strijd gaat verder. Het monster springt in jouw richting, wat doe je?",
@@ -73,7 +66,7 @@
                 { "Slaan met wapen": "slaan_met_wapen" },
                 { "Roep om hulp": "roep_om_hulp" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "aanvallen_handen": {
             "beschrijving": "Je kiest om aan te vallen met je blote handen. Je slaat het monster en probeert het te verslaan voordat het je kan bereiken. Het monster springt in jouw richting, wat doe je?",
@@ -82,7 +75,7 @@
                 { "Slaan met wapen": "slaan_met_wapen" },
                 { "Roep om hulp": "roep_om_hulp" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "tak_gooien": {
             "beschrijving": "Je kiest om een tak te gooien naar het monster. Helaas heeft de tak geen effect en het monster breekt de tak en kruipt langzaam naar je toe. De strijd gaat verder. Het monster springt in jouw richting, wat doe je?",
@@ -91,7 +84,7 @@
                 { "Slaan met wapen": "slaan_met_wapen" },
                 { "Roep om hulp": "roep_om_hulp" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "monster_aanval": {
             "beschrijving": "Het monster springt in jouw richting. Wat doe je?",
@@ -100,7 +93,7 @@
                 { "Slaan met wapen": "slaan_met_wapen" },
                 { "Roep om hulp": "roep_om_hulp" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "ontwijken": {
             "beschrijving": "Je probeert snel opzij te springen om de aanval van het monster te ontwijken. Het monster blijft sterk. Wat doe je?",
@@ -109,7 +102,7 @@
                 { "Snelle Herhalingsslagen": "snelle_slagen" },
                 { "Monster Analyseren": "monster_analyseren" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "slaan_met_wapen": {
             "beschrijving": "Vanuit je ooghoek zie je een roestige dolk verstopt in het zand. Je maakt gebruik van je wapen en probeert het monster te slaan voordat het je kan bereiken. Het monster blijft sterk. Wat doe je?",
@@ -118,7 +111,7 @@
                 { "Afleiding creeren": "afleiding_creeren" },
                 { "Rustig blijven": "rustig_blijven" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "roep_om_hulp": {
             "beschrijving": "Je schreeuwt om hulp in de hoop dat iemand in de buurt je te hulp schiet, maar helaas komt niemand. Het monster blijft sterk. Wat doe je?",
@@ -127,7 +120,7 @@
                 { "Afleiding creeren": "afleiding_creeren" },
                 { "Rustig blijven": "rustig_blijven" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "krachtige_slag": {
             "beschrijving": "Je slaat het monster en raakt het met een krachtige slag. Het monster deinst terug maar blijft gevaarlijk. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
@@ -136,7 +129,7 @@
                 { "Afleiding creeren": "afleiding_creeren" },
                 { "Rustig blijven": "rustig_blijven" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "snelle_slagen": {
             "beschrijving": "Je blijft snel herhaalde slagen uitdelen om het monster op afstand te houden en te verzwakken. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
@@ -145,7 +138,7 @@
                 { "Afleiding creeren": "afleiding_creeren" },
                 { "Rustig blijven": "rustig_blijven" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "monster_analyseren": {
             "beschrijving": "Je slaat het monster en trekt je vervolgens tactisch terug om het te analyseren, maar je vindt geen zwakke punten. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
@@ -154,7 +147,7 @@
                 { "Afleiding creeren": "afleiding_creeren" },
                 { "Rustig blijven": "rustig_blijven" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "energie_herwinnen": {
             "beschrijving": "Je probeert even op adem te komen en je energie te herwinnen voordat je verdere actie onderneemt. Maar het duurt niet lang voor dat het beest je weer probeert te wonden. Wat doe je?",
@@ -163,7 +156,7 @@
                 { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
                 { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "afleiding_creeren": {
             "beschrijving": "Je probeert het monster af te leiden door iets in de omgeving te gebruiken om lawaai te maken of zijn aandacht af te leiden, maar helaas is het monsters focus alleen op jou. Wat doe je?",
@@ -172,7 +165,7 @@
                 { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
                 { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "rustig_blijven": {
             "beschrijving": "Je doet je best om kalm te blijven en je vermoeidheid te verbergen, hopend dat het monster je niet als een gemakkelijke prooi zal zien, maar het is te laat het monster is al zelfverzekerd dat jij zijn nieuwe slachtoffer zal zijn. Wat doe je?",
@@ -181,7 +174,7 @@
                 { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
                 { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
             ],
-            "einde": "goed"
+            "einde": "slecht"
         },
         "gevangen_genomen_boom": {
             "beschrijving": "Monster gooit je tegen een boom en pakt je in zijn vieze klauwen. Er is geen kans meer om te ontsnappen.",
