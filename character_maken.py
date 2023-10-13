@@ -11,6 +11,10 @@ def character_maken(venster: Tk, menu):
 
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
 
@@ -48,6 +52,11 @@ def naam_ophalen(venster, name_input, menu):
     naam_character = name_input.get()
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
+
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
 
@@ -80,6 +89,11 @@ def ras_kiezen(venster, menu, name_inhoud):
     for widget in venster.winfo_children():
         widget.destroy()
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
 
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
@@ -143,6 +157,12 @@ def ras_binnen_krijgen(venster, type_ras, menu, name_inhoud):
         mk.het_ras_van_de_speler_is_dwerg = False
 
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
+
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
     label_je_hebt_een_character = Label(venster, text="Je hebt een character!", font="Roboto, 24")

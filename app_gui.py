@@ -3,7 +3,7 @@ from admin_inloggen import *
 from character_maken import character_maken
 import threading
 from settings_menu import settings
-from game_muziek import music
+from game_muziek import music, introsound
 
 
 def kill_process(root, menu_return):
@@ -41,6 +41,11 @@ def menu(root):
         widget.destroy()
 
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
 
     bg_label = Label(root, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
@@ -82,13 +87,25 @@ def menu(root):
     root.mainloop()
 
 
+def enter_game(root):
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    threading.Thread(target=music).start()
+
+    label = Frame(root, bg="black")
+    label.pack(fill="both", expand=True)
+
+    root.after(1000, menu, root)
+
+
 def applicatie_gui():
     root = Tk()
     root.geometry("1400x800")
     root.iconbitmap("images/lord_of_the_rings_icon.ico")
     root.title("Lord of The Rings")
 
-    root.resizable(False, False)
+    root.resizable(True, True)
     app_frame = Frame(root, bg="black")
     app_frame.pack(fill="both", expand=True)
 
@@ -98,8 +115,8 @@ def applicatie_gui():
     logo_image = PhotoImage(file= "images/lord_of_the_rings_logo.png")
     logo_label = Label(root, image= logo_image, bg="black")
     logo_label.place(anchor="center", relx=0.5, rely=0.5)
-    root.after(5000, menu, root)
+    root.after(3000, enter_game, root)
 
-    threading.Thread(target=music).start()
+    threading.Thread(target=introsound).start()
 
     root.mainloop()
