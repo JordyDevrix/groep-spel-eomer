@@ -1,11 +1,10 @@
 from tkinter import *
 from admin_inloggen import *
 from character_maken import character_maken
-from pygame import mixer
-import pygame.constants
 from PIL import Image, ImageTk
 import threading
 from settings_menu import settings
+from game_muziek import music
 
 
 def kill_process(root, menu_return):
@@ -36,20 +35,6 @@ def kill_process(root, menu_return):
                            bg="green",
                            command=lambda: menu_return(root))
     cancel_button.pack(side="right", padx=10, pady=10)
-
-
-def music():
-    mixer.init()
-    mixer.music.load("music/lordapp vol1 preview2.mp3")
-    mixer.music.play(-1)
-    mixer.music.set_endevent(pygame.constants.USEREVENT)
-
-
-def introsound():
-    mixer.init()
-    mixer.music.load("music/introsound.mp3")
-    mixer.Channel(1).play(pygame.mixer.Sound('music/introsound.mp3'))
-    mixer.music.set_endevent(pygame.constants.USEREVENT)
 
 
 # def tijd_locatie_weergeven(root):

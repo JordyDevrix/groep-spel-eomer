@@ -39,7 +39,6 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
                                command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
             button.grid(padx=20, pady=5, column=i, row=0)
 
-
 def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, button_frame):
     locatie_data = gegevens["locaties"][huidige_locatie]
     keuzes = locatie_data["keuzes"]
@@ -68,10 +67,6 @@ def start_tekst_avontuur(root, bestand, menu):
     for widget in root.winfo_children():
         widget.destroy()
 
-    bg_image = tk.PhotoImage(file="images/Lord of the rings background (1).png")
-    bg_label = tk.Label(root, image=bg_image)
-    bg_label.place(x=0, y=0)
-
     huidige_locatie = "start"
 
     root.title("Tekstavontuur")
@@ -79,10 +74,13 @@ def start_tekst_avontuur(root, bestand, menu):
 
     for widget in root.winfo_children():
         widget.destroy()
-
+    bg_image = tk.PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+    bg_label = tk.Label(root, image=bg_image)
+    bg_label.place(x=0, y=0)
+    button_frame = tk.Frame(root)
+    button_frame.place(anchor="center", relx=0.5, rely=0.5)
     top_bar = tk.Frame(root, bg="grey", height=40)
     top_bar.pack(fill="both")
-
     cancel_button = tk.Button(top_bar, width=3, height=1, text="X", command=lambda: menu(root))
     cancel_button.pack(padx=5, pady=5, side="right")
 
@@ -93,5 +91,5 @@ def start_tekst_avontuur(root, bestand, menu):
     button_frame.place(anchor="center", relx=0.5, rely=0.5)
 
     update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
-
+    tk.mainloop()
 

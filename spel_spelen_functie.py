@@ -4,10 +4,11 @@ from PIL import Image, ImageTk
 
 
 def verhaal_kiezen(root, menu):
-
     for widget in root.winfo_children():
         widget.destroy()
-
+    bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+    bg_label = Label(root, image=bg_image)
+    bg_label.place(x=0, y=0)
     avontuur_1_foto = Image.open('images/isengard.jpg')
     avontuur_2_foto = Image.open('images/MysteryForest.jpg')
     avontuur_3_foto = Image.open('images/ittilen.jpg')
@@ -49,3 +50,4 @@ def verhaal_kiezen(root, menu):
     avontuur_drie = Button(root, text="hallo ",image=root.avontuur_3_foto,
                            command=lambda: mk.start_tekst_avontuur(root, "files/avontuurgegevens_3.json", menu))
     avontuur_drie.place(anchor='center', relx=0.75, rely=0.5)
+    root.mainloop()
