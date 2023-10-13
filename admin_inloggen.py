@@ -7,10 +7,6 @@ def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
         print("Ingelogd")
         admin_scherm(root, menu)
-    elif input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord != inhoud['wachtwoord']:
-        melding = Label()
-
-
 
 def admin_inlogscherm(root, menu):
     for widget in root.winfo_children():
@@ -71,24 +67,24 @@ def admin_scherm(root, menu):
     verhaal_button_frame = Frame(frame, height=650, width=500, bg="#ded9ee")
     verhaal_button_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    admin_verhaal1 = Button(verhaal_button_frame,
+    admin_verhaal_1 = Button(verhaal_button_frame,
                           text="Verhaal 1",
                           font="Roboto, 20",
                           width=40,
                           command=lambda: verhaal_1(root, menu))
-    admin_verhaal2 = Button(verhaal_button_frame,
+    admin_verhaal_2 = Button(verhaal_button_frame,
                           text="Verhaal 2",
                           font="Roboto, 20",
                           width=40,
                           command=lambda: verhaal_2(root, menu))
-    admin_verhaal3 = Button(verhaal_button_frame,
+    admin_verhaal_3 = Button(verhaal_button_frame,
                           text="Verhaal 3",
                           font="Roboto, 20",
                           width=40,
                           command=lambda: verhaal_3(root, menu))
-    admin_verhaal1.pack()
-    admin_verhaal2.pack()
-    admin_verhaal3.pack()
+    admin_verhaal_1.pack()
+    admin_verhaal_2.pack()
+    admin_verhaal_3.pack()
     return root, menu
 
 def verhaal_1(root, menu):
@@ -122,7 +118,6 @@ def verhaal_1(root, menu):
                         keuzes.pack()
             else:
                 pass
-
 
 def verhaal_2(root, menu):
     for widget in root.winfo_children():

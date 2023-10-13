@@ -22,17 +22,18 @@ def character_maken(venster: Tk, menu):
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(venster))
     cancel_button.pack(padx=5, pady=5, side="right")
 
-    naam_input_frame = Frame(venster)
+    naam_input_frame = Frame(venster, width=400, height=250, bd=2, relief="solid", highlightthickness=1, highlightbackground="black")
+
     naam_input_frame.place(anchor='center', relx=0.5, rely=0.5)
 
     label = Label(naam_input_frame, text="Vul uw naam in ", font="Roboto, 24")
-    label.grid(row=0, column=0)
+    label.pack()
 
     name_input = Entry(naam_input_frame, width=10, font="Roboto, 24")
-    name_input.grid(row=0, column=1)
+    name_input.pack()
 
-    haal_naam_op_knop = Button(naam_input_frame, text="Haal tekst op", command=lambda: naam_ophalen(venster, name_input, menu))
-    haal_naam_op_knop.grid(row=0, column=2)
+    haal_naam_op_knop = Button(naam_input_frame, text="Klaar",width=4,height=2 ,command=lambda: naam_ophalen(venster, name_input, menu))
+    haal_naam_op_knop.pack()
 
     venster.mainloop()
 
@@ -65,9 +66,12 @@ def naam_ophalen(venster, name_input, menu):
 
     label_huidge_naam = Label(venster, text= f"Uw gekozen naam: {naam_character}", font="Roboto, 17")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
-    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Arial, 17", command=lambda : ras_kiezen(venster, menu, naam_character))
-    doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.6)
+    doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Roboto, 18",
+                                    command=lambda : ras_kiezen(venster, menu, naam_character))
+    doorgaan_button.place(anchor= 'center', relx= 0.5, rely= 0.5)
+
     venster.mainloop()
+
 
 
 def ras_kiezen(venster, menu, name_inhoud):
