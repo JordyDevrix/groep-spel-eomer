@@ -45,7 +45,7 @@ def tijd_locatie_weergeven(huidige_locatie):
     locatie = huidige_locatie
 
     frame1 = tk.Frame(width=300, height=120, highlightbackground="blue", highlightthickness=6)
-    frame1.place(x=600, y=340)
+    frame1.place(anchor="center", relx=0.5, rely=0.5)
 
     lt_label = tk.Label(frame1, text=f"{locatie}", font=("Roboto", 24))
     lt_label.grid(row=0, column=0, pady=20)  # Center label vertically
