@@ -53,16 +53,22 @@ def naam_ophalen(venster, name_input, menu):
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
 
-    if naam_character == "":
+    if naam_character == "" or naam_character == " ":
 
         character_maken(venster, menu)
-        label = Label(venster, text="Dit is niet geldig")
+        label = Label(venster, text="Dit is niet geldig", font="Roboto, 24")
         label.pack()
     elif naam_character == "Frodo Baggings":
         label = Label(venster, text="It must often be so, Sam, when things are in danger: some one has to "
                                     "give them up, lose them, so that others may keep them", font="Roboto, 16")
         label.pack()
+
+    elif naam_character == "Vincent" or naam_character == 'vincent' or naam_character == 'Vincent Spijkers':
+        label_vincent = Label(venster, text="Legend!", font="CheapFire, 24")
+        label_vincent.pack()
     name_input.delete(0, tkinter.END)
+
+
 
     label_huidge_naam = Label(venster, text= f"Uw gekozen naam: {naam_character}", font="Roboto, 17")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
