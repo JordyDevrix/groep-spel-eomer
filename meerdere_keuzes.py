@@ -7,7 +7,7 @@ het_ras_van_de_speler_is_dwerg = False
 
 
 def lees_gegevens(gegevensbestand):
-    with open(gegevensbestand, 'r') as bestand:
+    with open(gegevensbestand, 'r', encoding='utf-8') as bestand:
         return json.load(bestand)
 
 
@@ -53,7 +53,7 @@ def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, bu
     if nieuwe_locatie is not None:
         update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
     else:
-        gemaakte_keuzes_tekst = "\n".join(gemaakte_keuzes)
+        gemaakte_keuzes_tekst = "\n- ".join(gemaakte_keuzes)
         beschrijving_label.config(text=gemaakte_keuzes_tekst)
         gemaakte_keuzes.clear()
 

@@ -72,7 +72,7 @@
         "eten_zoeken": {
             "beschrijving": "Je gaat op zoek naar voedsel. Gelukkig voor jou zitten er wat rijpe bessen aan een struik vlakbij. De sappige bessen roepen je bijna toe terwijl je erop af rent. Voordat je er een kunt plukken, hoor je een geritsel uit de struiken. Je zet je dapperste gezicht op en zegt: \"Kom naar buiten, wie je ook bent, ik ben niet bang voor je\". \"Dat zou je moeten zijn\", antwoordt de stem. Het is een diep stem die autoriteit uitstraalt. Tot jouw verbazing komt Gandalf uit de struiken tevoorschijn.\n\n\"Er is geen tijd\", zegt hij. Hij geeft je een enkele narcis. \"Je moet reizen om de boomherders te zien. Geef dit aan hen en zij zullen weten dat ze je kunnen helpen.\" Je neemt de bloem van hem af.\nJe gaat naar de boom herders en laat de narcis zien. Ze willen je helpen.",
             "keuzes": [
-                { "Ga naar gandalf": "artefacten" }
+                { "Ga naar Gandalf": "artefacten" }
             ],
             "einde": "goed"
         },
@@ -90,21 +90,21 @@
         "zingen": {
             "beschrijving": "Je stem zo slecht dat de boom herders klaar zijn om je te doden. Eentje steekt zijn hand op om je neer te steken. Maar wacht! Gandalf verschijnt om je te redden. \"You shall not kill!\" Gilt  hij. Alles komt tot een stil stand. \"Jullie hebben elkaar nodig anders wint Saruman en zijn duistere wezens en dan is alles als wij het weten over\", zegt Gandalf. De boom herders besluiten om je te helpenl.",
             "keuzes": [
-                { "Ga naar gandalf" : "artefacten" }
+                { "Ga naar Gandalf" : "artefacten" }
             ],
             "einde": "goed"
         },
         "smeken_mens": {
             "beschrijving": "Je gaat op je knien zitten en smeekt, \"Alstublieft ik heb niemand anders die me kan helpen. De veradelijke worm tongue zit vast al achter me aan. Als Saruman wint komt hij ook voor het bos en alle wezens die hier wonen\". De boomherders zijn een vreedzaam volk ze beseffen dat zij misschien overdreven reageerden. Ze realiseren hoe belangerijk het is dat Saruman niet wint. Ze kiezen om je te helpen.",
             "keuzes": [
-                { "Ga naar gandalf" : "artefacten" }
+                { "Ga naar Gandalf" : "artefacten" }
             ],
             "einde": "goed"
         },
         "smeken_dwerg": {
             "beschrijving": "Je blijft staan en bereid je voor om te smeken. \"Dit is zo gênant.\", zeg je zachtjes je knijpt je vuisten samen en vermijdt oogcontact met de boomherders. \"Alstublieft helpen wij zijn allemaal dood als Worm tongue en Saruman winnen\". Tot je verassing is dat goed genoeg. De boom herders vonden het leuk om een dwerg te zien smeken. Ze gaan je helpen.",
             "keuzes": [
-                { "Ga naar gandalf" : "artefacten" }
+                { "Ga naar Gandalf" : "artefacten" }
             ],
             "einde": "goed"
         },

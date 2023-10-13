@@ -1,0 +1,353 @@
+{
+    "locaties": {
+        "start": {
+            "beschrijving": "Jij bent op een missie om aanwijzingen te vinden voor de plannen van Sauron, en jouw reis heeft jou naar Ithilien gebracht, een prachtig en mysterieus land. Er zijn verhalen verteld over de grote macht die deze land bezat, en jij bent vastbesloten erachter te komen welke geheimen ze verborgen houden. Waar ga jij naartoe?",
+            "keuzes": [
+                { "Noord": "noord" },
+                { "West": "west" },
+                { "Zuid": "zuid" }
+            ],
+            "einde": "goed"
+        },
+        "noord": {
+            "beschrijving": "Je loopt het pad af alles lijkt normaal te zijn totdat je merkt dat een figuur je in de weg staat. Je blijft staan, niet zeker wat je moet doen. Je ziet dat de figuur een krijger is. Hij draagt een harnas en een zwaard, en hij ziet er krachtig en intimiderend uit. Dit is Faramir, kapitein van de rangers van Ithilien. 'Wat brengt jou hier?' vraagt Faramir. 'Ik zoek informatie om Sauron te verslaan,' zeg jij. 'Dan hebben wij dezelfde missie.'",
+            "keuzes": [
+                { "Ga samen op pad": "breng_hem_mee" },
+                { "Weiger zijn hulp": "zuid" }
+            ],
+            "einde": "goed"
+        },
+        "west": {
+            "beschrijving": "Je hoort een vreemd geluid uit de bomen komen. Het klinkt als een gierend geluid, als van een wild dier. Jij blijft stilstaan en probeert erachter te komen wat het is. Plotseling verschijnt er uit de bomen een ghul! Het is een grotesk wezen met een lange, spitse neus en scherpe klauwen. Zijn ogen waren roodgloeiend en hij liet een laag, dreigend gegrom horen.  De ghul komt dichter naar je toe en je voelt  zijn koude adem op jouw gezicht. Faramir springt uit de bomen en met de red je met de kracht van zijn zwaard",
+            "keuzes": [
+                { "Bedank hem (Dwerg)": "dank_dwerg" },
+                { "Bedank hem (Mens)": "dank_dwerg" },
+                { "Ren snel weg": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "dank_dwerg": {
+            "beschrijving": "Je voelt de adrenaline pompen door je aderen terwijl je Faramir bedankt voor zijn hulp, maar je laat hem weten dat je het gevecht zelf had kunnen afhandelen. Als een dwerg ben je trots op je vaardigheden en wil je je onafhankelijkheid behouden, zelfs in deze angstaanjagende situaties. Faramir knikt begrijpend en toont respect voor je zelfverzekerdheid. Samen kijken jullie naar de verslagen ghul, die nu levenloos op de grond ligt. Wat doe je nu?",
+            "keuzes": [
+                { "Ga samen op pad": "breng_hem_mee" },
+                { "Weiger zijn hulp": "zuid" }
+            ],
+            "einde": "goed"
+        },
+        "dank_mens": {
+            "beschrijving": "Opgelucht draai je je naar Faramir en bedankt hem hartelijk voor zijn moedige actie. Je vertelt hem dat je al een tijdje geen andere mensen hebt gezien tijdens je reis door het bos. Faramir knikt begrijpend en vertelt dat de wereld buiten de steden en dorpen soms vol gevaarlijke verrassingen kan zijn. Wat doe je nu?",
+            "keuzes": [
+                { "Ga samen op pad": "breng_hem_mee" },
+                { "Weiger zijn hulp": "zuid" }
+            ],
+            "einde": "goed"
+        },
+        "ren_weg": {
+            "beschrijving": "Je rent snel weg maar komt nog een ghul tegen. Voordat je kunt reageren, slaat deze je tegen de grond. Het monster laat je achter met je verwondingen. Uiteindelijk word je gevonden door vijanden en zij nemen je gevangen.",
+            "keuzes": [
+                { "Slecht einde - Gevangen genomen": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "zelf_redden": {
+            "beschrijving": "Je hoort een vreemd geluid uit de bomen komen. Het klinkt als een gierend geluid, als van een wild dier. Jij blijft stilstaan en probeert erachter te komen wat het is. Plotseling verschijnt er uit de bomen een ghul! Het is een grotesk wezen met een lange, spitse neus en scherpe klauwen. Zijn ogen waren roodgloeiend en hij laat een laag, dreigend gegrom horen. De ghul komt dichter naar je toe en je voelt zijn koude adem op jouw gezicht. Faramir springt uit de bomen en redt je met de kracht van zijn zwaard.",
+            "keuzes": [
+                { "Ga verder": "goed" }
+            ],
+            "einde": "goed"
+        },
+        "zuid": {
+            "beschrijving": "Je komt plotseling oog in oog te staan met een volger van de vijand, een angstaanjagend monster dat bekend staat als de gevreesde Hell Hawk! De lucht trilt van onheilspellende vleugelslagen terwijl deze verschrikking van een wezen zijn duistere silhouet boven je aftekent. De helhavik is berucht om zijn genadeloze aanvallen en meedogenloze jachtinstinct, en je voelt de adrenaline door je aderen razen terwijl je je klaarmaakt voor een onvermijdelijke confrontatie. Wat doe je?",
+            "keuzes": [
+                { "Verdedigen": "verdedigen_steen" },
+                { "Aanvallen": "aanvallen_handen" },
+                { "Gooi tak": "tak_gooien" }
+            ],
+            "einde": "goed"
+        },
+        "verdedigen_steen": {
+            "beschrijving": "Je kiest om te verdedigen. Je slaat het monster met je blote hand of steen. Het heeft effect, want het monster is gedesoriënteerd, en de strijd gaat verder. Het monster springt in jouw richting, wat doe je?",
+            "keuzes": [
+                { "Ontwijken": "ontwijken" },
+                { "Slaan met wapen": "slaan_met_wapen" },
+                { "Roep om hulp": "roep_om_hulp" }
+            ],
+            "einde": "goed"
+        },
+        "aanvallen_handen": {
+            "beschrijving": "Je kiest om aan te vallen met je blote handen. Je slaat het monster en probeert het te verslaan voordat het je kan bereiken. Het monster springt in jouw richting, wat doe je?",
+            "keuzes": [
+                { "Ontwijken": "ontwijken" },
+                { "Slaan met wapen": "slaan_met_wapen" },
+                { "Roep om hulp": "roep_om_hulp" }
+            ],
+            "einde": "goed"
+        },
+        "tak_gooien": {
+            "beschrijving": "Je kiest om een tak te gooien naar het monster. Helaas heeft de tak geen effect en het monster breekt de tak en kruipt langzaam naar je toe. De strijd gaat verder. Het monster springt in jouw richting, wat doe je?",
+            "keuzes": [
+                { "Ontwijken": "ontwijken" },
+                { "Slaan met wapen": "slaan_met_wapen" },
+                { "Roep om hulp": "roep_om_hulp" }
+            ],
+            "einde": "goed"
+        },
+        "monster_aanval": {
+            "beschrijving": "Het monster springt in jouw richting. Wat doe je?",
+            "keuzes": [
+                { "Ontwijken": "ontwijken" },
+                { "Slaan met wapen": "slaan_met_wapen" },
+                { "Roep om hulp": "roep_om_hulp" }
+            ],
+            "einde": "goed"
+        },
+        "ontwijken": {
+            "beschrijving": "Je probeert snel opzij te springen om de aanval van het monster te ontwijken. Het monster blijft sterk. Wat doe je?",
+            "keuzes": [
+                { "Krachtige Slag": "krachtige_slag" },
+                { "Snelle Herhalingsslagen": "snelle_slagen" },
+                { "Monster Analyseren": "monster_analyseren" }
+            ],
+            "einde": "goed"
+        },
+        "slaan_met_wapen": {
+            "beschrijving": "Vanuit je ooghoek zie je een roestige dolk verstopt in het zand. Je maakt gebruik van je wapen en probeert het monster te slaan voordat het je kan bereiken. Het monster blijft sterk. Wat doe je?",
+            "keuzes": [
+                { "Energie proberen te herwinnen": "energie_herwinnen" },
+                { "Afleiding creeren": "afleiding_creeren" },
+                { "Rustig blijven": "rustig_blijven" }
+            ],
+            "einde": "goed"
+        },
+        "roep_om_hulp": {
+            "beschrijving": "Je schreeuwt om hulp in de hoop dat iemand in de buurt je te hulp schiet, maar helaas komt niemand. Het monster blijft sterk. Wat doe je?",
+            "keuzes": [
+                { "Energie proberen te herwinnen": "energie_herwinnen" },
+                { "Afleiding creeren": "afleiding_creeren" },
+                { "Rustig blijven": "rustig_blijven" }
+            ],
+            "einde": "goed"
+        },
+        "krachtige_slag": {
+            "beschrijving": "Je slaat het monster en raakt het met een krachtige slag. Het monster deinst terug maar blijft gevaarlijk. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
+            "keuzes": [
+                { "Energie proberen te herwinnen": "energie_herwinnen" },
+                { "Afleiding creeren": "afleiding_creeren" },
+                { "Rustig blijven": "rustig_blijven" }
+            ],
+            "einde": "goed"
+        },
+        "snelle_slagen": {
+            "beschrijving": "Je blijft snel herhaalde slagen uitdelen om het monster op afstand te houden en te verzwakken. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
+            "keuzes": [
+                { "Energie proberen te herwinnen": "energie_herwinnen" },
+                { "Afleiding creeren": "afleiding_creeren" },
+                { "Rustig blijven": "rustig_blijven" }
+            ],
+            "einde": "goed"
+        },
+        "monster_analyseren": {
+            "beschrijving": "Je slaat het monster en trekt je vervolgens tactisch terug om het te analyseren, maar je vindt geen zwakke punten. Je begint nu moe te worden en het monster merkt het. Wat doe jij?",
+            "keuzes": [
+                {"Energie proberen te herwinnen": "energie_herwinnen" },
+                { "Afleiding creeren": "afleiding_creeren" },
+                { "Rustig blijven": "rustig_blijven" }
+            ],
+            "einde": "goed"
+        },
+        "energie_herwinnen": {
+            "beschrijving": "Je probeert even op adem te komen en je energie te herwinnen voordat je verdere actie onderneemt. Maar het duurt niet lang voor dat het beest je weer probeert te wonden. Wat doe je?",
+            "keuzes": [
+                { "Ren weg": "gevangen_genomen_boom" },
+                { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
+                { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
+            ],
+            "einde": "goed"
+        },
+        "afleiding_creeren": {
+            "beschrijving": "Je probeert het monster af te leiden door iets in de omgeving te gebruiken om lawaai te maken of zijn aandacht af te leiden, maar helaas is het monsters focus alleen op jou. Wat doe je?",
+            "keuzes": [
+                { "Ren weg": "gevangen_genomen_boom" },
+                { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
+                { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
+            ],
+            "einde": "goed"
+        },
+        "rustig_blijven": {
+            "beschrijving": "Je doet je best om kalm te blijven en je vermoeidheid te verbergen, hopend dat het monster je niet als een gemakkelijke prooi zal zien, maar het is te laat het monster is al zelfverzekerd dat jij zijn nieuwe slachtoffer zal zijn. Wat doe je?",
+            "keuzes": [
+                { "Ren weg": "gevangen_genomen_boom" },
+                { "Verstoppen in de bosjes.": "gevangen_genomen_schouders" },
+                { "Geef niet op (Dwerg)": "gevangen_genomen_klap" }
+            ],
+            "einde": "goed"
+        },
+        "gevangen_genomen_boom": {
+            "beschrijving": "Monster gooit je tegen een boom en pakt je in zijn vieze klauwen. Er is geen kans meer om te ontsnappen.",
+            "keuzes": [
+                { "Slecht einde - Gevangen genomen" : null },
+                { "Probeer Opnieuw" : "start" }
+            ],
+            "einde": "slecht"
+        },
+        "gevangen_genomen_schouders": {
+            "beschrijving": "Monster pakt je in zijn vieze klauwen en gooit je op zijn schouders. Er is geen kans meer om te ontsnappen.",
+            "keuzes": [
+                { "Slecht einde - Gevangen genomen" : null },
+                { "Probeer Opnieuw" : "start" }
+            ],
+            "einde": "slecht"
+        },
+        "gevangen_genomen_klap": {
+            "beschrijving": "Monster geeft je een klap op de hoofd en pakt je in zijn vieze klauwen. Er is geen kans meer om te ontsnappen.",
+            "keuzes": [
+                { "Slecht einde - Gevangen genomen" : null },
+                { "Probeer Opnieuw" : "start" }
+            ],
+            "einde": "slecht"
+        },
+        "breng_hem_mee": {
+            "beschrijving": "Faramir wil mee op het avontuur. Wat doe jij?",
+            "keuzes": [
+                { "Breng hem mee": "zwaard_meenemen" },
+                { "Weiger zijn hulp": "geen_hulp" }
+            ],
+            "einde": "goed"
+        },
+        "zwaard_meenemen": {
+            "beschrijving": "Faramir biedt je een zwaard aan. Wat doe jij?",
+            "keuzes": [
+                { "Pak zwaard aan": "spin" },
+                { "Pak stok van de grond": "stok_pakken" }
+            ],
+            "einde": "goed"
+        },
+        "stok_pakken": {
+            "beschrijving": "Je pakt een stok van de grond in de hoop dat je het niet gaat gebruiken.",
+            "keuzes": [
+                { "Verder gaan met je gekozen wapen": "spin" },
+                { "Ga naar huis met je stok": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "geen_hulp": {
+            "beschrijving": "Jij gaat alleen verder op je avontuur.",
+            "keuzes": [
+                { "Ga verder": "zuid" },
+                { "Ren snel weg": "ren_weg" }
+
+            ],
+            "einde": "goed"
+        },
+        "spin": {
+            "beschrijving": "Jullie ontmoeten een gigantische spin op het pad, hun benen lijken eeuwig door te gaan. Het haar erop benadrukte alleen maar hun toch al angstaanjagende imago. Wat ga je doen? (Hint: Heb je wapens?)",
+            "keuzes": [
+                { "Vechten": "vechten_spin" },
+                { "Verstoppen": "verstoppen_spin" }
+            ],
+            "einde": "goed"
+        },
+        "vechten_spin": {
+            "beschrijving": "Je kiest om te vechten tegen de gigantische spin met de hulp van Faramir. Jullie hallen allebei je wapens tevoorschijn en gaan de spin dapper tegemoet. Het wordt een zware strijd, maar uiteindelijk slagen jullie erin om de spin te verslaan.",
+            "keuzes": [
+                { "Ga verder": "goed" }
+            ],
+            "einde": "goed"
+        },
+        "verstoppen_spin": {
+            "beschrijving": "Je besluit je te verstoppen voor de gigantische spin in de hoop dat hij je niet zal opmerken. Helaas merkt de spin je toch op en valt hij je aan. Je hebt geen andere keuze dan te vechten voor je leven. Samen met Faramir slagen jullie erin om de spin te verslaan, maar het was een nauwe ontsnapping.",
+            "keuzes": [
+                { "Ga verder": "goed" }
+            ],
+            "einde": "goed"
+        },
+        "raadsel": {
+            "beschrijving": "Je gaat eten vinden, je ziet een boom met rijp appels je begint met opwinding het fruit te plukken. Plotseling schijnt er een licht tussen de takken.  Je hoort een diepe stem \"Wie zoekt mijn wijsheid \"Gandalf verschijnt. Je kijkt met ogen vol verbazing. \"Ik ...denk ik\", zeg jij, jij twijfelt nog of hij echt voor je staat. \"ik kan je alleen maar helpen als je dit raadsel oplost” Zegt Gandalf. \n\n\" Je ziet noch voelt het, Heeft geen gewicht, Je hoort noch ruikt het,En het ligt achter sterren en heuveltop, En vult lege holen op. Het komt eerst en volgt op slag, Eindigt leven, Doodt gelach\" \n\n Welke kies jij?",
+            "keuzes": [
+                { "De maan ": "maan" },
+                { "De nacht ": "nacht" },
+                { "Het donker": "donker" }
+            ],
+            "einde": "goed"
+        },
+        "maan": {
+            "beschrijving": "\"De Maan\" zeg jij met vol vertrouwen. \"Dat is fout\" ik kan je niks laten zien. Je gaat terug naar Farimir en jullie proberen de aanwijzingen te vinden.",
+            "keuzes": [
+                { "Ga verder": "zuid" },
+                { "Ga naar huis": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "nacht": {
+            "beschrijving": "\"De Nacht?” vraag jij. \"Dat is niet het juist antwoord maar het is wel dichtbij\". Ik kan je de weg niet wijzen maar ik kan wel je wapen betoveren. Hij strekt zijn arm uit en je wapen begint te gloeien. \"Met dit wapen versla al je vijanden, veel succes op je reis\". Je vind Faramir en jullie besluiten om verder te zoeken",
+            "keuzes": [
+                { "Ga verder": "vind_documenten" },
+                { "Ga naar huis": "ren_weg" }
+
+            ],
+            "einde": "goed"
+        },
+
+        "donker": {
+            "beschrijving": "\"Het donker\" zeg jij. Gandalf kijkt je voor een tijdje aan...\"Dat is juist\" zegt hij. Je laat een zucht van verlichting ontsnappen. \"De aanwijzingen vind je in Minas Morgul. Maar pas op voor de Orks die de toren bewaken.\" Jij bedankt hem en gaat verder met Fariman reizen.",
+            "keuzes": [
+                { "Ga verder": "vind_documenten" },
+                { "Ga naar huis": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "vind_documenten": {
+            "beschrijving": "Je bevindt je bij Minas Morgul. De donkere toren ligt aan de voet van de Bergen van Schaduw. De lucht is zwaar van de geur van verval en rot. De donkere horizon lijkt zich eeuwig uit te strekken. Er zijn drie manieren om binnen Minas Morgul te komen. Welke kies jij?",
+            "keuzes": [
+                { "Door de bergen van schaduw. (Mens)": "zuid" },
+                { "Door de bergen van schaduw. (Dwerg)": "bergen_van_schaduw_dwerg" },
+                { "Rond de bergen van schaduw.": "rond_bergen_van_schaduw" },
+                { "Over de bergen van schaduw.": "over_bergen_van_schaduw" }
+            ],
+            "einde": "goed"
+        },
+        "bergen_van_schaduw_dwerg": {
+            "beschrijving": "Jij en Fariman gaan door de bergen van schaduw heen. Julie komen tegen een cave troll aan. Je vecht de troll met je gekozen wapen en wint. Jullie bereiken met succes de toren.   Jullie bevinden zich in een donkere vochtige kamer. Het is tijd om de informatie te zoeken. Waar zoeken jullie?",
+            "keuzes": [
+                { "In de kist op de vloer": "" },
+                { "Onder de vloertegels": "onder_vloertegels" },
+                { "Achter de fluwelen gordijnen": "" }
+            ],
+            "einde": "goed"
+        },
+        "rond_bergen_van_schaduw": {
+            "beschrijving": "",
+            "keuzes": [
+
+            ],
+            "einde": "goed"
+        },
+        "over_bergen_van_schaduw": {
+            "beschrijving": "Jullie proberen over de bergen te gaan maar zijn makkelijk te zien door de vijanden. Jullie woorden gepakt. ",
+            "keuzes": [
+                { "Ga verder": "vind_documenten" },
+                { "Ga naar huis": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "": {
+            "beschrijving": "",
+            "keuzes": [
+                { "Rood": "" },
+                { "Grijs ": "" },
+                { "Blauw": "" }
+            ],
+            "einde": "goed"
+        },
+        "": {
+            "beschrijving": "",
+            "keuzes": [
+                { "Rood": "" },
+                { "Grijs ": "" },
+                { "Blauw": "" }
+            ],
+            "einde": "goed"
+        }
+    }
+}
