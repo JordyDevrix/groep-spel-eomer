@@ -68,7 +68,7 @@ def menu(root):
                            font="Roboto, 20",
                            width=40,
                            command=lambda: settings(root, menu))
-    settings_menu.pack(padx=10, pady=10, fill="both")
+    #   settings_menu.pack(padx=10, pady=10, fill="both")
 
     admin_opties = Button(menu_button_frame,
                           text="ADMIN MODE",
