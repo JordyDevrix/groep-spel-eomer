@@ -76,6 +76,12 @@ def start_tekst_avontuur(root, bestand, menu):
     for widget in root.winfo_children():
         widget.destroy()
     bg_image = tk.PhotoImage(file="images/Mordor background.png")
+
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
+
     bg_label = tk.Label(root, image=bg_image)
     bg_label.place(x=0, y=0)
     button_frame = tk.Frame(root)

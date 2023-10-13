@@ -42,6 +42,11 @@ def menu(root):
 
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
 
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
+
     bg_label = Label(root, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
 
@@ -100,7 +105,7 @@ def applicatie_gui():
     root.iconbitmap("images/lord_of_the_rings_icon.ico")
     root.title("Lord of The Rings")
 
-    root.resizable(False, False)
+    root.resizable(True, True)
     app_frame = Frame(root, bg="black")
     app_frame.pack(fill="both", expand=True)
 

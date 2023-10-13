@@ -7,6 +7,12 @@ def verhaal_kiezen(root, menu):
     for widget in root.winfo_children():
         widget.destroy()
     bg_image = PhotoImage(file="images/Character_kies_achtegrond-transformed (1).png")
+
+    # ================================ # maakt achtergrond resizable
+    bg_image = bg_image.zoom(10)
+    bg_image = bg_image.subsample(7)
+    # ================================ #
+
     bg_label = Label(root, image=bg_image)
     bg_label.place(x=0, y=0)
     avontuur_1_foto = Image.open('images/isengard.jpg')
