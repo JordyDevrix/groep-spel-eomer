@@ -69,7 +69,11 @@ def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, bu
         update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
     else:
         gemaakte_keuzes_tekst = "\n- ".join(gemaakte_keuzes)
-        beschrijving_label.config(text=gemaakte_keuzes_tekst)
+        beschrijving_label.place_forget()
+        button_frame.place_forget()
+        gemaakte_keuzes_label = tk.Label(justify="center", font="Roboto, 12", text=gemaakte_keuzes_tekst,
+                                         wraplength=800, padx=10, pady=10)
+        gemaakte_keuzes_label.place(anchor="center", relx=0.5, rely=0.5)
         gemaakte_keuzes.clear()
 
         for knop in button_frame.winfo_children():
