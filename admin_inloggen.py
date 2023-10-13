@@ -1,12 +1,14 @@
 from tkinter import *
 import json
 
+
 def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     with open("files/admin_inlog.json") as bestand:
         inhoud = json.load(bestand)
     if input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord == inhoud['wachtwoord']:
         print("Ingelogd")
         admin_scherm(root, menu)
+
 
 def admin_inlogscherm(root, menu):
     for widget in root.winfo_children():
@@ -20,10 +22,8 @@ def admin_inlogscherm(root, menu):
     frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
 
-
     titel = Label(frame, text="Admin login", font=("Roboto", 24), bg="#ded9ee")
     titel.pack(padx= 25, pady= 25)
-
 
     admin_login_frame = Frame(frame, bg="#ded9ee")
     admin_login_frame.place(anchor="center", relx=0.5, rely=0.5)
@@ -40,7 +40,6 @@ def admin_inlogscherm(root, menu):
                                                       root,
                                                       menu))
 
-
     gebruikersnaam_label.pack(padx=5, pady=5)
     input_gebruikersnaam.pack(padx=5, pady=5)
     wachtwoord_label.pack(padx=5, pady=5)
@@ -48,6 +47,7 @@ def admin_inlogscherm(root, menu):
     inlog_button.pack(padx=5, pady=5)
 
     return root, menu
+
 
 def admin_scherm(root, menu):
     for widget in root.winfo_children():
@@ -62,7 +62,6 @@ def admin_scherm(root, menu):
     frame.pack(fill="both", expand=True)
     titel = Label(frame, text="Admin portaal", font=("Roboto", 24), bg="#ded9ee")
     titel.pack(padx=25, pady=25)
-
 
     verhaal_button_frame = Frame(frame, height=650, width=500, bg="#ded9ee")
     verhaal_button_frame.place(anchor="center", relx=0.5, rely=0.5)
@@ -87,6 +86,7 @@ def admin_scherm(root, menu):
     admin_verhaal_3.pack()
     return root, menu
 
+
 def verhaal_1(root, menu):
     for widget in root.winfo_children():
         widget.destroy()
@@ -99,7 +99,6 @@ def verhaal_1(root, menu):
 
     frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
-
 
     titel = Label(frame, text="Verhaal 1", font="Roboto, 24", bg="#ded9ee")
     ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20", bg="#ded9ee")
@@ -118,6 +117,7 @@ def verhaal_1(root, menu):
                         keuzes.pack()
             else:
                 pass
+
 
 def verhaal_2(root, menu):
     for widget in root.winfo_children():

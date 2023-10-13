@@ -39,6 +39,7 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
                                command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
             button.grid(padx=20, pady=5, column=i, row=0)
 
+
 def kies_optie(nieuwe_locatie, huidige_locatie, gegevens, beschrijving_label, button_frame):
     locatie_data = gegevens["locaties"][huidige_locatie]
     keuzes = locatie_data["keuzes"]

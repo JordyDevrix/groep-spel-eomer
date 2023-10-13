@@ -6,7 +6,6 @@ from PIL import Image, ImageTk
 
 
 def character_maken(venster: Tk, menu):
-
     for widget in venster.winfo_children():
         widget.destroy()
 
@@ -14,7 +13,6 @@ def character_maken(venster: Tk, menu):
 
     bg_label = Label(venster, image=bg_image)
     bg_label.place(relwidth=1, relheight=1)
-
 
     top_bar = Frame(venster, bg="grey", height=40)
     top_bar.pack(fill="both")
@@ -68,8 +66,6 @@ def naam_ophalen(venster, name_input, menu):
         label_vincent.pack()
     name_input.delete(0, tkinter.END)
 
-
-
     label_huidge_naam = Label(venster, text= f"Uw gekozen naam: {naam_character}", font="Roboto, 17")
     label_huidge_naam.place(anchor= 'center', relx= 0.5, rely=0.65)
     doorgaan_button = Button(venster, text="Ga door naar volgende keuze.", font="Roboto, 18",
@@ -93,22 +89,17 @@ def ras_kiezen(venster, menu, name_inhoud):
     top_bar = Frame(venster, bg="grey", height=40)
     top_bar.pack(fill="both")
 
-
-
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: menu(venster))
     cancel_button.pack(padx=5, pady=5, side="right")
 
     dwerg_image = Image.open("images/dwerg.png")
     mens_image = Image.open('images/mens.png')
 
-
     dwerg_image = dwerg_image.resize((300, 500))
     mens_image = mens_image.resize((300, 500))
 
-
     venster.dwerg_photo = ImageTk.PhotoImage(dwerg_image)
     venster.mens_photo = ImageTk.PhotoImage(mens_image)
-
 
     dwerg_button = Button(venster, image=venster.dwerg_photo, command=lambda: ras_binnen_krijgen(venster, 1, menu, name_inhoud))
     dwerg_button.place(anchor='center', relx=0.25, rely=0.4)
@@ -127,10 +118,8 @@ def ras_kiezen(venster, menu, name_inhoud):
     tekst_mens_eigenschap = Label(venster, text="Eigenschap: Slim", font="Roboto, 24")
     tekst_mens_eigenschap.place(anchor='center', relx=0.75, rely=0.8)
 
-
     tekst_dwerg_eigenschap = Label(venster, text="Eigenschap: Sterk", font="Roboto, 24")
     tekst_dwerg_eigenschap.place(anchor='center', relx=0.25, rely=0.8)
-
 
     tekst = Label(venster, text="Kies uw Ras", font='Roboto, 24')
     tekst.pack()
@@ -176,7 +165,7 @@ def character_gegevens_wegschrijven(ras, name_input):
     with open(f"charater_gegevens.json", 'w') as bestand:
         gegevens = {
             "Ras": ras,
-            "naam":str(name_input)
+            "naam": str(name_input)
         }
         data = json.dumps(gegevens, indent=1)
         bestand.write(data)

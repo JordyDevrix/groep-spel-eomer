@@ -1,7 +1,6 @@
-from tkinter import *
+
 from admin_inloggen import *
 from character_maken import character_maken
-from PIL import Image, ImageTk
 import threading
 from settings_menu import settings
 from game_muziek import music
@@ -37,23 +36,6 @@ def kill_process(root, menu_return):
     cancel_button.pack(side="right", padx=10, pady=10)
 
 
-# def tijd_locatie_weergeven(root):
-#     for widget in root.winfo_children():
-#         widget.destroy()
-#
-#     tijd = "10:12"
-#     locatie = "Rivendel"
-#
-#     frame1 = Frame(root, width=300, height=120, highlightbackground="blue", highlightthickness=6)
-#     frame1.place(x=600, y=340)
-#
-#     lt_label = Label(frame1, text=f"{tijd} en {locatie}", font=("Roboto", 24))
-#     lt_label.grid(row=0, column=0, pady=20)
-#
-#     close_button = Button(frame1, text="x", command=lambda: spel_spelen(root))
-#     close_button.grid(row=1, column=0)
-
-
 def menu(root):
     for widget in root.winfo_children():
         widget.destroy()
@@ -82,9 +64,6 @@ def menu(root):
                            width=40,
                            command=lambda: settings(root, menu))
     settings_menu.pack(padx=10, pady=10, fill="both")
-
-    # speel_spel = Button(menu_button_frame, text="PLAY GAME", font="Roboto, 20", width=40, command=lambda: spel_spelen(root))
-    # speel_spel.pack(padx=10, pady=10, fill="both")
 
     admin_opties = Button(menu_button_frame,
                           text="ADMIN MODE",
