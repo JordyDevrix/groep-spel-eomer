@@ -10,8 +10,6 @@ def check_inlog(input_gebruikersnaam, input_wachtwoord, root, menu):
     elif input_gebruikersnaam == inhoud['gebruikersnaam'] and input_wachtwoord != inhoud['wachtwoord']:
         melding = Label()
 
-
-
 def admin_inlogscherm(root, menu):
     for widget in root.winfo_children():
         widget.destroy()
@@ -122,7 +120,6 @@ def verhaal_1(root, menu):
                         keuzes.pack()
             else:
                 pass
-
 
 def verhaal_2(root, menu):
     for widget in root.winfo_children():
