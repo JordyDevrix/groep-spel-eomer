@@ -251,14 +251,25 @@
         "vechten_spin": {
             "beschrijving": "Je kiest om te vechten tegen de gigantische spin met de hulp van Faramir. Jullie hallen allebei je wapens tevoorschijn en gaan de spin dapper tegemoet. Het wordt een zware strijd, maar uiteindelijk slagen jullie erin om de spin te verslaan.",
             "keuzes": [
-                { "Ga verder": "goed" }
+                { "Ga verder": "ga_verder" },
+                { "Ga naar huis": "ren_weg" }
             ],
             "einde": "goed"
         },
         "verstoppen_spin": {
             "beschrijving": "Je besluit je te verstoppen voor de gigantische spin in de hoop dat hij je niet zal opmerken. Helaas merkt de spin je toch op en valt hij je aan. Je hebt geen andere keuze dan te vechten voor je leven. Samen met Faramir slagen jullie erin om de spin te verslaan, maar het was een nauwe ontsnapping.",
             "keuzes": [
-                { "Ga verder": "goed" }
+                { "Ga verder": "ga_verder" },
+                { "Ga naar huis": "ren_weg" }
+            ],
+            "einde": "goed"
+        },
+        "ga_verder": {
+            "beschrijving": "Jullie gaan verder binnen  lthilien, Faruman zegt dat jullie moet stoppen en even moeten rusten. Wat doe jij?",
+            "keuzes": [
+                { "Stop en rust": "zuid" },
+                { "Eten zoeken": "raadsel" },
+                { "Loop alleen door": "zuid" }
             ],
             "einde": "goed"
         },
@@ -302,50 +313,86 @@
             "keuzes": [
                 { "Door de bergen van schaduw. (Mens)": "zuid" },
                 { "Door de bergen van schaduw. (Dwerg)": "bergen_van_schaduw_dwerg" },
-                { "Rond de bergen van schaduw.": "rond_bergen_van_schaduw" },
-                { "Over de bergen van schaduw.": "over_bergen_van_schaduw" }
+                { "Rond de bergen van schaduw.": "zuid" },
+                { "Over de bergen van schaduw.": "zuid" }
             ],
             "einde": "goed"
         },
         "bergen_van_schaduw_dwerg": {
             "beschrijving": "Jij en Fariman gaan door de bergen van schaduw heen. Julie komen tegen een cave troll aan. Je vecht de troll met je gekozen wapen en wint. Jullie bereiken met succes de toren.   Jullie bevinden zich in een donkere vochtige kamer. Het is tijd om de informatie te zoeken. Waar zoeken jullie?",
             "keuzes": [
-                { "In de kist op de vloer": "" },
+                { "In de kist op de vloer": "zuid" },
                 { "Onder de vloertegels": "onder_vloertegels" },
-                { "Achter de fluwelen gordijnen": "" }
+                { "Achter de fluwelen gordijnen": "zuid" }
             ],
             "einde": "goed"
         },
-        "rond_bergen_van_schaduw": {
+        "onder_vloertegels": {
             "beschrijving": "",
             "keuzes": [
-
+                { "Rood": "rood" },
+                { "Grijs ": "grijs" },
+                { "Blauw": "blauw" }
             ],
             "einde": "goed"
         },
-        "over_bergen_van_schaduw": {
-            "beschrijving": "Jullie proberen over de bergen te gaan maar zijn makkelijk te zien door de vijanden. Jullie woorden gepakt. ",
-            "keuzes": [
-                { "Ga verder": "vind_documenten" },
-                { "Ga naar huis": "ren_weg" }
-            ],
-            "einde": "goed"
-        },
-        "": {
+        "rood": {
             "beschrijving": "",
             "keuzes": [
-                { "Rood": "" },
-                { "Grijs ": "" },
-                { "Blauw": "" }
+                { "Farimans zwaard": "tegel_omhoog" },
+                { "Je handen": "tegel_omhoog" },
+                { "Een stok": "tegel_omhoog" }
             ],
             "einde": "goed"
         },
-        "": {
+        "blauw": {
             "beschrijving": "",
             "keuzes": [
-                { "Rood": "" },
-                { "Grijs ": "" },
-                { "Blauw": "" }
+                { "Farimans zwaard": "tegel_omhoog" },
+                { "Je handen": "tegel_omhoog" },
+                { "Een stok": "tegel_omhoog" }
+            ],
+            "einde": "goed"
+        },
+        "Grijs": {
+            "beschrijving": "",
+            "keuzes": [
+                { "Farimans zwaard": "tegel_omhoog" },
+                { "Je handen": "tegel_omhoog" },
+                { "Een stok": "tegel_omhoog" }
+            ],
+            "einde": "goed"
+        },
+        "tegel_omhoog": {
+            "beschrijving": "Je ziet iets dat uit het grond steekt. Het zijn de documenten die het plan van Sauron bevatten! Je hebt de informatie gevonden. Jullie juichen! Je missie is een succes. Wat is jouw reactie: ",
+            "keuzes": [
+                { "Huilen": "huilen" },
+                { "Vrolijkheid ": "vrolijkheid" },
+                { "Boosheid": "" }
+            ],
+            "einde": "goed"
+        },
+        "huilen": {
+            "beschrijving": "Huilend pak je de documenten en neemt ze mee. Je hebt je missie voltooid!!!",
+            "keuzes": [
+                { "Goed einde - Documenten Bemachtigd" : null },
+                { "Probeer Opnieuw" : "start" }
+            ],
+            "einde": "goed"
+        },
+        "vrolijkheid": {
+            "beschrijving": "Je juicht als je de documenten pakt. Je neemt ze mee en maak je klaar voor de terug weg. Je hebt je missie voltooid!!!",
+            "keuzes": [
+                { "Goed einde - Documenten Bemachtigd" : null },
+                { "Probeer Opnieuw" : "start" }
+            ],
+            "einde": "goed"
+        },
+        "boosheid": {
+            "beschrijving": "Jij bent boos dat het zo lang heb gereisd voor iets die gewoon onder tegels verstopt was. Je pakt het en loopt boos uit de toren, wat een tijdverspilling.  ",
+            "keuzes": [
+                { "Goed einde?! - Documenten Bemachtigd" : null },
+                { "Probeer Opnieuw" : "start" }
             ],
             "einde": "goed"
         }
