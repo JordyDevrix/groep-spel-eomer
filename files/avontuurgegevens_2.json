@@ -1,30 +1,299 @@
 {
     "locaties": {
         "start": {
-            "beschrijving": "Je begint je avontuur in het Fangorn forrest. Het knisperen van de bladeren onder je voeten is een mooie herinnering aan het mystieke wezen waar je naar op zoek bent: De Entwives.\nZe zijn opeens verdwenen en niemand weet waarom dat gebeurde of waar ze zijn. De wind fluit door de bomen en de geur van vochtig hout nadat de regen de vult de lucht. Jij hebt het gevoel dat dit een spannend avontuur wordt. Waar ga je heen?",
+            "beschrijving": "Je begint je avontuur in het Fangorn Forest. Het knisperen van de bladeren onder je voeten is een mooie herinnering aan het mystieke wezen waar je naar op zoek bent: De Entwives.\nZe zijn opeens verdwenen en niemand weet waarom dat gebeurde of waar ze zijn. De wind fluit door de bomen en de geur van vochtig hout nadat de regen de lucht vult. Jij hebt het gevoel dat dit een spannend avontuur wordt. Waar ga je heen?",
             "keuzes": [
-                { "Noord": "noord" },
-                { "West": "west" },
-                { "Zuid": "zuid" }
-            ]
+                { "Noord": "noord_west_start" },
+                { "West": "noord_west_start" },
+                { "Zuid": "zuid_start" }
+            ],
+            "einde": "goed"
         },
-        "noord": {
-            "beschrijving": "Je ontmoet Treebeard en Quickbeam op een pad in de bos",
-            "keuzes": [
-
-            ]
-        },
-        "west": {
+        "noord_west_start": {
             "beschrijving": "Het lijkt erop dat je goed hebt gekozen. Dit pad is goed verlicht en - een gebrul onderbreekt je gedachten. Een gruwelijke Ork met een dorst naar bloed komt naar je toe. Voordat je kunt reageren, komen er twee entiteiten tussenbeide en overmeesteren de orc, deze vlucht beschaamd. Ze draaien zich naar jou toe. Je bedankt ze. Het ouder uitziende boomachtige wezen stelt zichzelf voor als Treebeard, de jongere lanke boom stelt zichzelf voor als Quickbeam",
             "keuzes": [
-
-            ]
+                { "Vraag Treebeard over de Entwives": "vraag_entwives" }
+            ],
+            "einde": "goed"
         },
-        "zuid": {
-            "beschrijving": "Je loopt rechtstreeks in de pad van de vijand",
+        "zuid_start": {
+            "beschrijving": "Het lijkt erop dat je goed hebt gekozen. Dit pad is goed verlicht en - een gebrul onderbreekt je gedachten. Een gruwelijke Ork met een dorst naar bloed komt naar je toe. Voordat je kunt reageren, slaat deze je tegen de grond. Het monster laat je achter met je verwondingen. Uiteindelijk word je gevonden door vijanden zij nemen je gevangen.",
             "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "vraag_entwives": {
+            "beschrijving": "Jij vraagt Treabeard over de Entwives. Treabeard zegt \"ze hadden haar uitgedroogd door de zon in de tint van rijpe maïs en hun wangen waren als rode appels. Toch waren hun ogen nog steeds de ogen van ons eigen volk,\"'. Quickbeam kan niet eens de tijd waar de Entwives nog leefden herinneren tranen beginnen te vallen. Wat ga jij doen?",
+            "keuzes": [
+                { "Troost hem": "ga_verder" },
+                { "Beledig hem": "beledig" },
+                { "Moedig hem aan": "ga_verder" }
+            ],
+            "einde": "goed"
+        },
+        "beledig": {
+            "beschrijving": "Jii zegt \"Jullie hebben vast iegts gedaan om ervoor te zorgen dat de Ent wives nooit terug kwamen\". Quickbeam wordt boos en valt je aan. Wat doe jij?",
+            "keuzes": [
+                { "Overmeesteren (Dwerg) ": "overmeester_dwerg" },
+                { "Overmeesteren (Mens) ": "overmeester_mens" },
+                { "Vraag Treebeard om hulp": "ga_verder" }
+            ],
+            "einde": "goed"
+        },
+        "overmeester_dwerg": {
+            "beschrijving": "Jij pakt zijn arm en draait het tot dat hij smeekt dat jij stopt. Zei respecteren je moed.",
+            "keuzes": [
+                { "Loop samen verder": "ga_verder" }
+            ],
+            "einde": "goed"
+        },
+        "overmeester_mens": {
+            "beschrijving": "Natuurlijk kan je het niet winnen. Tree beard en Quickbeam lachen je uit ze vinden je zwakte grappig. Ze laten je op de grond liggen en lopen verder. Het monster laat je achter met je verwondingen. Uiteindelijk word je gevonden door vijanden zij nemen je gevangen.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "ga_verder": {
+            "beschrijving": "Treabeard en Quickbeam zeggen dat jij een vriend voor leven hebt en willen graag met je mee op je zoek tocht.  Welke kant op?",
+            "keuzes": [
+                { "Oost": "oost_event" },
+                { "Zuid": "gollum" },
+                { "Noord": "gollum" }
+            ],
+            "einde": "goed"
+        },
+        "oost_event": {
+            "beschrijving": "Je reis gaat verder door het bos met je metgezellen. \"Een donkere Ent, we moeten ons verstoppen\", fluistert Treabeard. Het is echter te laat. De duistere Ent ziet je. Het komt met grote snelheid op je af. Boombaard raakt hem meerdere keren totdat hij te zwak is om op te staan. \"Hij zal snel de kracht vinden om op te staan, we moeten vertrekken.\" Je laat het haastig achter.",
+            "keuzes": [
+                { "Ga snel door": "gollum" }
+            ],
+            "einde": "goed"
+        },
+        "gollum": {
+            "beschrijving": "Jullie komen Gollum tegen. Die zegt dat hij weet waar de Entwives zitten. 'Ze zijn in Lothlorien,' zegt Gollum. Treabeard en Quickbeam zeggen dat hij te vertrouwen is. Wat ga jij doen?",
+            "keuzes": [
+                { "Vertrouw Gollum": "vertrouw_gollum" },
+                { "Advies negeren": "advies_negeer" }
+            ],
+            "einde": "goed"
+        },
+        "vertrouw_gollum": {
+            "beschrijving": "Je besluit Gollum te vertrouwen en begint een tocht naar Lothlorien.",
+            "keuzes": [
+                { "Vervolg je tocht": "vervolg_avontuur_huorn" }
+            ],
+            "einde": "goed"
+        },
+        "advies_negeer": {
+            "beschrijving": "Je negeert Gollum's advies en gaat je eigen weg.",
+            "keuzes": [
+                { "Advies negeren gekozen": "vervolg_avontuur_huorn" }
+            ],
+            "einde": "goed"
+        },
+        "vervolg_avontuur_huorn": {
+            "beschrijving": "Jullie komen een Huorn tegen, een boomachtige entiteit. Met het blote oog lijkt hij op een onbeweeglijke gewone boom, maar als je beter kijkt, kun je een gezicht ontdekken. Hij blokkeert het pad en zal niet vertrekken tenzij je zijn raadsel goed beantwoord. Het raadsel luidt: 'Een oog in een blauw gezicht, Zag een oog in een groen gezicht, Dat oog lijkt op dit oog, Maar laag Niet hoog (hint: zij volgen het zonlicht). Wat is je antwoord?",
+            "keuzes": [
+                { "Rosen": "rosen" },
+                { "Boterbloempjes": "goede_bloem" },
+                { "Ranunculus lingua": "goede_bloem" }
+            ],
+            "einde": "goed"
+        },
+        "rosen": {
+            "beschrijving": "Helaas is je antwoord onjuist. De Huorn roept vijanden naar je toe. Hoe wil je ontsnappen?",
+            "keuzes": [
+                { "Verder in bos rennen": "gepakt" },
+                { "Bomen klimmen": "gepakt" }
+            ],
+            "einde": "goed"
+        },
+        "gepakt": {
+            "beschrijving": "Helaas wordt je gevangen, maar door wie?",
+            "keuzes": [
+                { "Door Dark Ents": "gepakt_dark_ents_gevecht" },
+                { "Door vijandige soldaten": "gepakt_soldaten_gevecht" },
+                { "Door gigantische spin": "gepakt_spin_gevecht" }
+            ],
+            "einde": "goed"
+        },
+        "gepakt_dark_ents_gevecht": {
+            "beschrijving": "De Dark Ents bereiden zich voor om je te pakken. Wat doe jij?",
+            "keuzes": [
+                { "Vechten": "vechten_einde" },
+                { "Verstoppen": "verstoppen_einde" },
+                { "Roept": "verstoppen_einde" }
+            ],
+            "einde": "goed"
+        },
+        "gepakt_soldaten_gevecht": {
+            "beschrijving": "De Soldaten bereiden zich voor om je te pakken. Wat doe jij?",
+            "keuzes": [
+                { "Vechten": "vechten_einde" },
+                { "Verstoppen": "verstoppen_einde" },
+                { "Om hulp roepen": "roepen_einde" }
+            ],
+            "einde": "goed"
+        },
+        "gepakt_spin_gevecht": {
+            "beschrijving": "De Gigantishe spin maakt zich gereed om je te pakken. Wat doe jij?",
+            "keuzes": [
+                { "Vechten": "vechten_einde" },
+                { "Verstoppen": "verstoppen_einde" },
+                { "Om hulp roepen": "roepen_einde" }
+            ],
+            "einde": "slecht"
+        },
+        "vechten_einde": {
+            "beschrijving": "Je probeert te vechten, maar het is te laat. Je wordt gepakt en gevangen genomen.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "roepen_einde": {
+            "beschrijving": "Je probeert om hulp te roepen, maar het is te laat. Je wordt gepakt en gevangen genomen.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "verstoppen_einde": {
+            "beschrijving": "Je probeert te vechten, maar het is te laat. Je wordt gepakt en gevangen genomen.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "goede_bloem": {
+            "beschrijving": "De Huorn keurt je antwoord goed. Hij zegt dat hij weet waar de Entwives zijn en dat ze zich op een betoverde plek bevinden, gecamoufleerd met het bos. Wat doe jij?",
+            "keuzes": [
+                { "Advies nemen": "advies_nemen" },
+                { "Advies van Huorn negeren": "advies_negeer_huorn" }
+            ],
+            "einde": "goed"
+        },
+        "advies_nemen": {
+            "beschrijving": "Je besluit het advies van de Huorn op te volgen. Wat is je volgende stap?",
+            "keuzes": [
+                { "Volg Huorn's pad": "gollum_waarschuwing" }
 
-            ]
+            ],
+            "einde": "goed"
+        },
+        "advies_negeer_huorn": {
+            "beschrijving": "Je kiest ervoor om het advies van de Huorn te negeren. In plaats daarvan besluit je verder te gaan en dieper het betoverde bos in te trekken. Je voelt een onweerstaanbare drang om de Entwives te vinden en bent vastbesloten om geen mogelijkheid onbenut te laten. Welke kant ga je op?",
+            "keuzes": [
+                { "Noord": "links_rechts" },
+                { "Zuid": "links_rechts" },
+                { "Oost": "links_rechts" }
+            ],
+            "einde": "goed"
+        },
+        "links_rechts": {
+            "beschrijving": "Je staat op een kruispunt in het betoverde bos, omgeven door dichte begroeiing en grote, oude bomen. Het is moeilijk te zeggen welke kant de juiste richting is om de Entwives te vinden. In het donkere, mysterieuze bos zijn geen duidelijke aanwijzingen of markeringen te zien. Welke kant ga je op?",
+            "keuzes": [
+                { "Links": "waardig_gevangen" },
+                { "Rechts": "gollum_waarschuwing" }
+            ],
+            "einde": "goed"
+        },
+        "waardig_gevangen": {
+            "beschrijving": "Helaas word je gevangen. \"Wij laten je met waardigheid gevangennemen,\" zegt een van de wezens. Ze staan om je heen en lijken vastbesloten om je gevangen te nemen. Ze geven je de keuze hoe je gevangen wilt worden. Welke kies je?",
+            "keuzes": [
+                { "Door Dark Ents": "dark_ents" },
+                { "Door vijand soldaten": "vijand_soldaten" },
+                { "Door gigantische spin": "gigantische_spin" }
+            ],
+            "einde": "goed"
+        },
+        "dark_ents": {
+            "beschrijving": "Je kiest ervoor om gevangen te worden door de duistere ents. Terwijl je je keuze maakt, voel je een zekere griezeligheid over je heen komen. De wezens om je heen knikken instemmend en beginnen te bewegen. Uit de schaduwen stappen langzaam grote, dreigende figuren tevoorschijn. Het zijn de dark ents, angstaanjagende boomachtige wezens met donkere, knoestige ledematen en een onheilspellende uitstraling. Ze naderen je langzaam en grijpen je voorzichtig vast, alsof ze echt proberen je met waardigheid gevangen te nemen. ",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "vijand_soldaten": {
+            "beschrijving": "Je besluit om jezelf gevangen te laten nemen door de vijandelijke soldaten. Terwijl de wezens om je heen staan en hun vastberadenheid tonen, stap je naar voren en zeg je: \"Ik kies om gevangengenomen te worden door de vijandelijke soldaten.\"\n\nDe wezens knikken instemmend en communiceren op de een of andere manier met de soldaten, die al snel verschijnen en je gevangennemen met minimale weerstand. Hoewel je gevangenschap onvermijdelijk is, hoop je dat deze keuze enige invloed zal hebben op de manier waarop je behandeld wordt door je nieuwe bewaarders.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "gigantische_spin": {
+            "beschrijving": "Je kiest ervoor om gevangen te worden door de gigantische spin. Je hebt gehoord dat deze wezens bekend staan om het respecteren van degenen die moedig genoeg zijn om deze angstaanjagende keuze te maken. Terwijl de andere wezens toekijken, begint de gigantische spin je met zorgvuldige precisie in zijn zijden web te wikkelen. Ondanks de ongemakkelijke situatie, heb je het gevoel dat je waardigheid behouden blijft en dat dit misschien wel de minst schadelijke optie is in deze benarde situatie.",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "gollum_waarschuwing": {
+            "beschrijving": "Terwijl jullie lopen komen jullie tegen de Gollum. Hij zegt dat jullie niet de juiste kant op gaan. Wat doe jij?",
+            "keuzes": [
+                { "Negeer Gollum": "ga_verder_veld" },
+                { "Quickbeam valt Gollum aan": "quickbeam_aanval" },
+                { "Advies nemen": "ga_verder_veld" }
+            ],
+            "einde": "goed"
+        },
+        "quickbeam_aanval": {
+            "beschrijving": "Quickbeam slaat Gollum tegen een boom. Gollum staat niet op het vecht blijkt gewonnen te zijn. Jullie draaien om verder te gaan met je avontuur maar plotseling hoor je Gollum zachtjes, \"My precious\". \"Nee. Het kan niet\" zeg jij, Maar het is zo, in de handen van Gollum staat de ene ring. De ring roept de volgers van Sauron en jullie worden gevangen",
+            "keuzes": [
+                { "Slecht Einde - Gevangen genomen.": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "ga_verder_veld": {
+            "beschrijving": "Jullie komen terecht bij een veld. De zon schijnt fel op het open veld, de gouden stralen glinsteren van het hoge gras dat zachtjes zwaait in de warme bries. Wilde bloemen van elke kleur verspreidden het landschap, zwaaiend op het ritme van de wind. De lucht was diepblauw, de wolken leken op rookwolken van suikerspin. 'Iets klopt niet,' zegt Treebeard. 'De bomen zijn hier te stil.' Quickbeam zegt, 'Het blijkt een onzichtbare schild te zijn.' Treabeard zegt, 'De Huorn had gelijk, We zijn er!' Wat doe jij?",
+            "keuzes": [
+                { "Loop samen door het onzichtbare schild": "loop_samen" },
+                { "Loop weg": "loop_weg" },
+                { "Loop zelf binnen en laat de anderen achter": "loop_zelf" }
+            ],
+            "einde": "goed"
+        },
+        "loop_samen": {
+            "beschrijving": "Je kiest ervoor samen door het onzichtbare schild te lopen en vindt de Entwives. Jullie herenigen ze met de Ents.",
+            "keuzes": [
+                {"Je hebt gewonnen!  vindt de Entwives en herenigt ze met de Ents." :  ""},
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "loop_weg": {
+            "beschrijving": "Je kiest ervoor weg te lopen en verliest.",
+            "keuzes": [
+                { "Slecht Einde - Weggelopen": null },
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "slecht"
+        },
+        "loop_einde": {
+            "beschrijving": "Je kiest ervoor alleen binnen te gaan en de anderen achter te laten. Je vindt de Entwives en herenigt ze met de Ents.",
+            "keuzes": [
+                {"Je hebt gewonnen!  vindt de Entwives en herenigt ze met de Ents." :  ""},
+                { "Probeer Opnieuw": "start" }
+            ],
+            "einde": "goed"
         }
     }
 }
+
+
+
+
+
+
+
