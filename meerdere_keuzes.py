@@ -88,7 +88,7 @@ def start_tekst_avontuur(root, bestand, menu):
     beschrijving_label = tk.Label(root, justify="center", font="Roboto, 12", text="", wraplength=800, padx=10, pady=10)
     beschrijving_label.place(anchor="center", relx=0.5, rely=0.15)
 
-    button_frame = tk.Frame(root)
+    button_frame = tk.Frame(root, bg='darkred')
     button_frame.place(anchor="center", relx=0.5, rely=0.5)
 
     update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
