@@ -65,6 +65,8 @@ def admin_scherm(root, menu):
 
     verhaal_button_frame = Frame(frame, height=650, width=500, bg="#ded9ee")
     verhaal_button_frame.place(anchor="center", relx=0.5, rely=0.5)
+    ondertitel = Label(verhaal_button_frame, text="Goede keuzes:", font="Roboto, 20", bg="#ded9ee")
+    ondertitel.pack()
 
     admin_verhaal_1 = Button(verhaal_button_frame,
                           text="Verhaal 1",
@@ -96,23 +98,21 @@ def verhaal_1(root, menu):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: admin_scherm(root, menu))
     cancel_button.pack(padx=5, pady=5, side="right")
-
     frame = Frame(root, bg="#ded9ee")
     frame.pack(fill="both", expand=True)
-
     titel = Label(frame, text="Verhaal 1", font="Roboto, 24", bg="#ded9ee")
-    ondertitel = Label(frame, text="Goede keuzes:", font="Roboto, 20", bg="#ded9ee")
     titel.pack(padx=25, pady=25)
-    ondertitel.pack()
+
+
     verhaal_keuzes_frame = Frame(frame, height=400, width=500, bg="#ded9ee")
-    verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
-    with open("files/avontuurgegevens.json") as bestand:
+    verhaal_keuzes_frame.place(anchor="center", relx=0.50, rely=0.55)
+    with open("files/avontuurgegevens_2.json") as bestand:
         inhoud = json.load(bestand)
         for onderdelen in inhoud['locaties']:
-            if inhoud['locaties'][onderdelen]['einde'] == 'goed':
+            if inhoud['locaties'][onderdelen]['einde'] == "goed":
                 for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
                         keuzes = Label(verhaal_keuzes_frame,
-                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee",
+                                       text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee",
                                        font="Roboto, 5")
                         keuzes.pack()
             else:
@@ -128,20 +128,22 @@ def verhaal_2(root, menu):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: admin_scherm(root, menu))
     cancel_button.pack(padx=5, pady=5, side="right")
-    titel = Label(root, text="Verhaal 2", font="Roboto, 24")
-    ondertitel = Label(root, text="Goede keuzes:", font="Roboto, 20")
+    frame = Frame(root, bg="#ded9ee")
+    frame.pack(fill="both", expand=True)
+    titel = Label(frame, text="Verhaal 2", font="Roboto, 24", bg="#ded9ee")
     titel.pack(padx=25, pady=25)
-    ondertitel.pack()
 
-    verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
-    verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
+
+    verhaal_keuzes_frame = Frame(frame, height=400, width=500, bg="#ded9ee")
+    verhaal_keuzes_frame.place(anchor="center", relx=0.50, rely=0.55)
     with open("files/avontuurgegevens_2.json") as bestand:
         inhoud = json.load(bestand)
         for onderdelen in inhoud['locaties']:
             if inhoud['locaties'][onderdelen]['einde'] == "goed":
                 for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
                         keuzes = Label(verhaal_keuzes_frame,
-                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}')
+                                       text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee",
+                                       font="Roboto, 5")
                         keuzes.pack()
             else:
                 pass
@@ -154,21 +156,22 @@ def verhaal_3(root, menu):
 
     cancel_button = Button(top_bar, width=3, height=1, text="X", command=lambda: admin_scherm(root, menu))
     cancel_button.pack(padx=5, pady=5, side="right")
-    titel = Label(root, text="Verhaal 3", font="Roboto, 24")
-    ondertitel = Label(root, text="Goede keuzes:", font="Roboto, 20")
+    frame = Frame(root, bg="#ded9ee")
+    frame.pack(fill="both", expand=True)
+    titel = Label(frame, text="Verhaal 2", font="Roboto, 24", bg="#ded9ee")
     titel.pack(padx=25, pady=25)
-    ondertitel.pack()
 
-    verhaal_keuzes_frame = Frame(root, height=400, width=500, bg="red")
-    verhaal_keuzes_frame.place(anchor="center", relx=0.5, rely=0.5)
 
-    with open("files/avontuurgegevens_3.json") as bestand:
+    verhaal_keuzes_frame = Frame(frame, height=400, width=500, bg="#ded9ee")
+    verhaal_keuzes_frame.place(anchor="center", relx=0.50, rely=0.55)
+    with open("files/avontuurgegevens_3.json", 'r', encoding='utf-8') as bestand:
         inhoud = json.load(bestand)
         for onderdelen in inhoud['locaties']:
             if inhoud['locaties'][onderdelen]['einde'] == "goed":
                 for i in range(len(inhoud["locaties"][onderdelen]["keuzes"])):
                         keuzes = Label(verhaal_keuzes_frame,
-                                   text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}')
+                                       text=f'{i}. {inhoud["locaties"][onderdelen]["keuzes"][i]}', bg="#ded9ee",
+                                       font="Roboto, 5")
                         keuzes.pack()
             else:
                 pass
