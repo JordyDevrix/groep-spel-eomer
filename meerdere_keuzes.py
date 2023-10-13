@@ -1,6 +1,7 @@
 import json
 import tkinter as tk
 
+
 gemaakte_keuzes = []
 het_ras_van_de_speler_is_mens = False
 het_ras_van_de_speler_is_dwerg = False
@@ -26,17 +27,20 @@ def update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame
 
         if "Dwerg" in keuze_text:
             if het_ras_van_de_speler_is_dwerg:
-                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
-                                   command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
+                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text, font="Roboto,18",
+                                   command=lambda loc=nieuwe_locatie:
+                                   kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
                 button.grid(padx=20, pady=5, column=i, row=0)
         elif "Mens" in keuze_text:
             if het_ras_van_de_speler_is_mens:
-                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
-                                   command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
+                button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text, font="Roboto,18",
+                                   command=lambda loc=nieuwe_locatie:
+                                   kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
                 button.grid(padx=20, pady=5, column=i, row=0)
         else:
-            button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text,font="Roboto,18",
-                               command=lambda loc=nieuwe_locatie: kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
+            button = tk.Button(button_frame, width=35, height=15, bg="grey", text=keuze_text, font="Roboto,18",
+                               command=lambda loc=nieuwe_locatie:
+                               kies_optie(loc, huidige_locatie, gegevens, beschrijving_label, button_frame))
             button.grid(padx=20, pady=5, column=i, row=0)
 
 
@@ -45,11 +49,12 @@ def tijd_locatie_weergeven(huidige_locatie):
     locatie = huidige_locatie
 
     frame1 = tk.Frame(width=300, height=120, highlightbackground="blue", highlightthickness=6)
-    frame1.place(x=600, y=340)
+    frame1.place(anchor="center", relx=0.5, rely=0.5)
 
     lt_label = tk.Label(frame1, text=f"{locatie}", font=("Roboto", 24))
     lt_label.grid(row=0, column=0, pady=20)  # Center label vertically
-    close_button = tk.Button(frame1, text="x", command=lambda: (close_button.destroy(), lt_label.destroy(), frame1.destroy()))
+    close_button = tk.Button(frame1, text="x",
+                             command=lambda: (close_button.destroy(), lt_label.destroy(), frame1.destroy()))
     close_button.grid(row=1, column=0)
 
 
@@ -90,17 +95,14 @@ def start_tekst_avontuur(root, bestand, menu):
 
     huidige_locatie = "start"
 
-    root.title("Tekstavontuur")
     root.geometry("1400x800")
 
     for widget in root.winfo_children():
         widget.destroy()
     bg_image = tk.PhotoImage(file="images/Mordor background.png")
 
-    # ================================ # maakt achtergrond resizable
     bg_image = bg_image.zoom(10)
     bg_image = bg_image.subsample(7)
-    # ================================ #
 
     bg_label = tk.Label(root, image=bg_image)
     bg_label.place(x=0, y=0)
@@ -119,4 +121,3 @@ def start_tekst_avontuur(root, bestand, menu):
 
     update_interface(huidige_locatie, gegevens, beschrijving_label, button_frame)
     tk.mainloop()
-
